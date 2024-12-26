@@ -1,0 +1,1246 @@
+2024-09-04T10:48:07.594736 tid11080 [IFO,LogManager] Enabled primary log file C:\Program Files\Micro-Manager-2.0\CoreLogs\CoreLog20240904T104807_pid12992.txt
+2024-09-04T10:48:07.594820 tid11080 [IFO,App] User: yclenman
+2024-09-04T10:48:07.594924 tid11080 [IFO,App] Host: PHYSWDREN033092
+2024-09-04T10:48:07.594930 tid11080 [IFO,App] MM Studio version: 2.0.3 20240828
+2024-09-04T10:48:07.594946 tid11080 [IFO,App] MMCore version 11.1.1
+2024-09-04T10:48:07.594954 tid11080 [IFO,App] Device API version 71, Module API version 10
+2024-09-04T10:48:07.594960 tid11080 [IFO,App] Operating System: Windows 10 (amd64) 10.0
+2024-09-04T10:48:07.594966 tid11080 [IFO,App] JVM: Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_152, 64-bit
+2024-09-04T10:48:07.970559 tid72908 [IFO,App] Found plugin GaussianTrack@189ecf54
+2024-09-04T10:48:07.971595 tid72908 [IFO,App] Found plugin ch.epfl.leb.autolase.AutoLasePlugin@5893d464
+2024-09-04T10:48:07.972214 tid72908 [IFO,App] Found plugin com.asiimaging.asigamepad.AsiGamepad@37d2b2b1
+2024-09-04T10:48:07.972529 tid72908 [IFO,App] Found plugin com.asiimaging.crisp.CRISPPlugin@55d99678
+2024-09-04T10:48:07.972781 tid72908 [IFO,App] Found plugin com.asiimaging.plogic.PLogicControlPlugin@6f8a54e0
+2024-09-04T10:48:07.973054 tid72908 [IFO,App] Found plugin com.asiimaging.tirf.TIRFControlPlugin@24ff870b
+2024-09-04T10:48:07.973098 tid72908 [IFO,App] Found plugin com.imaging100x.tracker.TrackerPlugin@19effa20
+2024-09-04T10:48:07.973223 tid72908 [IFO,App] Found plugin de.embl.rieslab.emu.EMUPlugin@2482b4bf
+2024-09-04T10:48:07.973276 tid72908 [IFO,App] Found plugin edu.ucsf.valelab.mmclearvolumeplugin.CVPlugin@3920bb92
+2024-09-04T10:48:07.973802 tid72908 [IFO,App] Found plugin edu.umassmed.pgfocus.PGFocus@36f11780
+2024-09-04T10:48:07.973864 tid72908 [IFO,App] Found plugin org.micromanager.acquiremultipleregions.AcquireMultipleRegions@ab1d6e7
+2024-09-04T10:48:07.974869 tid72908 [IFO,App] Found plugin org.micromanager.asidispim.ASIdiSPIM@2d85395c
+2024-09-04T10:48:07.975075 tid72908 [IFO,App] Found plugin org.micromanager.assembledata.AssembleData@282a6949
+2024-09-04T10:48:07.975379 tid72908 [IFO,App] Found plugin org.micromanager.channelcorrector.ChannelCorrector@1300ef72
+2024-09-04T10:48:07.975730 tid72908 [IFO,App] Found plugin org.micromanager.deskew.Deskew@301146a2
+2024-09-04T10:48:07.976994 tid72908 [IFO,App] Found plugin org.micromanager.duplicator.DuplicatorPlugin@57bd1f0
+2024-09-04T10:48:07.977155 tid72908 [IFO,App] Found plugin org.micromanager.hcs.HCSPlugin@58efcaf0
+2024-09-04T10:48:07.977324 tid72908 [IFO,App] Found plugin org.micromanager.imageflipper.FlipperPlugin@11104b07
+2024-09-04T10:48:07.977513 tid72908 [IFO,App] Found plugin org.micromanager.intelligentacquisition.IntelligentAcquisition@73b2cfbd
+2024-09-04T10:48:07.977565 tid72908 [IFO,App] Found plugin org.micromanager.magellan.internal.main.Magellan@552c2371
+2024-09-04T10:48:07.977604 tid72908 [IFO,App] Found plugin org.micromanager.multicamera.MultiCamera@6019465a
+2024-09-04T10:48:07.977638 tid72908 [IFO,App] Found plugin org.micromanager.multichannelshading.MultiChannelShading@7342612d
+2024-09-04T10:48:07.977874 tid72908 [IFO,App] Found plugin org.micromanager.pipelinesaver.SaverPlugin@16e897df
+2024-09-04T10:48:07.978129 tid72908 [IFO,App] Found plugin org.micromanager.plugins.framecombiner.FrameCombinerPlugin@226b19d8
+2024-09-04T10:48:07.978409 tid72908 [IFO,App] Found plugin org.micromanager.plugins.mist.Mist@86aa059
+2024-09-04T10:48:07.978443 tid72908 [IFO,App] Found plugin org.micromanager.plugins.rtintensities.RTIntensities@68c1e370
+2024-09-04T10:48:07.978473 tid72908 [IFO,App] Found plugin org.micromanager.plugins.sequencebuffermonitor.SequenceBufferMonitor@3a45c7d8
+2024-09-04T10:48:07.978518 tid72908 [IFO,App] Found plugin org.micromanager.plugins.snaponmove.SnapOnMovePlugin@409abc91
+2024-09-04T10:48:07.978558 tid72908 [IFO,App] Found plugin org.micromanager.pmqi.AutoWB@1dafb4b3
+2024-09-04T10:48:07.978591 tid72908 [IFO,App] Found plugin org.micromanager.pointandshootanalysis.PointAndShootAnalysis@7a920e15
+2024-09-04T10:48:07.978887 tid72908 [IFO,App] Found plugin org.micromanager.projector.ProjectorPlugin@7b163ae2
+2024-09-04T10:48:07.978943 tid72908 [IFO,App] Found plugin org.micromanager.ptctools.PtcTools@1b7c131f
+2024-09-04T10:48:07.978975 tid72908 [IFO,App] Found plugin org.micromanager.randomizer.RandomizePositionNamesPlugin@71f454c3
+2024-09-04T10:48:07.979008 tid72908 [IFO,App] Found plugin org.micromanager.ratioimaging.RatioImaging@746066c8
+2024-09-04T10:48:07.979882 tid72908 [IFO,App] Found plugin org.micromanager.recall.RecallPlugin@45749bb5
+2024-09-04T10:48:07.980015 tid72908 [IFO,App] Found plugin org.micromanager.sharpest.SharpestPlugin@16f58d94
+2024-09-04T10:48:07.980062 tid72908 [IFO,App] Found plugin org.micromanager.slideexplorer.SlideExplorerPlugin@61d4efa4
+2024-09-04T10:48:07.980100 tid72908 [IFO,App] Found plugin org.micromanager.splitview.SplitView@34167f1
+2024-09-04T10:48:07.980520 tid72908 [IFO,App] Found plugin org.micromanager.zprojector.ZProjectorPlugin@6209fd1f
+2024-09-04T10:48:07.980585 tid72908 [IFO,App] Found plugin org.wallerlab.illuminate.IlluminatePlugin@58aa55e7
+2024-09-04T10:48:07.980961 tid72908 [IFO,App] Found plugin edu.ucsf.valelab.mmclearvolumeplugin.CVInspectorPanelPlugin@3b7f5c93
+2024-09-04T10:48:07.981042 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.sharpnessinspector.SharpnessInspectorPlugin@31f03376
+2024-09-04T10:48:07.981082 tid72908 [IFO,App] Searching for plugins in C:\Program Files\Micro-Manager-2.0/mmautofocus
+2024-09-04T10:48:08.012115 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.Autofocus@47d33b63
+2024-09-04T10:48:08.012464 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.AutofocusDuo@1fd5aba
+2024-09-04T10:48:08.012770 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.AutofocusTB@e6c7cd
+2024-09-04T10:48:08.013443 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.HardwareFocusExtender@3259b097
+2024-09-04T10:48:08.018145 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.OughtaFocus@124ed689
+2024-09-04T10:48:08.018484 tid72908 [IFO,App] Found plugin org.micromanager.autofocus.PFSOffsetFocusser@673a96bc
+2024-09-04T10:48:08.018589 tid72908 [IFO,App] Searching for plugins in MMStudio's class loader
+2024-09-04T10:48:08.249180 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.intensity.IntensityInspectorPanelPlugin@325cc4eb
+2024-09-04T10:48:08.249283 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.metadata.SummaryMetadataInspectorPanelPlugin@52d30684
+2024-09-04T10:48:08.249310 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.metadata.PlaneMetadataInspectorPanelPlugin@3a9e8db5
+2024-09-04T10:48:08.249341 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.comments.CommentsInspectorPanelPlugin@579e0e84
+2024-09-04T10:48:08.249506 tid72908 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.PatternOverlayPlugin@721ed67
+2024-09-04T10:48:08.249587 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.navigation.NavigationInspectorPanelPlugin@20ec2929
+2024-09-04T10:48:08.249618 tid72908 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.overlays.OverlaysInspectorPanelPlugin@2cc977c7
+2024-09-04T10:48:08.249640 tid72908 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.ScaleBarPlugin@46b7a88
+2024-09-04T10:48:08.249660 tid72908 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.TextOverlayPlugin@c29e5b7
+2024-09-04T10:48:08.249682 tid72908 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.TimestampPlugin@4dcd207a
+2024-09-04T10:48:08.249759 tid72908 [IFO,App] Found plugin org.micromanager.acquisition.internal.DefaultMDAPlugin@2a5d114b
+2024-09-04T10:48:08.249793 tid72908 [IFO,App] Found plugin org.micromanager.acquisition.internal.acqengjcompat.multimda.MultiMDA@75bd81b2
+2024-09-04T10:48:08.249880 tid72908 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.CopyToImageJItem@36fac6ef
+2024-09-04T10:48:08.249909 tid72908 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.ExportImagesItem@1210eeba
+2024-09-04T10:48:08.249937 tid72908 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.LineProfileItem@508562fa
+2024-09-04T10:48:08.250264 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.AutofocusButtons@68d1b574
+2024-09-04T10:48:08.250342 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.CloseAllButton@4c6deb08
+2024-09-04T10:48:08.250538 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ExposureTime@1b17cd9c
+2024-09-04T10:48:08.250706 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.LiveButton@662864a9
+2024-09-04T10:48:08.250978 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.MDAButtons@6dbf6ac0
+2024-09-04T10:48:08.251284 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.PresetButton@44a595ec
+2024-09-04T10:48:08.251336 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.RefreshButton@52da0ed2
+2024-09-04T10:48:08.251698 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.SavedMDAButton@6b2cc883
+2024-09-04T10:48:08.251900 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ScriptButton@25d9a85f
+2024-09-04T10:48:08.251984 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ShutterControl@283c14b7
+2024-09-04T10:48:08.252154 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.SnapButton@3eb7d761
+2024-09-04T10:48:08.252193 tid72908 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.TextLabel@7666f5ac
+2024-09-04T10:48:08.252398 tid72908 [IFO,App] Plugin loading took 843ms
+2024-09-04T10:48:08.252425 tid11080 [IFO,App] Finished waiting for plugins to load
+2024-09-04T10:48:19.978911 tid11080 [IFO,Core] Did unload all devices
+2024-09-04T10:48:19.979351 tid11080 [IFO,Core] Did unload all devices
+2024-09-04T10:48:19.980283 tid11080 [IFO,Core] Did load device DHub from DemoCamera; label = DHub
+2024-09-04T10:48:19.980344 tid11080 [IFO,Core] Did load device DCam from DemoCamera; label = Camera
+2024-09-04T10:48:19.980364 tid11080 [IFO,Core] Did load device DWheel from DemoCamera; label = Dichroic
+2024-09-04T10:48:19.980374 tid11080 [IFO,Core] Did load device DWheel from DemoCamera; label = Emission
+2024-09-04T10:48:19.980382 tid11080 [IFO,Core] Did load device DWheel from DemoCamera; label = Excitation
+2024-09-04T10:48:19.980394 tid11080 [IFO,Core] Did load device DObjective from DemoCamera; label = Objective
+2024-09-04T10:48:19.980403 tid11080 [IFO,Core] Did load device DStage from DemoCamera; label = Z
+2024-09-04T10:48:19.980412 tid11080 [IFO,Core] Did load device DLightPath from DemoCamera; label = Path
+2024-09-04T10:48:19.980421 tid11080 [IFO,Core] Did load device DXYStage from DemoCamera; label = XY
+2024-09-04T10:48:19.980431 tid11080 [IFO,Core] Did load device DShutter from DemoCamera; label = White Light Shutter
+2024-09-04T10:48:19.980438 tid11080 [IFO,Core] Did load device DAutoFocus from DemoCamera; label = Autofocus
+2024-09-04T10:48:19.980449 tid11080 [IFO,Core] Did load device DStateDevice from DemoCamera; label = LED
+2024-09-04T10:48:19.981085 tid11080 [IFO,Core] Did load device State Device Shutter from Utilities; label = LED Shutter
+2024-09-04T10:48:19.981131 tid11080 [IFO,Core] Will initialize 13 devices
+2024-09-04T10:48:19.981131 tid11080 [IFO,Core] Will initialize device DHub
+2024-09-04T10:48:19.981132 tid11080 [IFO,Core] Did initialize device DHub
+2024-09-04T10:48:19.981137 tid11080 [IFO,Core] Will initialize device Camera
+2024-09-04T10:48:19.981234 tid11080 [IFO,Core] Did initialize device Camera
+2024-09-04T10:48:19.981235 tid11080 [IFO,Core] Default camera set to Camera
+2024-09-04T10:48:19.981235 tid11080 [IFO,Core] Will initialize device Dichroic
+2024-09-04T10:48:19.981250 tid11080 [IFO,Core] Did initialize device Dichroic
+2024-09-04T10:48:19.981251 tid11080 [IFO,Core] Will initialize device Emission
+2024-09-04T10:48:19.981259 tid11080 [IFO,Core] Did initialize device Emission
+2024-09-04T10:48:19.981259 tid11080 [IFO,Core] Will initialize device Excitation
+2024-09-04T10:48:19.981267 tid11080 [IFO,Core] Did initialize device Excitation
+2024-09-04T10:48:19.981267 tid11080 [IFO,Core] Will initialize device Objective
+2024-09-04T10:48:19.981282 tid11080 [IFO,Core] Did initialize device Objective
+2024-09-04T10:48:19.981284 tid11080 [IFO,Core] Will initialize device Z
+2024-09-04T10:48:19.981291 tid11080 [IFO,Core] Did initialize device Z
+2024-09-04T10:48:19.981291 tid11080 [IFO,Core] Will initialize device Path
+2024-09-04T10:48:19.981294 tid11080 [IFO,Core] Did initialize device Path
+2024-09-04T10:48:19.981295 tid11080 [IFO,Core] Will initialize device XY
+2024-09-04T10:48:19.981296 tid11080 [IFO,Core] Did initialize device XY
+2024-09-04T10:48:19.981297 tid11080 [IFO,Core] Default xy stage set to XY
+2024-09-04T10:48:19.981297 tid11080 [IFO,Core] Will initialize device White Light Shutter
+2024-09-04T10:48:19.981299 tid11080 [IFO,Core] Did initialize device White Light Shutter
+2024-09-04T10:48:19.981299 tid11080 [IFO,Core] Default shutter set to White Light Shutter
+2024-09-04T10:48:19.981301 tid11080 [IFO,Core] Will initialize device Autofocus
+2024-09-04T10:48:19.981302 tid11080 [IFO,Core] Did initialize device Autofocus
+2024-09-04T10:48:19.981303 tid11080 [IFO,Core] Default autofocus set to Autofocus
+2024-09-04T10:48:19.981303 tid11080 [IFO,Core] Will initialize device LED
+2024-09-04T10:48:19.981312 tid11080 [IFO,Core] Did initialize device LED
+2024-09-04T10:48:19.981312 tid11080 [IFO,Core] Will initialize device LED Shutter
+2024-09-04T10:48:19.981352 tid11080 [IFO,Core] Did initialize device LED Shutter
+2024-09-04T10:48:19.981353 tid11080 [IFO,Core] Default shutter set to LED Shutter
+2024-09-04T10:48:19.981354 tid11080 [IFO,Core] Finished initializing 13 devices
+2024-09-04T10:48:19.981392 tid11080 [IFO,Core] Default camera set to Camera
+2024-09-04T10:48:19.981411 tid11080 [IFO,Core] Default shutter set to White Light Shutter
+2024-09-04T10:48:19.981417 tid11080 [IFO,Core] Default stage set to Z
+2024-09-04T10:48:19.981916 tid11080 [IFO,Core] Did update system state cache
+2024-09-04T10:48:19.982213 tid11080 [IFO,Core] Channel group set to Channel
+2024-09-04T10:48:19.982367 tid11080 [IFO,Core] Did update system state cache
+2024-09-04T10:48:20.048941 tid11080 [IFO,App] EDTHangLogger: Started monitoring of EDT hangs
+                                    [       ] [heartbeat timeout = 4500 ms, hang check interval = 1000 ms]
+2024-09-04T10:48:20.204665 tid11080 [IFO,App] Rebuilding config group table
+2024-09-04T10:48:20.205157 tid11080 [IFO,App] Finished rebuilding config group table
+2024-09-04T10:48:20.210183 tid11080 [IFO,App] Startup script (C:\Program Files\Micro-Manager-2.0\MMStartup.bsh) not present
+2024-09-04T10:48:20.210194 tid11080 [IFO,App] Updating GUI; config pad = true; from cache = false
+2024-09-04T10:48:20.211385 tid11080 [IFO,Core] Default autofocus set to Autofocus
+2024-09-04T10:48:20.211611 tid11080 [IFO,Core] Did update system state cache
+2024-09-04T10:48:20.212433 tid11080 [IFO,App] Rebuilding config group table
+2024-09-04T10:48:20.212518 tid11080 [IFO,App] Finished rebuilding config group table
+2024-09-04T10:48:20.213153 tid11080 [IFO,App] Finished updating GUI
+2024-09-04T10:48:32.529346 tid70052 [IFO,Core] Did unload all devices
+2024-09-04T10:48:32.529352 tid70052 [IFO,Core] System reset
+2024-09-04T10:48:32.539013 tid70052 [IFO,App] 89North_LDI
+2024-09-04T10:48:32.540015 tid70052 [IFO,App]    89 North Laser Diode Illuminator, Multi-line, Solid-State Laser Illuminator
+2024-09-04T10:48:32.540019 tid70052 [IFO,App] AAAOTF
+2024-09-04T10:48:32.540601 tid70052 [IFO,App]    AAAOTF, AAAOTF
+2024-09-04T10:48:32.540603 tid70052 [IFO,App]    multiAAAOTF, multiAAAOTF
+2024-09-04T10:48:32.540604 tid70052 [IFO,App] ABSCamera
+2024-09-04T10:48:32.541147 tid70052 [IFO,App]    ABSCam, ABS camera
+2024-09-04T10:48:32.541149 tid70052 [IFO,App] AgilentLaserCombiner
+2024-09-04T10:48:32.541655 tid70052 [IFO,App]    LC-Shutter, Shutter
+2024-09-04T10:48:32.541657 tid70052 [IFO,App]    LC-SafetyShutter, SafetyShutter
+2024-09-04T10:48:32.541658 tid70052 [IFO,App]    LC-DAC, DA
+2024-09-04T10:48:32.541660 tid70052 [IFO,App] Aladdin
+2024-09-04T10:48:32.542157 tid70052 [IFO,App]    Aladdin, Aladdin Syringe Pump
+2024-09-04T10:48:32.542160 tid70052 [IFO,App] AlliedVisionCamera
+2024-09-04T10:48:32.542642 tid70052 [IFO,App]    AlliedVisionHub, Allied Vision Hub
+2024-09-04T10:48:32.542647 tid70052 [IFO,App] AmScope
+2024-09-04T10:48:32.544884 tid70052 [IFO,App]    AmScope, AmScope
+2024-09-04T10:48:32.544886 tid70052 [IFO,App] Andor
+2024-09-04T10:48:32.547357 tid70052 [IFO,App]    Andor, Generic Andor Camera Adapter
+2024-09-04T10:48:32.547359 tid70052 [IFO,App] AndorDragonfly
+2024-09-04T10:48:32.548243 tid70052 [IFO,App]    Andor Dragonfly, Andor Dragonfly
+2024-09-04T10:48:32.548246 tid70052 [IFO,App] AndorILE
+2024-09-04T10:48:32.548968 tid70052 [IFO,App]    Andor ILE, Integrated Laser Engine
+2024-09-04T10:48:32.548971 tid70052 [IFO,App]    Andor Dual ILE, Dual Integrated Laser Engine
+2024-09-04T10:48:32.548973 tid70052 [IFO,App]    Andor Dual ILE 700, Dual Integrated Laser Engine 700
+2024-09-04T10:48:32.548974 tid70052 [IFO,App] AndorLaserCombiner
+2024-09-04T10:48:32.549507 tid70052 [IFO,App]    AndorLaserCombiner, AndorLaserCombiner
+2024-09-04T10:48:32.549510 tid70052 [IFO,App]    PiezoStage, PiezoStage
+2024-09-04T10:48:32.549511 tid70052 [IFO,App] AndorSDK3
+2024-09-04T10:48:32.550344 tid70052 [IFO,App] Error: Unable to load AndorSDK3 library: Failed to load device adapter "AndorSDK3" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_AndorSDK3.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.550354 tid70052 [IFO,App] AndorShamrock
+2024-09-04T10:48:32.550948 tid70052 [IFO,App] Error: Unable to load AndorShamrock library: Failed to load device adapter "AndorShamrock" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_AndorShamrock.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.550951 tid70052 [IFO,App] AOTF
+2024-09-04T10:48:32.552912 tid70052 [IFO,App]    AOTF-Switch, TTL digital out AOTF wavelength selector
+2024-09-04T10:48:32.552915 tid70052 [IFO,App]    AOTF-Shutter, TTL digital out AOTF shutter
+2024-09-04T10:48:32.552916 tid70052 [IFO,App] Aquinas
+2024-09-04T10:48:32.553443 tid70052 [IFO,App]    Aquinas Controller, Aquinas Controller
+2024-09-04T10:48:32.553445 tid70052 [IFO,App] Arduino
+2024-09-04T10:48:32.553917 tid70052 [IFO,App]    Arduino-Hub, Hub (required)
+2024-09-04T10:48:32.553919 tid70052 [IFO,App]    Arduino-Switch, Digital out 8-bit
+2024-09-04T10:48:32.553923 tid70052 [IFO,App]    Arduino-Shutter, Shutter
+2024-09-04T10:48:32.553924 tid70052 [IFO,App]    Arduino-DAC1, DAC channel 1
+2024-09-04T10:48:32.553924 tid70052 [IFO,App]    Arduino-DAC2, DAC channel 2
+2024-09-04T10:48:32.553925 tid70052 [IFO,App]    Arduino-Input, ADC
+2024-09-04T10:48:32.553926 tid70052 [IFO,App] Arduino32bitBoards
+2024-09-04T10:48:32.554482 tid70052 [IFO,App]    Arduino32-Hub, Hub (required)
+2024-09-04T10:48:32.554485 tid70052 [IFO,App]    Arduino32-Switch, Switch on/off channels 1 to 8
+2024-09-04T10:48:32.554486 tid70052 [IFO,App]    Arduino32-Shutter, Shutter
+2024-09-04T10:48:32.554487 tid70052 [IFO,App]    Arduino32-Input, ADC
+2024-09-04T10:48:32.554488 tid70052 [IFO,App]    Arduino32-DAC/PWM-1, DAC/PWM channel 1
+2024-09-04T10:48:32.554490 tid70052 [IFO,App]    Arduino32-DAC/PWM-2, DAC/PWM channel 2
+2024-09-04T10:48:32.554491 tid70052 [IFO,App]    Arduino32-DAC/PWM-3, DAC/PWM channel 3
+2024-09-04T10:48:32.554493 tid70052 [IFO,App]    Arduino32-DAC/PWM-4, DAC/PWM channel 4
+2024-09-04T10:48:32.554494 tid70052 [IFO,App]    Arduino32-DAC/PWM-5, DAC/PWM channel 5
+2024-09-04T10:48:32.554496 tid70052 [IFO,App]    Arduino32-DAC/PWM-6, DAC/PWM channel 6
+2024-09-04T10:48:32.554497 tid70052 [IFO,App]    Arduino32-DAC/PWM-7, DAC/PWM channel 7
+2024-09-04T10:48:32.554498 tid70052 [IFO,App]    Arduino32-DAC/PWM-8, DAC/PWM channel 8
+2024-09-04T10:48:32.554499 tid70052 [IFO,App] ArduinoCounter
+2024-09-04T10:48:32.554975 tid70052 [IFO,App]    ArduinoCounterCamera, ArduinoCounterCamera
+2024-09-04T10:48:32.554978 tid70052 [IFO,App] ArduinoNeoPixel
+2024-09-04T10:48:32.555418 tid70052 [IFO,App]    ArduinoNeoPixel-Hub, Hub (required)
+2024-09-04T10:48:32.555421 tid70052 [IFO,App]    ArduinoNeoPixel-Shutter, Shutter
+2024-09-04T10:48:32.555422 tid70052 [IFO,App] ASIFW1000
+2024-09-04T10:48:32.555925 tid70052 [IFO,App]    ASIFWController, ASIFW1000 Controller
+2024-09-04T10:48:32.555927 tid70052 [IFO,App]    ASIFilterWheel, ASI FilterWheel
+2024-09-04T10:48:32.555928 tid70052 [IFO,App]    ASIFilterWheelSA, ASI FilterWheel SA
+2024-09-04T10:48:32.555928 tid70052 [IFO,App]    ASIShutter, ASI Shutter
+2024-09-04T10:48:32.555929 tid70052 [IFO,App] ASIStage
+2024-09-04T10:48:32.556470 tid70052 [IFO,App]    ZStage, Add-on Z-stage
+2024-09-04T10:48:32.556472 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.556473 tid70052 [IFO,App]    CRIF, CRIF
+2024-09-04T10:48:32.556474 tid70052 [IFO,App]    CRISP, CRISP
+2024-09-04T10:48:32.556474 tid70052 [IFO,App]    AZ100 Turret, AZ100 Turret
+2024-09-04T10:48:32.556475 tid70052 [IFO,App]    State Device, State Device
+2024-09-04T10:48:32.556475 tid70052 [IFO,App]    LED, LED
+2024-09-04T10:48:32.556476 tid70052 [IFO,App]    TIRF, TIRF
+2024-09-04T10:48:32.556477 tid70052 [IFO,App] ASITiger
+2024-09-04T10:48:32.557051 tid70052 [IFO,App]    TigerCommHub, ASI TigerComm Hub (TG-1000)
+2024-09-04T10:48:32.557053 tid70052 [IFO,App] ASIwptr
+2024-09-04T10:48:32.557489 tid70052 [IFO,App]    WPTRobot, WPTRobot
+2024-09-04T10:48:32.557491 tid70052 [IFO,App] AtikCamera
+2024-09-04T10:48:32.557944 tid70052 [IFO,App]    Universal Atik Cameras Device Adapter, Atik
+2024-09-04T10:48:32.557946 tid70052 [IFO,App] AxioCam
+2024-09-04T10:48:32.558388 tid70052 [IFO,App]    Zeiss AxioCam, Zeiss AxioCam
+2024-09-04T10:48:32.558390 tid70052 [IFO,App] BaslerPylon
+2024-09-04T10:48:32.559050 tid70052 [IFO,App] Error: Unable to load BaslerPylon library: Failed to load device adapter "BaslerPylon" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_BaslerPylon.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.559054 tid70052 [IFO,App] BaumerOptronic
+2024-09-04T10:48:32.569386 tid70052 [IFO,App]    BaumerOptronic, Baumer Optronic driver for Leica Cameras
+2024-09-04T10:48:32.569389 tid70052 [IFO,App] BDPathway
+2024-09-04T10:48:32.569951 tid70052 [IFO,App]    BDPathway-Controller, BDPathway controller - required for all other devices
+2024-09-04T10:48:32.569953 tid70052 [IFO,App]    BDPathway-ZStage, Z-stage
+2024-09-04T10:48:32.569954 tid70052 [IFO,App]    BDPathway-XYStage, XY-stage
+2024-09-04T10:48:32.569956 tid70052 [IFO,App]    BDPathway-WheelA, Excitation filter wheel A
+2024-09-04T10:48:32.569957 tid70052 [IFO,App]    BDPathway-WheelB, Excitation filter wheel B
+2024-09-04T10:48:32.569958 tid70052 [IFO,App]    BDPathway-WheelExcitDichroic, Excitation Dichroic wheel
+2024-09-04T10:48:32.569959 tid70052 [IFO,App]    BDPathway-WheelEpiDichroic, Epifluorescence Dichroic wheel
+2024-09-04T10:48:32.569960 tid70052 [IFO,App]    BDPathway-WheelEmission, Emission filter wheel
+2024-09-04T10:48:32.569962 tid70052 [IFO,App]    BDPathway-ShutterA, Excitation shutter A
+2024-09-04T10:48:32.569963 tid70052 [IFO,App]    BDPathway-ShutterB, Excitation shutter B
+2024-09-04T10:48:32.569965 tid70052 [IFO,App]    BDPathway-ShutterTrans, Transmitted light shutter
+2024-09-04T10:48:32.569965 tid70052 [IFO,App]    BDPathway-AccessDoor, Sample loading
+2024-09-04T10:48:32.569966 tid70052 [IFO,App]    BDPathway-Viewport, Viewport
+2024-09-04T10:48:32.569967 tid70052 [IFO,App]    BDPathway-ConfocalMode, Confocal mode
+2024-09-04T10:48:32.569968 tid70052 [IFO,App]    BDPathway-SpinningDisk, Turn the spinning disk on/off
+2024-09-04T10:48:32.569969 tid70052 [IFO,App] BH_DCC_DCU
+2024-09-04T10:48:32.570564 tid70052 [IFO,App] Error: Unable to load BH_DCC_DCU library: Failed to load device adapter "BH_DCC_DCU" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_BH_DCC_DCU.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.570567 tid70052 [IFO,App] BlueboxOptics_niji
+2024-09-04T10:48:32.571072 tid70052 [IFO,App]    niji, niji LED illuminator
+2024-09-04T10:48:32.571074 tid70052 [IFO,App] CARVII
+2024-09-04T10:48:32.571585 tid70052 [IFO,App]    CARVII Hub, Hub (Needed for CARVII)
+2024-09-04T10:48:32.571587 tid70052 [IFO,App]    CARVII Shutter, Confocal shutter
+2024-09-04T10:48:32.571588 tid70052 [IFO,App]    CARVII Ex filter, Confocal excitation filter wheel
+2024-09-04T10:48:32.571589 tid70052 [IFO,App]    CARVII Em filter, Confocal emission filter wheel
+2024-09-04T10:48:32.571590 tid70052 [IFO,App]    CARVII Dichroic, Confocal dichroic wheel
+2024-09-04T10:48:32.571590 tid70052 [IFO,App]    CARVII FRAP iris, Confocal field aperture
+2024-09-04T10:48:32.571591 tid70052 [IFO,App]    CARVII Intensity iris, Confocal "Condenser" illumination aperture
+2024-09-04T10:48:32.571592 tid70052 [IFO,App]    CARVII Disk slider, Spinning disk slider
+2024-09-04T10:48:32.571592 tid70052 [IFO,App]    CARVII Spin motor, Spinning disk motor
+2024-09-04T10:48:32.571593 tid70052 [IFO,App]    CARVII Prism slider, Light path slider
+2024-09-04T10:48:32.571593 tid70052 [IFO,App]    CARVII Touchscreen, Touchscreen lockout control
+2024-09-04T10:48:32.571595 tid70052 [IFO,App] ChuoSeiki_MD5000
+2024-09-04T10:48:32.572058 tid70052 [IFO,App]    ChuoSeiki_MD 2-Axis, XY Stages
+2024-09-04T10:48:32.572060 tid70052 [IFO,App]    ChuoSeiki_MD 1-Axis, Z Stage
+2024-09-04T10:48:32.572061 tid70052 [IFO,App] ChuoSeiki_QT
+2024-09-04T10:48:32.572505 tid70052 [IFO,App]    ChuoSeiki_QT 2-Axis, XY stages
+2024-09-04T10:48:32.572507 tid70052 [IFO,App]    ChuoSeiki_QT 1-Axis, Z stage
+2024-09-04T10:48:32.572508 tid70052 [IFO,App] Cobolt
+2024-09-04T10:48:32.572951 tid70052 [IFO,App]    Cobolt, Cobolt Laser Controller
+2024-09-04T10:48:32.572953 tid70052 [IFO,App] CoboltOfficial
+2024-09-04T10:48:32.573432 tid70052 [IFO,App]    Cobolt Laser, Official device adapter for Cobolt lasers.
+2024-09-04T10:48:32.573434 tid70052 [IFO,App] CoherentCube
+2024-09-04T10:48:32.573863 tid70052 [IFO,App]    CoherentCube, CoherentCube Laser
+2024-09-04T10:48:32.573865 tid70052 [IFO,App] CoherentOBIS
+2024-09-04T10:48:32.574311 tid70052 [IFO,App]    CoherentObis, CoherentObis Laser
+2024-09-04T10:48:32.574313 tid70052 [IFO,App] CoherentScientificRemote
+2024-09-04T10:48:32.574740 tid70052 [IFO,App]    Coherent-Scientific Remote, CoherentScientificRemote Laser
+2024-09-04T10:48:32.574742 tid70052 [IFO,App] Conix
+2024-09-04T10:48:32.575186 tid70052 [IFO,App]    ConixQuadFilter, External Filter Cube Switcher
+2024-09-04T10:48:32.575188 tid70052 [IFO,App]    ConixHexFilter, External Filter Cube Switcher(6)
+2024-09-04T10:48:32.575189 tid70052 [IFO,App]    ConixXYStage, Conix XY stage
+2024-09-04T10:48:32.575189 tid70052 [IFO,App]    ConixZStage, Conix Z stage
+2024-09-04T10:48:32.575190 tid70052 [IFO,App] Corvus
+2024-09-04T10:48:32.575624 tid70052 [IFO,App]    ITK Corvus Controller, ITK Corvus Controller
+2024-09-04T10:48:32.575626 tid70052 [IFO,App]    XY Stage, XY Stage
+2024-09-04T10:48:32.575627 tid70052 [IFO,App]    Z Axis, Z Axis
+2024-09-04T10:48:32.575628 tid70052 [IFO,App] CSUW1
+2024-09-04T10:48:32.576109 tid70052 [IFO,App]    CSUW1-Hub, CSUW1 Hub (Needed for CSUW1. 115200bps)
+2024-09-04T10:48:32.576111 tid70052 [IFO,App]    CSUW1-Filter Wheel, Filter Wheel
+2024-09-04T10:48:32.576112 tid70052 [IFO,App]    CSUW1-Dichroic Mirror, Dichroic Mirror
+2024-09-04T10:48:32.576113 tid70052 [IFO,App]    CSUW1-Shutter, Shutter
+2024-09-04T10:48:32.576113 tid70052 [IFO,App]    CSUW1-Drive Speed, Drive Speed
+2024-09-04T10:48:32.576114 tid70052 [IFO,App]    CSUW1-Bright Field, Bright Field
+2024-09-04T10:48:32.576115 tid70052 [IFO,App]    CSUW1-Disk, Disk
+2024-09-04T10:48:32.576115 tid70052 [IFO,App]    CSUW1-Port, Port
+2024-09-04T10:48:32.576116 tid70052 [IFO,App]    CSUW1-Aperture, Aperture
+2024-09-04T10:48:32.576116 tid70052 [IFO,App]    CSUW1-FRAP, FRAP
+2024-09-04T10:48:32.576117 tid70052 [IFO,App]    CSUW1-Magnifier, Magnifier
+2024-09-04T10:48:32.576118 tid70052 [IFO,App]    CSUW1-NIR Shutter, NIR Shutter
+2024-09-04T10:48:32.576119 tid70052 [IFO,App] CSUX
+2024-09-04T10:48:32.576579 tid70052 [IFO,App]    CSUX-Hub, CSUX Hub (Needed for CSUX)
+2024-09-04T10:48:32.576581 tid70052 [IFO,App]    CSUX-Filter Wheel, Filter Wheel
+2024-09-04T10:48:32.576613 tid70052 [IFO,App]    CSUX-Dichroic Mirror, Dichroic Mirror
+2024-09-04T10:48:32.576615 tid70052 [IFO,App]    CSUX-Shutter, Shutter
+2024-09-04T10:48:32.576616 tid70052 [IFO,App]    CSUX-DriveSpeed, DriveSpeed
+2024-09-04T10:48:32.576617 tid70052 [IFO,App] DahengGalaxy
+2024-09-04T10:48:32.577192 tid70052 [IFO,App] Error: Unable to load DahengGalaxy library: Failed to load device adapter "DahengGalaxy" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_DahengGalaxy.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.577195 tid70052 [IFO,App] dc1394
+2024-09-04T10:48:32.578232 tid70052 [IFO,App] Error: Unable to load dc1394 library: Failed to load device adapter "dc1394" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_dc1394.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.578241 tid70052 [IFO,App] DECamera
+2024-09-04T10:48:32.578996 tid70052 [IFO,App]    Direct Electron Camera, Direct Electron Camera
+2024-09-04T10:48:32.578999 tid70052 [IFO,App] DemoCamera
+2024-09-04T10:48:32.579025 tid70052 [IFO,App]    DCam, Demo camera
+2024-09-04T10:48:32.579026 tid70052 [IFO,App]    DWheel, Demo filter wheel
+2024-09-04T10:48:32.579027 tid70052 [IFO,App]    DStateDevice, Demo State Device
+2024-09-04T10:48:32.579028 tid70052 [IFO,App]    DObjective, Demo objective turret
+2024-09-04T10:48:32.579028 tid70052 [IFO,App]    DStage, Demo stage
+2024-09-04T10:48:32.579029 tid70052 [IFO,App]    DXYStage, Demo XY stage
+2024-09-04T10:48:32.579029 tid70052 [IFO,App]    DLightPath, Demo light path
+2024-09-04T10:48:32.579030 tid70052 [IFO,App]    DAutoFocus, Demo auto focus
+2024-09-04T10:48:32.579037 tid70052 [IFO,App]    DShutter, Demo shutter
+2024-09-04T10:48:32.579038 tid70052 [IFO,App]    D-DA, Demo DA
+2024-09-04T10:48:32.579039 tid70052 [IFO,App]    D-DA2, Demo DA-2
+2024-09-04T10:48:32.579039 tid70052 [IFO,App]    DOptovar, Demo Optovar
+2024-09-04T10:48:32.579040 tid70052 [IFO,App]    DGalvo, Demo Galvo
+2024-09-04T10:48:32.579041 tid70052 [IFO,App]    TransposeProcessor, TransposeProcessor
+2024-09-04T10:48:32.579041 tid70052 [IFO,App]    ImageFlipX, ImageFlipX
+2024-09-04T10:48:32.579042 tid70052 [IFO,App]    ImageFlipY, ImageFlipY
+2024-09-04T10:48:32.579042 tid70052 [IFO,App]    MedianFilter, MedianFilter
+2024-09-04T10:48:32.579043 tid70052 [IFO,App]    DHub, DHub
+2024-09-04T10:48:32.579043 tid70052 [IFO,App] Diskovery
+2024-09-04T10:48:32.579570 tid70052 [IFO,App]    Diskovery-Hub, Diskovery Hub (required)
+2024-09-04T10:48:32.579572 tid70052 [IFO,App]    Diskovery-Disk-Position, Diskovery Spinning Disk Position
+2024-09-04T10:48:32.579573 tid70052 [IFO,App]    Diskovery-Illumination-Size, Diskovery Illumination Size
+2024-09-04T10:48:32.579574 tid70052 [IFO,App]    Diskovery-TIRF-Position, Diskovery TIRF Position
+2024-09-04T10:48:32.579574 tid70052 [IFO,App]    Diskovery-Objective-Select, Diskovery Objective Select
+2024-09-04T10:48:32.579575 tid70052 [IFO,App]    Diskovery-Filter-W, Diskovery Filter W
+2024-09-04T10:48:32.579575 tid70052 [IFO,App]    Diskovery-Filter-T, Diskovery Filter T
+2024-09-04T10:48:32.579576 tid70052 [IFO,App] DTOpenLayer
+2024-09-04T10:48:32.580122 tid70052 [IFO,App] Error: Unable to load DTOpenLayer library: Failed to load device adapter "DTOpenLayer" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_DTOpenLayer.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.580126 tid70052 [IFO,App] ESIOImagingControllers
+2024-09-04T10:48:32.580653 tid70052 [IFO,App]    ESioController, ESImaging Controller
+2024-09-04T10:48:32.580655 tid70052 [IFO,App] ESP32
+2024-09-04T10:48:32.581127 tid70052 [IFO,App]    ESP32-Hub, Hub (required)
+2024-09-04T10:48:32.581129 tid70052 [IFO,App]    ESP32-Switch, Switch on/off channels 0 to 10
+2024-09-04T10:48:32.581130 tid70052 [IFO,App]    ESP32-Shutter, Shutter
+2024-09-04T10:48:32.581130 tid70052 [IFO,App]    ESP32-PWM0, PWM channel 0
+2024-09-04T10:48:32.581132 tid70052 [IFO,App]    ESP32-PWM1, PWM channel 1
+2024-09-04T10:48:32.581132 tid70052 [IFO,App]    ESP32-PWM2, PWM channel 2
+2024-09-04T10:48:32.581133 tid70052 [IFO,App]    ESP32-PWM3, PWM channel 3
+2024-09-04T10:48:32.581133 tid70052 [IFO,App]    ESP32-PWM4, PWM channel 4
+2024-09-04T10:48:32.581134 tid70052 [IFO,App]    ZStage, Z Stage
+2024-09-04T10:48:32.581134 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.581135 tid70052 [IFO,App]    ESP32-Input, ADC
+2024-09-04T10:48:32.581136 tid70052 [IFO,App] ETL
+2024-09-04T10:48:32.581554 tid70052 [IFO,App]    ETL, Optotune ETL
+2024-09-04T10:48:32.581556 tid70052 [IFO,App] FakeCamera
+2024-09-04T10:48:32.583204 tid70052 [IFO,App]    FakeCamera, Fake camera that loads images from disk
+2024-09-04T10:48:32.583207 tid70052 [IFO,App] FirstLightImagingCameras
+2024-09-04T10:48:32.583778 tid70052 [IFO,App] Error: Unable to load FirstLightImagingCameras library: Failed to load device adapter "FirstLightImagingCameras" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_FirstLightImagingCameras.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.583782 tid70052 [IFO,App] FLICamera
+2024-09-04T10:48:32.584319 tid70052 [IFO,App]    FLICamera, FLI Camera Device
+2024-09-04T10:48:32.584321 tid70052 [IFO,App] FreeSerialPort
+2024-09-04T10:48:32.584768 tid70052 [IFO,App]    FreeSerialPort, Free-form communication Serial Port.
+2024-09-04T10:48:32.584770 tid70052 [IFO,App] GenericSLM
+2024-09-04T10:48:32.585215 tid70052 [IFO,App]    GenericSLM, Spatial light modulator controlled through computer graphics output
+2024-09-04T10:48:32.585217 tid70052 [IFO,App] GigECamera
+2024-09-04T10:48:32.585752 tid70052 [IFO,App] Error: Unable to load GigECamera library: Failed to load device adapter "GigECamera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_GigECamera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.585756 tid70052 [IFO,App] HamamatsuHam
+2024-09-04T10:48:32.586405 tid70052 [IFO,App] Error: Unable to load HamamatsuHam library: Failed to load device adapter "HamamatsuHam" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_HamamatsuHam.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.586408 tid70052 [IFO,App] HamiltonMVP
+2024-09-04T10:48:32.586904 tid70052 [IFO,App]    HamiltonMVPChain, Hamilton Modular Valve Positioner (possibly chained)
+2024-09-04T10:48:32.586906 tid70052 [IFO,App] HIDManager
+2024-09-04T10:48:32.601151 tid70052 [IFO,App] Hikrobot
+2024-09-04T10:48:32.601910 tid70052 [IFO,App] Error: Unable to load Hikrobot library: Failed to load device adapter "Hikrobot" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Hikrobot.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.601915 tid70052 [IFO,App] HoribaEPIX
+2024-09-04T10:48:32.603378 tid70052 [IFO,App]    Horiba EFIS Camera, Horiba EFIS Camera
+2024-09-04T10:48:32.603380 tid70052 [IFO,App]    Horiba EFIS III Camera, Horiba EFIS III Camera
+2024-09-04T10:48:32.603381 tid70052 [IFO,App]    Horiba ATOR Camera, Horiba ATOR Camera
+2024-09-04T10:48:32.603381 tid70052 [IFO,App]    Horiba IRIS Camera, Horiba IRIS Camera
+2024-09-04T10:48:32.603382 tid70052 [IFO,App]    Horiba IRIS RGB Camera, Horiba IRIS RGB Camera
+2024-09-04T10:48:32.603384 tid70052 [IFO,App] Hydra
+2024-09-04T10:48:32.603856 tid70052 [IFO,App]    ITK Hydra Controller, ITK Hydra Controller
+2024-09-04T10:48:32.603858 tid70052 [IFO,App]    XY Stage, XY Stage
+2024-09-04T10:48:32.603859 tid70052 [IFO,App] IDSPeak
+2024-09-04T10:48:32.604407 tid70052 [IFO,App] Error: Unable to load IDSPeak library: Failed to load device adapter "IDSPeak" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_IDSPeak.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.604411 tid70052 [IFO,App] IDS_uEye
+2024-09-04T10:48:32.604980 tid70052 [IFO,App] Error: Unable to load IDS_uEye library: Failed to load device adapter "IDS_uEye" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_IDS_uEye.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.604984 tid70052 [IFO,App] IIDC
+2024-09-04T10:48:32.605889 tid70052 [IFO,App] Error: Unable to load IIDC library: Failed to load device adapter "IIDC" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_IIDC.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.605893 tid70052 [IFO,App] IlluminateLedArray
+2024-09-04T10:48:32.606422 tid70052 [IFO,App]    IlluminateLedArray, LED Array
+2024-09-04T10:48:32.606424 tid70052 [IFO,App]    IlluminateLedArrayVirtualShutter, Virtual shutter device that only turns on LEDs when it is open
+2024-09-04T10:48:32.606426 tid70052 [IFO,App] ImageProcessorChain
+2024-09-04T10:48:32.606904 tid70052 [IFO,App]    ImageProcessorChain, ImageProcessorChain
+2024-09-04T10:48:32.606906 tid70052 [IFO,App] IsmatecMCP
+2024-09-04T10:48:32.607368 tid70052 [IFO,App]    IsmatecMCPChain, Ismatec MCP peristaltic pump (possibly chained)
+2024-09-04T10:48:32.607371 tid70052 [IFO,App] JAI
+2024-09-04T10:48:32.608114 tid70052 [IFO,App] Error: Unable to load JAI library: Failed to load device adapter "JAI" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_JAI.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.608117 tid70052 [IFO,App] K8055
+2024-09-04T10:48:32.608584 tid70052 [IFO,App]    K8055-Hub, Hub
+2024-09-04T10:48:32.608586 tid70052 [IFO,App]    K8055-Switch, Switch
+2024-09-04T10:48:32.608587 tid70052 [IFO,App]    K8055-Shutter, Shutter
+2024-09-04T10:48:32.608588 tid70052 [IFO,App]    K8055-DAC-1, DA-1
+2024-09-04T10:48:32.608588 tid70052 [IFO,App]    K8055-DAC-2, DA-2
+2024-09-04T10:48:32.608589 tid70052 [IFO,App]    K8055-Input, Digital Input
+2024-09-04T10:48:32.608590 tid70052 [IFO,App] K8061
+2024-09-04T10:48:32.609038 tid70052 [IFO,App]    K8061-Hub, Hub
+2024-09-04T10:48:32.609039 tid70052 [IFO,App]    K8061-Switch, Switch
+2024-09-04T10:48:32.609040 tid70052 [IFO,App]    K8061-Shutter, Shutter
+2024-09-04T10:48:32.609041 tid70052 [IFO,App]    K8061-DAC, DA
+2024-09-04T10:48:32.609041 tid70052 [IFO,App]    K8061-Input, Input
+2024-09-04T10:48:32.609042 tid70052 [IFO,App] KDV
+2024-09-04T10:48:32.609475 tid70052 [IFO,App]    KDVZStage, Focus drive for Meiji Techno EMZ
+2024-09-04T10:48:32.609477 tid70052 [IFO,App] KuriosLCTF
+2024-09-04T10:48:32.610631 tid70052 [IFO,App] Error: Unable to load KuriosLCTF library: Failed to load device adapter "KuriosLCTF" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_KuriosLCTF.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.610634 tid70052 [IFO,App] LaserQuantumLaser
+2024-09-04T10:48:32.611111 tid70052 [IFO,App]    Laser, LaserQuantum laser
+2024-09-04T10:48:32.611113 tid70052 [IFO,App] LeicaDMI
+2024-09-04T10:48:32.611626 tid70052 [IFO,App]    Scope, Leica DMI microscope controlled through serial interface
+2024-09-04T10:48:32.611627 tid70052 [IFO,App]    TL-Shutter, Transmitted Light Shutter
+2024-09-04T10:48:32.611628 tid70052 [IFO,App]    IL-Shutter, Incident Light Shutter
+2024-09-04T10:48:32.611629 tid70052 [IFO,App]    IL-Turret, Reflector Turret (dichroics)
+2024-09-04T10:48:32.611630 tid70052 [IFO,App]    ObjectiveTurret, Objective Turret
+2024-09-04T10:48:32.611630 tid70052 [IFO,App]    FastFilterWheel, Fast Filter Wheel
+2024-09-04T10:48:32.611631 tid70052 [IFO,App]    FocusDrive, Z-drive
+2024-09-04T10:48:32.611631 tid70052 [IFO,App]    XYStage, XYStage
+2024-09-04T10:48:32.611632 tid70052 [IFO,App]    TL-FieldDiaphragm, Field Diaphragm (Trans)
+2024-09-04T10:48:32.611632 tid70052 [IFO,App]    TL-ApertureDiaphragm, Aperture Diaphragm (Condensor)
+2024-09-04T10:48:32.611633 tid70052 [IFO,App]    IL-FieldDiaphragm, Field Diaphragm (Fluorescence)
+2024-09-04T10:48:32.611634 tid70052 [IFO,App]    IL-ApertureDiaphragm, Aperture Diaphragm (Fluorescence)
+2024-09-04T10:48:32.611634 tid70052 [IFO,App]    MagnificationChanger, Tube Lens (magnification changer)
+2024-09-04T10:48:32.611635 tid70052 [IFO,App]    TLPolarizer, Transmitted light Polarizer
+2024-09-04T10:48:32.611636 tid70052 [IFO,App]    DIC Turret, DIC Turret
+2024-09-04T10:48:32.611636 tid70052 [IFO,App]    Condensor, Condensor Turret
+2024-09-04T10:48:32.611637 tid70052 [IFO,App]    Transmitted Light, Transmitted Light
+2024-09-04T10:48:32.611637 tid70052 [IFO,App]    Adaptive Focus Control, Adaptive Focus Control
+2024-09-04T10:48:32.611638 tid70052 [IFO,App]    Adaptive Focus Control Offset, Adaptive Focus Control Offset
+2024-09-04T10:48:32.611639 tid70052 [IFO,App]    SidePort, Side Port
+2024-09-04T10:48:32.611639 tid70052 [IFO,App]    T-House Mirror, T-House Mirror
+2024-09-04T10:48:32.611640 tid70052 [IFO,App] LeicaDMR
+2024-09-04T10:48:32.612115 tid70052 [IFO,App]    Leica DM microscope, LeicaDMR (DM RXA, DM RME, RD RBE, DM RXA, DM RA, DM IRBE) Controller
+2024-09-04T10:48:32.612117 tid70052 [IFO,App]    Reflected Light Module, Reflected Light LModule
+2024-09-04T10:48:32.612118 tid70052 [IFO,App]    Halogen Lamp, Halogen Lamp
+2024-09-04T10:48:32.612119 tid70052 [IFO,App]    Shutter, Reflected Light Shutter
+2024-09-04T10:48:32.612119 tid70052 [IFO,App]    Z Drive, Z Drive
+2024-09-04T10:48:32.612120 tid70052 [IFO,App]    Objective Nosepiece, Objective Nosepiece
+2024-09-04T10:48:32.612121 tid70052 [IFO,App]    Aperture Diaphragm, Aperture Diaphragm
+2024-09-04T10:48:32.612121 tid70052 [IFO,App]    Field Diaphragm, Field Diaphragm
+2024-09-04T10:48:32.612122 tid70052 [IFO,App] LeicaDMSTC
+2024-09-04T10:48:32.612558 tid70052 [IFO,App]    Leica DMSTC stage hub, LeicaDMSTC Controller
+2024-09-04T10:48:32.612560 tid70052 [IFO,App]    Leica DMSTC XY stage, XY Drive
+2024-09-04T10:48:32.612561 tid70052 [IFO,App] LightSheetManager
+2024-09-04T10:48:32.613016 tid70052 [IFO,App]    LightSheetDeviceManager, Maps logical devices to physical devices for the LightSheetManager plugin.
+2024-09-04T10:48:32.613018 tid70052 [IFO,App] Ludl
+2024-09-04T10:48:32.613469 tid70052 [IFO,App]    LudlController, Ludl Controller
+2024-09-04T10:48:32.613471 tid70052 [IFO,App]    LudlShutter, Ludl Shutter
+2024-09-04T10:48:32.613471 tid70052 [IFO,App]    LudlWheel, Ludl Filter Wheel
+2024-09-04T10:48:32.613472 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.613473 tid70052 [IFO,App]    Stage, Single Axis Stage
+2024-09-04T10:48:32.613473 tid70052 [IFO,App] LudlLow
+2024-09-04T10:48:32.613920 tid70052 [IFO,App]    LudlController, Ludl Controller
+2024-09-04T10:48:32.613922 tid70052 [IFO,App]    LudlShutter, Ludl Shutter
+2024-09-04T10:48:32.613923 tid70052 [IFO,App]    LudlWheel, Ludl Filter Wheel
+2024-09-04T10:48:32.613924 tid70052 [IFO,App] Lumencor
+2024-09-04T10:48:32.615694 tid70052 [IFO,App]    LightEngine, Lumencor Light Engine
+2024-09-04T10:48:32.615696 tid70052 [IFO,App] LumencorCIA
+2024-09-04T10:48:32.616240 tid70052 [IFO,App]    CIA, Lumencor Camera Interface Adapter
+2024-09-04T10:48:32.616242 tid70052 [IFO,App] LumencorSpectra
+2024-09-04T10:48:32.616731 tid70052 [IFO,App]    Spectra, Lumencor Spectra Light Engine
+2024-09-04T10:48:32.616733 tid70052 [IFO,App] Lumenera
+2024-09-04T10:48:32.617303 tid70052 [IFO,App] Error: Unable to load Lumenera library: Failed to load device adapter "Lumenera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Lumenera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.617306 tid70052 [IFO,App] MaestroServo
+2024-09-04T10:48:32.617793 tid70052 [IFO,App]    MaestroServo, Pololu MaestroServo controller
+2024-09-04T10:48:32.617795 tid70052 [IFO,App]    MaestroServoAsShutter, Pololu MaestroServo as shutter
+2024-09-04T10:48:32.617796 tid70052 [IFO,App] Marzhauser
+2024-09-04T10:48:32.618285 tid70052 [IFO,App]    XYStage, Tango XY Stage
+2024-09-04T10:48:32.618286 tid70052 [IFO,App]    ZAxis, Tango Z Axis
+2024-09-04T10:48:32.618287 tid70052 [IFO,App]    AAxis, Tango A Axis
+2024-09-04T10:48:32.618287 tid70052 [IFO,App]    TTLShutter, Tango TTL Shutter
+2024-09-04T10:48:32.618288 tid70052 [IFO,App]    LED100-1, Tango LED100-1 [0..100%]
+2024-09-04T10:48:32.618289 tid70052 [IFO,App]    LED100-2, Tango LED100-2 [0..100%]
+2024-09-04T10:48:32.618289 tid70052 [IFO,App]    DAC, Tango DAC [0..10V]
+2024-09-04T10:48:32.618290 tid70052 [IFO,App]    ADC, Tango ADC [0..5V]
+2024-09-04T10:48:32.618291 tid70052 [IFO,App] MarzhauserLStep
+2024-09-04T10:48:32.618731 tid70052 [IFO,App]    XYStage, LStep XY Stage
+2024-09-04T10:48:32.618733 tid70052 [IFO,App]    ZAxis, LStep Z Axis
+2024-09-04T10:48:32.618734 tid70052 [IFO,App] MarzhauserLStepOld
+2024-09-04T10:48:32.619164 tid70052 [IFO,App]    XYStage, LStepOld XY Stage
+2024-09-04T10:48:32.619166 tid70052 [IFO,App] MatrixVision
+2024-09-04T10:48:32.619724 tid70052 [IFO,App] Error: Unable to load MatrixVision library: Failed to load device adapter "MatrixVision" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MatrixVision.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.619728 tid70052 [IFO,App] MCCDAQ
+2024-09-04T10:48:32.620283 tid70052 [IFO,App] Error: Unable to load MCCDAQ library: Failed to load device adapter "MCCDAQ" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MCCDAQ.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.620286 tid70052 [IFO,App] MCL_MicroDrive
+2024-09-04T10:48:32.621042 tid70052 [IFO,App]    MicroDrive XY Stage, XY positioning
+2024-09-04T10:48:32.621044 tid70052 [IFO,App]    MicroDrive Z Stage, Z positioning
+2024-09-04T10:48:32.621045 tid70052 [IFO,App]    Mad-Tweezer, Rotational Axis
+2024-09-04T10:48:32.621046 tid70052 [IFO,App] MCL_NanoDrive
+2024-09-04T10:48:32.621793 tid70052 [IFO,App]    MCL NanoDrive Z Stage, Z positioning
+2024-09-04T10:48:32.621795 tid70052 [IFO,App]    MCL NanoDrive XY Stage, XY positioning
+2024-09-04T10:48:32.621796 tid70052 [IFO,App] MeadowlarkLC
+2024-09-04T10:48:32.622357 tid70052 [IFO,App] Error: Unable to load MeadowlarkLC library: Failed to load device adapter "MeadowlarkLC" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MeadowlarkLC.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.622364 tid70052 [IFO,App] MicroFPGA
+2024-09-04T10:48:32.622837 tid70052 [IFO,App]    MicroFPGA-Hub, Hub (required)
+2024-09-04T10:48:32.622839 tid70052 [IFO,App]    Camera Trigger, Camera Trigger
+2024-09-04T10:48:32.622840 tid70052 [IFO,App]    Laser Trigger, Laser Trigger
+2024-09-04T10:48:32.622840 tid70052 [IFO,App]    Analog Input, Analog Input
+2024-09-04T10:48:32.622841 tid70052 [IFO,App]    PWM, PWM Output
+2024-09-04T10:48:32.622841 tid70052 [IFO,App]    TTL, TTL Output
+2024-09-04T10:48:32.622842 tid70052 [IFO,App]    Servos, Servos
+2024-09-04T10:48:32.622843 tid70052 [IFO,App] Micropix
+2024-09-04T10:48:32.623381 tid70052 [IFO,App] Error: Unable to load Micropix library: Failed to load device adapter "Micropix" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Micropix.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.623384 tid70052 [IFO,App] MicroPoint
+2024-09-04T10:48:32.623846 tid70052 [IFO,App]    MicroPoint, MicroPoint
+2024-09-04T10:48:32.623849 tid70052 [IFO,App] Mightex
+2024-09-04T10:48:32.624359 tid70052 [IFO,App]    Mightex_SLC(USB), Mightex Sirius SLC LED Driver(USB)
+2024-09-04T10:48:32.624362 tid70052 [IFO,App] MightexPolygon
+2024-09-04T10:48:32.624983 tid70052 [IFO,App] Error: Unable to load MightexPolygon library: Failed to load device adapter "MightexPolygon" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MightexPolygon.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.624986 tid70052 [IFO,App] Mightex_BLS
+2024-09-04T10:48:32.625507 tid70052 [IFO,App]    Mightex_SLC(USB), Mightex Sirius SLC LED Driver(USB)
+2024-09-04T10:48:32.625509 tid70052 [IFO,App]    Mightex_BLS(USB), Mightex Sirius BLS Control Module(USB)
+2024-09-04T10:48:32.625510 tid70052 [IFO,App] Mightex_C_Cam
+2024-09-04T10:48:32.625976 tid70052 [IFO,App]    Mightex_BUF_USBCCDCamera, Mightex Buffer USB CCD Camera
+2024-09-04T10:48:32.625978 tid70052 [IFO,App] Modbus
+2024-09-04T10:48:32.627091 tid70052 [IFO,App]    Modbus, Modbus
+2024-09-04T10:48:32.627093 tid70052 [IFO,App] Mosaic3
+2024-09-04T10:48:32.627575 tid70052 [IFO,App]    Mosaic3, Andor Mosaic3 DMD Device
+2024-09-04T10:48:32.627577 tid70052 [IFO,App] MoticCamera
+2024-09-04T10:48:32.628107 tid70052 [IFO,App] Error: Unable to load MoticCamera library: Failed to load device adapter "MoticCamera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MoticCamera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.628110 tid70052 [IFO,App] MoticMicroscope
+2024-09-04T10:48:32.628638 tid70052 [IFO,App] Error: Unable to load MoticMicroscope library: Failed to load device adapter "MoticMicroscope" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_MoticMicroscope.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.628641 tid70052 [IFO,App] MP285
+2024-09-04T10:48:32.629121 tid70052 [IFO,App]    MP285 Controller, MP285 Controller
+2024-09-04T10:48:32.629123 tid70052 [IFO,App]    MP285 XY Stage, MP285 XY Stage
+2024-09-04T10:48:32.629123 tid70052 [IFO,App]    MP285 Z Stage, MP285 Z Stage
+2024-09-04T10:48:32.629124 tid70052 [IFO,App] MPBLaser
+2024-09-04T10:48:32.629572 tid70052 [IFO,App]    MPBLaser, Lasers from MPB Communications Inc.
+2024-09-04T10:48:32.629575 tid70052 [IFO,App] MT20
+2024-09-04T10:48:32.630070 tid70052 [IFO,App]    MT20-HUB, Olympus MT20 hub device
+2024-09-04T10:48:32.630072 tid70052 [IFO,App]    MT20-Burner, Olympus MT20 burner
+2024-09-04T10:48:32.630072 tid70052 [IFO,App]    MT20-Shutter, Olympus MT20 shutter
+2024-09-04T10:48:32.630073 tid70052 [IFO,App]    MT20-Filterwheel, Olympus MT20 filterwheel
+2024-09-04T10:48:32.630074 tid70052 [IFO,App]    MT20-Attenuator, Olympus MT20 attenuator
+2024-09-04T10:48:32.630075 tid70052 [IFO,App] Neos
+2024-09-04T10:48:32.630508 tid70052 [IFO,App]    Neos, Neos controller with USB
+2024-09-04T10:48:32.630510 tid70052 [IFO,App] NewportCONEX
+2024-09-04T10:48:32.630967 tid70052 [IFO,App]    XAxis, Conex_Axis X Axis
+2024-09-04T10:48:32.630969 tid70052 [IFO,App]    YAxis, Conex_Axis Y Axis
+2024-09-04T10:48:32.630970 tid70052 [IFO,App]    ZAxis, Conex_Axis Z Axis
+2024-09-04T10:48:32.630971 tid70052 [IFO,App] NewportSMC
+2024-09-04T10:48:32.631393 tid70052 [IFO,App]    NewportZStage, Newport SMC100CC controller
+2024-09-04T10:48:32.631396 tid70052 [IFO,App] NI100X
+2024-09-04T10:48:32.631912 tid70052 [IFO,App] Error: Unable to load NI100X library: Failed to load device adapter "NI100X" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_NI100X.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.631915 tid70052 [IFO,App] NIDAQ
+2024-09-04T10:48:32.632430 tid70052 [IFO,App] Error: Unable to load NIDAQ library: Failed to load device adapter "NIDAQ" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_NIDAQ.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.632433 tid70052 [IFO,App] Nikon
+2024-09-04T10:48:32.632887 tid70052 [IFO,App]    ZStage, Remote accessory Z-stage
+2024-09-04T10:48:32.632889 tid70052 [IFO,App]    TIRFShutter, TIRF Laser Shutter controller T-LUSU(2)
+2024-09-04T10:48:32.632890 tid70052 [IFO,App]    TiTIRFShutter, Ti-TIRF Laser Shutter controller T-LUSU(2)
+2024-09-04T10:48:32.632890 tid70052 [IFO,App]    IntensiLightShutter, IntensiLight Shutter
+2024-09-04T10:48:32.632891 tid70052 [IFO,App] NikonAZ100
+2024-09-04T10:48:32.633335 tid70052 [IFO,App]    AZ100, AZ100 controller - required for all other devices
+2024-09-04T10:48:32.633337 tid70052 [IFO,App]    Nosepiece, Nosepiece (objective turret)
+2024-09-04T10:48:32.633337 tid70052 [IFO,App]    Focus, Z-stage
+2024-09-04T10:48:32.633338 tid70052 [IFO,App]    Zoom, Zoom
+2024-09-04T10:48:32.633339 tid70052 [IFO,App] NikonEclipse90i
+2024-09-04T10:48:32.633794 tid70052 [IFO,App]    Eclipse90i, Eclipse90i controller - required for all other devices
+2024-09-04T10:48:32.633796 tid70052 [IFO,App]    Nosepiece, Nosepiece (objective turret)
+2024-09-04T10:48:32.633796 tid70052 [IFO,App]    Focus, Z-stage control
+2024-09-04T10:48:32.633797 tid70052 [IFO,App]    OpticalPath, Optical path switch - camera, eyepiece, etc.
+2024-09-04T10:48:32.633798 tid70052 [IFO,App]    Analyzer, Analyzer control
+2024-09-04T10:48:32.633798 tid70052 [IFO,App]    Transmitted Light, Transmitted Light control
+2024-09-04T10:48:32.633799 tid70052 [IFO,App]    Zoom, Zoom
+2024-09-04T10:48:32.633799 tid70052 [IFO,App]    DIA Field Stop, Transmitted Light Field Stop
+2024-09-04T10:48:32.633800 tid70052 [IFO,App]    EPI Field Stop, Epi-fluorescence Field Stop
+2024-09-04T10:48:32.633801 tid70052 [IFO,App]    FilterBlock, Filter changer
+2024-09-04T10:48:32.633801 tid70052 [IFO,App]    Epi-Shutter, Epi-fluorescence shutter
+2024-09-04T10:48:32.633802 tid70052 [IFO,App] NikonTE2000
+2024-09-04T10:48:32.634293 tid70052 [IFO,App]    TE2000, TE2000 controller - required for all other devices
+2024-09-04T10:48:32.634295 tid70052 [IFO,App]    Nosepiece, Nosepiece (objective turret)
+2024-09-04T10:48:32.634296 tid70052 [IFO,App]    Focus, Z-stage
+2024-09-04T10:48:32.634296 tid70052 [IFO,App]    OpticalPath, Optical path switch - camera, eyepiece, etc.
+2024-09-04T10:48:32.634297 tid70052 [IFO,App]    Analyzer, Analyzer control
+2024-09-04T10:48:32.634298 tid70052 [IFO,App]    FilterBlock, Filter changer
+2024-09-04T10:48:32.634298 tid70052 [IFO,App]    Lamp, Halogen lamp
+2024-09-04T10:48:32.634299 tid70052 [IFO,App]    Epi-Shutter, Epi-fluorescence shutter
+2024-09-04T10:48:32.634299 tid70052 [IFO,App]    Uniblitz-Shutter, Uniblitz shutter
+2024-09-04T10:48:32.634300 tid70052 [IFO,App]    PerfectFocus, PFS autofocus device
+2024-09-04T10:48:32.634300 tid70052 [IFO,App]    PFS-Offset, PFS Offset Lens
+2024-09-04T10:48:32.634301 tid70052 [IFO,App]    Excitation Filter wheel, Nikon excitation side filter changer
+2024-09-04T10:48:32.634302 tid70052 [IFO,App] NikonTI
+2024-09-04T10:48:32.634923 tid70052 [IFO,App]    TIScope, Nikon Ti Microscope
+2024-09-04T10:48:32.634924 tid70052 [IFO,App]    TIAnalyzer, Analyzer
+2024-09-04T10:48:32.634925 tid70052 [IFO,App]    TIEpiShutter, Epi Shutter
+2024-09-04T10:48:32.634926 tid70052 [IFO,App]    TIDiaShutter, Dia Shutter
+2024-09-04T10:48:32.634926 tid70052 [IFO,App]    TIAuxShutter, Aux Shutter
+2024-09-04T10:48:32.634927 tid70052 [IFO,App]    TIDiaLamp, Dia Lamp
+2024-09-04T10:48:32.634927 tid70052 [IFO,App]    TINosePiece, Objective Turret
+2024-09-04T10:48:32.634928 tid70052 [IFO,App]    TICondenserCassette, Condenser Cassette
+2024-09-04T10:48:32.634928 tid70052 [IFO,App]    TIBarrierFilterWheel, Barrier Filter Wheel
+2024-09-04T10:48:32.634929 tid70052 [IFO,App]    TIExcitationFilterWheel, Excitation Filter Wheel
+2024-09-04T10:48:32.634930 tid70052 [IFO,App]    TIFilterBlock1, Filter Block Cassette 1
+2024-09-04T10:48:32.634930 tid70052 [IFO,App]    TIFilterBlock2, Filter Block Cassette 2
+2024-09-04T10:48:32.634931 tid70052 [IFO,App]    TILightPath, Light Path Drive
+2024-09-04T10:48:32.634931 tid70052 [IFO,App]    TIZDrive, Z-Stage
+2024-09-04T10:48:32.634932 tid70052 [IFO,App]    TIXYDrive, XY-Stage
+2024-09-04T10:48:32.634933 tid70052 [IFO,App]    TIPFSOffset, PFS Offset
+2024-09-04T10:48:32.634933 tid70052 [IFO,App]    TIPFSStatus, PFS Status
+2024-09-04T10:48:32.634933 tid70052 [IFO,App]    TITIRF, TIRF
+2024-09-04T10:48:32.634934 tid70052 [IFO,App] NikonTi2
+2024-09-04T10:48:32.635480 tid70052 [IFO,App] Error: Unable to load NikonTi2 library: Failed to load device adapter "NikonTi2" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_NikonTi2.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.635483 tid70052 [IFO,App] NIMultiAnalog
+2024-09-04T10:48:32.635985 tid70052 [IFO,App] Error: Unable to load NIMultiAnalog library: Failed to load device adapter "NIMultiAnalog" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_NIMultiAnalog.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.635988 tid70052 [IFO,App] NKTSuperK
+2024-09-04T10:48:32.636518 tid70052 [IFO,App] Error: Unable to load NKTSuperK library: Failed to load device adapter "NKTSuperK" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_NKTSuperK.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.636521 tid70052 [IFO,App] NNLC
+2024-09-04T10:48:32.637022 tid70052 [IFO,App]    LC-Shutter, Shutter
+2024-09-04T10:48:32.637024 tid70052 [IFO,App]    LC-DAC, DA
+2024-09-04T10:48:32.637024 tid70052 [IFO,App]    LC-Setup, Setup
+2024-09-04T10:48:32.637025 tid70052 [IFO,App] NotificationTester
+2024-09-04T10:48:32.637466 tid70052 [IFO,App]    NTSyncProperty, Test synchronous property notifications
+2024-09-04T10:48:32.637468 tid70052 [IFO,App]    NTAsyncProperty, Test asynchronous property busy state and notifications
+2024-09-04T10:48:32.637469 tid70052 [IFO,App]    NTSyncStage, Test synchronous stage position notifications
+2024-09-04T10:48:32.637470 tid70052 [IFO,App]    NTAsyncStage, Test asynchronous stage busy state and position notifications
+2024-09-04T10:48:32.637471 tid70052 [IFO,App]    NTSyncXYStage, Test synchronous XY stage position notifications
+2024-09-04T10:48:32.637471 tid70052 [IFO,App]    NTAsyncXYStage, Test asynchronous XY stage busy state and position notifications
+2024-09-04T10:48:32.637472 tid70052 [IFO,App] NPointC400
+2024-09-04T10:48:32.637935 tid70052 [IFO,App]    nPoint C400 Controller, nPoint C400 Controller
+2024-09-04T10:48:32.637936 tid70052 [IFO,App]    Stage 1, Stage 1
+2024-09-04T10:48:32.637937 tid70052 [IFO,App]    Stage 2, Stage 2
+2024-09-04T10:48:32.637937 tid70052 [IFO,App]    Stage 3, Stage 3
+2024-09-04T10:48:32.637938 tid70052 [IFO,App]    Stage 4, Stage 4
+2024-09-04T10:48:32.637938 tid70052 [IFO,App]    Stage 5, Stage 5
+2024-09-04T10:48:32.637939 tid70052 [IFO,App]    Stage 6, Stage 6
+2024-09-04T10:48:32.637940 tid70052 [IFO,App] ObjectiveImaging
+2024-09-04T10:48:32.638496 tid70052 [IFO,App] Error: Unable to load ObjectiveImaging library: Failed to load device adapter "ObjectiveImaging" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ObjectiveImaging.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.638500 tid70052 [IFO,App] Okolab
+2024-09-04T10:48:32.639977 tid70052 [IFO,App]    OkoLab, Okolab Device Adapter
+2024-09-04T10:48:32.639979 tid70052 [IFO,App] Olympus
+2024-09-04T10:48:32.640529 tid70052 [IFO,App]    OlympusHub, Olympus Hub - required for all other devices
+2024-09-04T10:48:32.640531 tid70052 [IFO,App]    Objective, Objective turret
+2024-09-04T10:48:32.640532 tid70052 [IFO,App]    LightPath, Light path prism (eye/camera)
+2024-09-04T10:48:32.640532 tid70052 [IFO,App]    FilterCube, Fluorescence filter cube turret
+2024-09-04T10:48:32.640533 tid70052 [IFO,App]    Condenser, Transmitted light condenser turret
+2024-09-04T10:48:32.640534 tid70052 [IFO,App]    FilterWheel, Fluorescence filter wheel for IX/ First wheel for BX
+2024-09-04T10:48:32.640535 tid70052 [IFO,App]    FilterWheel2BX, Second filter wheel for BX
+2024-09-04T10:48:32.640535 tid70052 [IFO,App]    FilterWheel3BX, Third filter wheel for BX
+2024-09-04T10:48:32.640536 tid70052 [IFO,App]    Shutter1, Shutter number 1
+2024-09-04T10:48:32.640536 tid70052 [IFO,App]    Shutter2, Shutter number 2
+2024-09-04T10:48:32.640537 tid70052 [IFO,App]    ShutterBX, Shutter For BX2
+2024-09-04T10:48:32.640537 tid70052 [IFO,App]    BottomPort, Bottom port open/close
+2024-09-04T10:48:32.640538 tid70052 [IFO,App]    TransmittedLamp, Transmitted light lamp (voltage/on/off)
+2024-09-04T10:48:32.640539 tid70052 [IFO,App]    FluorescenceLamp, Epifluorescence lamp (voltage/on/off)
+2024-09-04T10:48:32.640539 tid70052 [IFO,App]    ManualFocus, Z-drive (jog wheel)
+2024-09-04T10:48:32.640540 tid70052 [IFO,App]    CondenserApertureStop, Condenser Aperture Stop
+2024-09-04T10:48:32.640540 tid70052 [IFO,App]    AutoFocusZDC, ZDC (Auto Focus)
+2024-09-04T10:48:32.640541 tid70052 [IFO,App]    ZDC2OffsetDrive, ZDC2 Offset Drive
+2024-09-04T10:48:32.640544 tid70052 [IFO,App] OlympusIX83
+2024-09-04T10:48:32.641241 tid70052 [IFO,App]    Olympus IX83, Olympus IX83 Microscope
+2024-09-04T10:48:32.641250 tid70052 [IFO,App]    Objective, Objective turret (nosepiece)
+2024-09-04T10:48:32.641251 tid70052 [IFO,App]    Dichroic 1, Mirror unit deck 1
+2024-09-04T10:48:32.641251 tid70052 [IFO,App]    Dichroic 2, Mirror unit deck 2
+2024-09-04T10:48:32.641252 tid70052 [IFO,App]    Condenser turret, Rotating condenser turret
+2024-09-04T10:48:32.641252 tid70052 [IFO,App]    Polarizer, Polarizer in/out device
+2024-09-04T10:48:32.641255 tid70052 [IFO,App]    Transmitted ND Wheel, Neutral density filter wheel for transmitted path.
+2024-09-04T10:48:32.641255 tid70052 [IFO,App]    Reflected ND Wheel, Neutral density filter wheel for reflected path.
+2024-09-04T10:48:32.641256 tid70052 [IFO,App]    Light Path, Switches light between camera and eyepiece.
+2024-09-04T10:48:32.641257 tid70052 [IFO,App]    Filter Wheel 1, A filter wheel
+2024-09-04T10:48:32.641258 tid70052 [IFO,App]    Filter Wheel 2, A filter wheel
+2024-09-04T10:48:32.641258 tid70052 [IFO,App]    Filter Wheel 3, A filter wheel
+2024-09-04T10:48:32.641259 tid70052 [IFO,App]    Filter Wheel 4, A filter wheel
+2024-09-04T10:48:32.641259 tid70052 [IFO,App]    Filter Wheel 5, A filter wheel
+2024-09-04T10:48:32.641260 tid70052 [IFO,App]    Filter Wheel 6, A filter wheel
+2024-09-04T10:48:32.641260 tid70052 [IFO,App]    EpiShutter 1, Epi shutter, deck 1
+2024-09-04T10:48:32.641261 tid70052 [IFO,App]    EpiShutter 2, Epi shutter, deck 2
+2024-09-04T10:48:32.641261 tid70052 [IFO,App]    DiaShutter, Dia shutter
+2024-09-04T10:48:32.641262 tid70052 [IFO,App]    FastShutter 1, Fast shutter 1
+2024-09-04T10:48:32.641263 tid70052 [IFO,App]    FastShutter 2, Fast shutter 2
+2024-09-04T10:48:32.641263 tid70052 [IFO,App]    FastShutter 3, Fast shutter 3
+2024-09-04T10:48:32.641264 tid70052 [IFO,App]    FastShutter 4, Fast shutter 4
+2024-09-04T10:48:32.641264 tid70052 [IFO,App]    TransmittedIllumination 1, DIA High Intensity White LED 1
+2024-09-04T10:48:32.641265 tid70052 [IFO,App]    TransmittedIllumination 2, DIA High Intensity White LED 2
+2024-09-04T10:48:32.641265 tid70052 [IFO,App]    Transmitted Aperture, Transmitted Aperture control
+2024-09-04T10:48:32.641266 tid70052 [IFO,App]    FocusDrive, Olympus IX83 Z drive
+2024-09-04T10:48:32.641267 tid70052 [IFO,App]    XYStage, Olympus IX83 XY stage
+2024-09-04T10:48:32.641267 tid70052 [IFO,App]    Autofocus, Olympus IX83 ZDC
+2024-09-04T10:48:32.641268 tid70052 [IFO,App]    AutofocusDrive, Olympus IX83 ZDC offset drive
+2024-09-04T10:48:32.641269 tid70052 [IFO,App] Omicron
+2024-09-04T10:48:32.649163 tid70052 [IFO,App]    Omicron, Omicron Laser Controller
+2024-09-04T10:48:32.649164 tid70052 [IFO,App]    Omicron USB, Omicron Device
+2024-09-04T10:48:32.649165 tid70052 [IFO,App]    OBIS, CoherentObis without Remote
+2024-09-04T10:48:32.649167 tid70052 [IFO,App] OpenCVgrabber
+2024-09-04T10:48:32.650030 tid70052 [IFO,App]    OpenCVgrabber, OpenCVgrabber video input
+2024-09-04T10:48:32.650033 tid70052 [IFO,App] OpenFlexure
+2024-09-04T10:48:32.650501 tid70052 [IFO,App]    XY Stage, XY Stage
+2024-09-04T10:48:32.650503 tid70052 [IFO,App]    SangaboardHub, Sangaboard Hub
+2024-09-04T10:48:32.650503 tid70052 [IFO,App]    Z Stage, Z Stage
+2024-09-04T10:48:32.650504 tid70052 [IFO,App]    LED illumination, LED Illumination
+2024-09-04T10:48:32.650505 tid70052 [IFO,App] OVP_ECS2
+2024-09-04T10:48:32.651007 tid70052 [IFO,App]    ECS-2, OVP ECS-2
+2024-09-04T10:48:32.651009 tid70052 [IFO,App] Oxxius
+2024-09-04T10:48:32.651467 tid70052 [IFO,App]    Oxxius LaserBoxx LBX or LMX or LCX, LaserBoxx laser source
+2024-09-04T10:48:32.651470 tid70052 [IFO,App] OxxiusCombiner
+2024-09-04T10:48:32.651953 tid70052 [IFO,App]    Combiner, Oxxius laser combiner controlled through serial interface
+2024-09-04T10:48:32.651956 tid70052 [IFO,App]    LCX laser source 1, LCX Laser on slot 1
+2024-09-04T10:48:32.651957 tid70052 [IFO,App]    LCX laser source 2, LCX Laser on slot 2
+2024-09-04T10:48:32.651959 tid70052 [IFO,App]    LCX laser source 3, LCX Laser on slot 3
+2024-09-04T10:48:32.651960 tid70052 [IFO,App]    LCX laser source 4, LCX Laser on slot 4
+2024-09-04T10:48:32.651961 tid70052 [IFO,App]    LCX laser source 5, LCX Laser on slot 5
+2024-09-04T10:48:32.651963 tid70052 [IFO,App]    LCX laser source 6, LCX Laser on slot 6
+2024-09-04T10:48:32.651964 tid70052 [IFO,App]    LBX laser source 1, LBX Laser on slot 1
+2024-09-04T10:48:32.651965 tid70052 [IFO,App]    LBX laser source 2, LBX Laser on slot 2
+2024-09-04T10:48:32.651971 tid70052 [IFO,App]    LBX laser source 3, LBX Laser on slot 3
+2024-09-04T10:48:32.651972 tid70052 [IFO,App]    LBX laser source 4, LBX Laser on slot 4
+2024-09-04T10:48:32.651973 tid70052 [IFO,App]    LBX laser source 5, LBX Laser on slot 5
+2024-09-04T10:48:32.651975 tid70052 [IFO,App]    LBX laser source 6, LBX Laser on slot 6
+2024-09-04T10:48:32.651976 tid70052 [IFO,App]    Obis laser source 1, Obis Laser on slot 1
+2024-09-04T10:48:32.651977 tid70052 [IFO,App]    Obis laser source 2, Obis Laser on slot 2
+2024-09-04T10:48:32.651979 tid70052 [IFO,App]    Obis laser source 3, Obis Laser on slot 3
+2024-09-04T10:48:32.651980 tid70052 [IFO,App]    Obis laser source 4, Obis Laser on slot 4
+2024-09-04T10:48:32.651982 tid70052 [IFO,App]    Obis laser source 5, Obis Laser on slot 5
+2024-09-04T10:48:32.651984 tid70052 [IFO,App]    Obis laser source 6, Obis Laser on slot 6
+2024-09-04T10:48:32.651984 tid70052 [IFO,App]    Shutter 1, E-m shutter on channel 1
+2024-09-04T10:48:32.651985 tid70052 [IFO,App]    Shutter 2, E-m shutter on channel 2
+2024-09-04T10:48:32.651985 tid70052 [IFO,App]    MDual A, M-Dual on channel A
+2024-09-04T10:48:32.651986 tid70052 [IFO,App]    MDual B, M-Dual on channel B
+2024-09-04T10:48:32.651987 tid70052 [IFO,App]    MDual C, M-Dual on channel C
+2024-09-04T10:48:32.651987 tid70052 [IFO,App]    Flip-Mirror 1, Flip-Mirror on slot 1
+2024-09-04T10:48:32.651988 tid70052 [IFO,App]    Flip-Mirror 2, Flip-Mirror on slot 2
+2024-09-04T10:48:32.651989 tid70052 [IFO,App] ParallelPort
+2024-09-04T10:48:32.652463 tid70052 [IFO,App]    LPT1, Printer port TTL digital output
+2024-09-04T10:48:32.652466 tid70052 [IFO,App]    LPT-Shutter, Printer port TTLs used as shutters
+2024-09-04T10:48:32.652467 tid70052 [IFO,App] PCO_Camera
+2024-09-04T10:48:32.654878 tid70052 [IFO,App]    pco_camera, pco.sdk camera adapter
+2024-09-04T10:48:32.654880 tid70052 [IFO,App] pE300
+2024-09-04T10:48:32.655359 tid70052 [IFO,App]    pE300, pE300 LED illuminator
+2024-09-04T10:48:32.655361 tid70052 [IFO,App] pE4000
+2024-09-04T10:48:32.655806 tid70052 [IFO,App]    pE4000, pE4000 LED illuminator
+2024-09-04T10:48:32.655808 tid70052 [IFO,App] Pecon
+2024-09-04T10:48:32.656241 tid70052 [IFO,App]    TempControl, Temperature controller 37-2 digital
+2024-09-04T10:48:32.656243 tid70052 [IFO,App]    CTIController3700, CTI controller 3700 digital
+2024-09-04T10:48:32.656244 tid70052 [IFO,App]    CO2Controller, CO2 controller
+2024-09-04T10:48:32.656245 tid70052 [IFO,App] PeCon2000
+2024-09-04T10:48:32.658020 tid70052 [IFO,App]    PeCon2000, PeCon2000
+2024-09-04T10:48:32.658022 tid70052 [IFO,App]    PeCon2000-Hub, PeCon2000-Hub
+2024-09-04T10:48:32.658023 tid70052 [IFO,App] pgFocus
+2024-09-04T10:48:32.658504 tid70052 [IFO,App]    pgFocus, Hub (required)
+2024-09-04T10:48:32.658507 tid70052 [IFO,App]    pgFocus-Stabilization, Focus Stabilization
+2024-09-04T10:48:32.658508 tid70052 [IFO,App] PI
+2024-09-04T10:48:32.658960 tid70052 [IFO,App]    PIZStage, PI E-662 Z-stage
+2024-09-04T10:48:32.658962 tid70052 [IFO,App] PICAM
+2024-09-04T10:48:32.659549 tid70052 [IFO,App] Error: Unable to load PICAM library: Failed to load device adapter "PICAM" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_PICAM.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.659552 tid70052 [IFO,App] PicardStage
+2024-09-04T10:48:32.661022 tid70052 [IFO,App]    Picard Twister, Twister
+2024-09-04T10:48:32.661024 tid70052 [IFO,App]    Picard Z Stage, Z stage
+2024-09-04T10:48:32.661025 tid70052 [IFO,App]    Picard XY Stage, XY stage
+2024-09-04T10:48:32.661026 tid70052 [IFO,App] PIEZOCONCEPT
+2024-09-04T10:48:32.661497 tid70052 [IFO,App]    PIEZOCONCEPT-Controller, PIEZOCONCEPT Controller
+2024-09-04T10:48:32.661498 tid70052 [IFO,App]    ZStage, Z Stage
+2024-09-04T10:48:32.661499 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.661500 tid70052 [IFO,App] Piezosystem_30DV50
+2024-09-04T10:48:32.661953 tid70052 [IFO,App]    PSJStage, Single Axis Stage
+2024-09-04T10:48:32.661955 tid70052 [IFO,App]    PSJShutter, PSJ Shutter
+2024-09-04T10:48:32.661956 tid70052 [IFO,App] Piezosystem_dDrive
+2024-09-04T10:48:32.662419 tid70052 [IFO,App]    PSJ_dDrive, Piezosystem Jena dDrive
+2024-09-04T10:48:32.662421 tid70052 [IFO,App]    PSJ_Stage1, Single Axis Stage Ch1
+2024-09-04T10:48:32.662422 tid70052 [IFO,App]    PSJ_Stage2, Single Axis Stage Ch2
+2024-09-04T10:48:32.662422 tid70052 [IFO,App]    PSJ_Stage3, Single Axis Stage Ch3
+2024-09-04T10:48:32.662423 tid70052 [IFO,App]    PSJ_Stage4, Single Axis Stage Ch4
+2024-09-04T10:48:32.662423 tid70052 [IFO,App]    PSJ_Stage5, Single Axis Stage Ch5
+2024-09-04T10:48:32.662424 tid70052 [IFO,App]    PSJ_Stage6, Single Axis Stage Ch6
+2024-09-04T10:48:32.662424 tid70052 [IFO,App]    PSJ_XYStage1, Two Axis XY Stage1
+2024-09-04T10:48:32.662425 tid70052 [IFO,App]    PSJ_XYStage2, Two Axis XY Stage2
+2024-09-04T10:48:32.662425 tid70052 [IFO,App]    PSJ_XYStage3, Two Axis XY Stage3
+2024-09-04T10:48:32.662426 tid70052 [IFO,App]    PSJ_Shutter1, PSJ Shutter
+2024-09-04T10:48:32.662426 tid70052 [IFO,App]    PSJ_Shutter2, PSJ Shutter
+2024-09-04T10:48:32.662427 tid70052 [IFO,App]    PSJ_Shutter3, PSJ Shutter
+2024-09-04T10:48:32.662427 tid70052 [IFO,App]    PSJ_Shutter4, PSJ Shutter
+2024-09-04T10:48:32.662428 tid70052 [IFO,App]    PSJ_Shutter5, PSJ Shutter
+2024-09-04T10:48:32.662428 tid70052 [IFO,App]    PSJ_Shutter6, PSJ Shutter
+2024-09-04T10:48:32.662429 tid70052 [IFO,App]    PSJ_Tritor1, PSJ Tritor
+2024-09-04T10:48:32.662429 tid70052 [IFO,App]    PSJ_Tritor2, PSJ Tritor
+2024-09-04T10:48:32.662430 tid70052 [IFO,App] Piezosystem_NV120_1
+2024-09-04T10:48:32.662874 tid70052 [IFO,App]    PSJ_Stage, Single Axis Stage Ch1
+2024-09-04T10:48:32.662876 tid70052 [IFO,App] Piezosystem_NV40_1
+2024-09-04T10:48:32.663329 tid70052 [IFO,App]    PSJ_Stage, Single Axis Stage Ch1
+2024-09-04T10:48:32.663331 tid70052 [IFO,App] Piezosystem_NV40_3
+2024-09-04T10:48:32.663767 tid70052 [IFO,App]    PSJ_NV40/3, Piezosystem Jena NV40 Multi
+2024-09-04T10:48:32.663769 tid70052 [IFO,App]    PSJ_Stage1, Single Axis Stage Ch1
+2024-09-04T10:48:32.663770 tid70052 [IFO,App]    PSJ_Stage2, Single Axis Stage Ch2
+2024-09-04T10:48:32.663770 tid70052 [IFO,App]    PSJ_Stage3, Single Axis Stage Ch3
+2024-09-04T10:48:32.663771 tid70052 [IFO,App]    PSJ_XYStage, Two Axis XY Stage
+2024-09-04T10:48:32.663772 tid70052 [IFO,App] Piper
+2024-09-04T10:48:32.664350 tid70052 [IFO,App] Error: Unable to load Piper library: Failed to load device adapter "Piper" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Piper.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.664353 tid70052 [IFO,App] Pixelink
+2024-09-04T10:48:32.664968 tid70052 [IFO,App] Error: Unable to load Pixelink library: Failed to load device adapter "Pixelink" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Pixelink.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.664971 tid70052 [IFO,App] PI_GCS
+2024-09-04T10:48:32.665459 tid70052 [IFO,App]    PIZStage, PI GCS Z-stage
+2024-09-04T10:48:32.665461 tid70052 [IFO,App] PI_GCS_2
+2024-09-04T10:48:32.665966 tid70052 [IFO,App]    PIZStage, PI GCS Z-stage
+2024-09-04T10:48:32.665968 tid70052 [IFO,App]    PIXYStage, PI GCS XY-stage
+2024-09-04T10:48:32.665969 tid70052 [IFO,App]    PI_GCSController_DLL, PI GCS DLL Controller
+2024-09-04T10:48:32.665970 tid70052 [IFO,App]    PI_GCSController, PI GCS Controller
+2024-09-04T10:48:32.665971 tid70052 [IFO,App]    C-663.11, PI C-663.11 Controller
+2024-09-04T10:48:32.665971 tid70052 [IFO,App]    C-843, PI C-843 Controller
+2024-09-04T10:48:32.665972 tid70052 [IFO,App]    C-863.11, PI C-863.11 Controller
+2024-09-04T10:48:32.665972 tid70052 [IFO,App]    C-867, PI C-867 Controller
+2024-09-04T10:48:32.665973 tid70052 [IFO,App]    C-884, PI C-884 Controller
+2024-09-04T10:48:32.665974 tid70052 [IFO,App]    E-517/E-545, PI E-517/E-545 Controller
+2024-09-04T10:48:32.665975 tid70052 [IFO,App]    E-709, PI E-709 Controller
+2024-09-04T10:48:32.665975 tid70052 [IFO,App]    E-710, PI E-710 Controller
+2024-09-04T10:48:32.665976 tid70052 [IFO,App]    E-712, PI E-712 Controller
+2024-09-04T10:48:32.665976 tid70052 [IFO,App]    E-753, PI E-753 Controller
+2024-09-04T10:48:32.665977 tid70052 [IFO,App] PlayerOne
+2024-09-04T10:48:32.666582 tid70052 [IFO,App] Error: Unable to load PlayerOne library: Failed to load device adapter "PlayerOne" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_PlayerOne.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.666586 tid70052 [IFO,App] PointGrey
+2024-09-04T10:48:32.667213 tid70052 [IFO,App] Error: Unable to load PointGrey library: Failed to load device adapter "PointGrey" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_PointGrey.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.667216 tid70052 [IFO,App] PolychromeV
+2024-09-04T10:48:32.667697 tid70052 [IFO,App]    AgilentPolychrome5000, Agilent Polychrome 5000
+2024-09-04T10:48:32.667700 tid70052 [IFO,App] PrecisExcite
+2024-09-04T10:48:32.668160 tid70052 [IFO,App]    PrecisExcite, PrecisExcite LED illuminator
+2024-09-04T10:48:32.668163 tid70052 [IFO,App] Prior
+2024-09-04T10:48:32.668625 tid70052 [IFO,App]    Shutter-1, Pro Scan shutter 1
+2024-09-04T10:48:32.668627 tid70052 [IFO,App]    Shutter-2, Pro Scan shutter 2
+2024-09-04T10:48:32.668627 tid70052 [IFO,App]    Shutter-3, Pro Scan shutter 3
+2024-09-04T10:48:32.668628 tid70052 [IFO,App]    Lumen, Lumen 200Pro lamp shutter
+2024-09-04T10:48:32.668629 tid70052 [IFO,App]    Wheel-1, Pro Scan filter wheel 1
+2024-09-04T10:48:32.668629 tid70052 [IFO,App]    Wheel-2, Pro Scan filter wheel 2
+2024-09-04T10:48:32.668630 tid70052 [IFO,App]    Wheel-3, Pro Scan filter wheel 3
+2024-09-04T10:48:32.668630 tid70052 [IFO,App]    ZStage, Add-on Z-stage
+2024-09-04T10:48:32.668631 tid70052 [IFO,App]    NanoScanZ, NanoScanZ
+2024-09-04T10:48:32.668631 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.668632 tid70052 [IFO,App]    TTL-0, Pro Scan TTL 0
+2024-09-04T10:48:32.668632 tid70052 [IFO,App]    TTL-1, Pro Scan TTL 1
+2024-09-04T10:48:32.668633 tid70052 [IFO,App]    TTL-2, Pro Scan TTL 2
+2024-09-04T10:48:32.668633 tid70052 [IFO,App]    TTL-3, Pro Scan TTL 3
+2024-09-04T10:48:32.668634 tid70052 [IFO,App] PriorLegacy
+2024-09-04T10:48:32.669083 tid70052 [IFO,App]    ZStage, Legacy Z stage
+2024-09-04T10:48:32.669085 tid70052 [IFO,App]    XYStage, Legacy XY Stage
+2024-09-04T10:48:32.669086 tid70052 [IFO,App] PrizmatixDevice
+2024-09-04T10:48:32.669640 tid70052 [IFO,App]    prizmatix-Hub, Hub (required)
+2024-09-04T10:48:32.669642 tid70052 [IFO,App] PVCAM
+2024-09-04T10:48:32.670195 tid70052 [IFO,App] Error: Unable to load PVCAM library: Failed to load device adapter "PVCAM" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_PVCAM.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.670198 tid70052 [IFO,App] PyDevice
+2024-09-04T10:48:32.671114 tid70052 [IFO,App]    PyHub, Runs a Python script that constructs one or more device objects
+2024-09-04T10:48:32.671116 tid70052 [IFO,App] QCam
+2024-09-04T10:48:32.671663 tid70052 [IFO,App] Error: Unable to load QCam library: Failed to load device adapter "QCam" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_QCam.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.671667 tid70052 [IFO,App] QSI
+2024-09-04T10:48:32.672195 tid70052 [IFO,App] Error: Unable to load QSI library: Failed to load device adapter "QSI" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_QSI.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.672200 tid70052 [IFO,App] RAMPS
+2024-09-04T10:48:32.672686 tid70052 [IFO,App]    RAMPSXYStage, RAMPS XY stage
+2024-09-04T10:48:32.672688 tid70052 [IFO,App]    RAMPSZStage, RAMPS Z stage
+2024-09-04T10:48:32.672689 tid70052 [IFO,App]    RAMPSHub, RAMPS hub
+2024-09-04T10:48:32.672691 tid70052 [IFO,App] Rapp
+2024-09-04T10:48:32.673904 tid70052 [IFO,App]    RappScanner, Rapp UGA-40 Scanner
+2024-09-04T10:48:32.673906 tid70052 [IFO,App] RaptorEPIX
+2024-09-04T10:48:32.674526 tid70052 [IFO,App]    Raptor Falcon Camera, Raptor Falcon Camera
+2024-09-04T10:48:32.674529 tid70052 [IFO,App]    Raptor Falcon III Camera, Raptor Falcon III Camera
+2024-09-04T10:48:32.674530 tid70052 [IFO,App]    Raptor Kite Camera, Raptor Kite Camera
+2024-09-04T10:48:32.674532 tid70052 [IFO,App]    Raptor Osprey Camera, Raptor Osprey Camera
+2024-09-04T10:48:32.674533 tid70052 [IFO,App]    Raptor Osprey RGB Camera, Raptor Osprey RGB Camera
+2024-09-04T10:48:32.674534 tid70052 [IFO,App]    Raptor Owl Camera 320, Raptor Owl Camera 320
+2024-09-04T10:48:32.674536 tid70052 [IFO,App]    Raptor Owl Camera 640, Raptor Owl Camera 640
+2024-09-04T10:48:32.674537 tid70052 [IFO,App]    Raptor Ninox Camera 640, Raptor Ninox Camera 640
+2024-09-04T10:48:32.674543 tid70052 [IFO,App]    Raptor Eagle Camera, Raptor Eagle Camera
+2024-09-04T10:48:32.674544 tid70052 [IFO,App]    Raptor Eagle V 4240 Camera, Raptor Eagle V 4240 Camera
+2024-09-04T10:48:32.674544 tid70052 [IFO,App]    Raptor Eagle V 4210 Camera, Raptor Eagle V 4210 Camera
+2024-09-04T10:48:32.674546 tid70052 [IFO,App]    Raptor Kingfisher 674, Raptor Kingfisher 674
+2024-09-04T10:48:32.674547 tid70052 [IFO,App]    Raptor Kingfisher 694, Raptor Kingfisher 694
+2024-09-04T10:48:32.674548 tid70052 [IFO,App]    Raptor Kingfisher 674 RGB, Raptor Kingfisher 674 RGB
+2024-09-04T10:48:32.674550 tid70052 [IFO,App]    Raptor Kingfisher 694 RGB, Raptor Kingfisher 694 RGB
+2024-09-04T10:48:32.674551 tid70052 [IFO,App] Sapphire
+2024-09-04T10:48:32.675020 tid70052 [IFO,App]    Sapphire, Sapphire Laser
+2024-09-04T10:48:32.675022 tid70052 [IFO,App] Scientifica
+2024-09-04T10:48:32.675473 tid70052 [IFO,App]    ZStage, Z Stage
+2024-09-04T10:48:32.675474 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.675476 tid70052 [IFO,App] ScientificaMotion8
+2024-09-04T10:48:32.675952 tid70052 [IFO,App]    Scientifica-Motion8-Hub, Hub (required)
+2024-09-04T10:48:32.675954 tid70052 [IFO,App]    Scientifica-Motion8-XY_Device_1, XY Stage (Device 1)
+2024-09-04T10:48:32.675956 tid70052 [IFO,App]    Scientifica-Motion8-Z_Device_1, Z Stage (Device 1)
+2024-09-04T10:48:32.675957 tid70052 [IFO,App]    Scientifica-Moiton8-XY_Device_2, XY Stage (Device 2)
+2024-09-04T10:48:32.675959 tid70052 [IFO,App]    Scientifica-Moition8-Z_Device_2, Z Stage (Device 2)
+2024-09-04T10:48:32.675960 tid70052 [IFO,App]    Scientifica-Motion8-Filter_Device_1, Filter Wheel (Device 1)
+2024-09-04T10:48:32.675960 tid70052 [IFO,App]    Scientifica-Motion8-Filter_Device_2, Filter Wheel (Device 2)
+2024-09-04T10:48:32.675961 tid70052 [IFO,App] ScopeLED
+2024-09-04T10:48:32.676423 tid70052 [IFO,App]    ScopeLED-G, ScopeLED Fiber Guide Illuminator
+2024-09-04T10:48:32.676425 tid70052 [IFO,App]    ScopeLED-B, ScopeLED Brightfield Microscope Illuminator
+2024-09-04T10:48:32.676426 tid70052 [IFO,App]    ScopeLED-F, ScopeLED Fluorescence Microscope Illuminator
+2024-09-04T10:48:32.676427 tid70052 [IFO,App] SequenceTester
+2024-09-04T10:48:32.677165 tid70052 [IFO,App]    THub, Fake devices for automated and interactive testing
+2024-09-04T10:48:32.677167 tid70052 [IFO,App] SerialManager
+2024-09-04T10:48:32.677848 tid70052 [IFO,App] SigmaKoki
+2024-09-04T10:48:32.678435 tid70052 [IFO,App] Error: Unable to load SigmaKoki library: Failed to load device adapter "SigmaKoki" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_SigmaKoki.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.678441 tid70052 [IFO,App] Skyra
+2024-09-04T10:48:32.678960 tid70052 [IFO,App]    Skyra, Skyra Laser Controller
+2024-09-04T10:48:32.678963 tid70052 [IFO,App] SmarActHCU-3D
+2024-09-04T10:48:32.679424 tid70052 [IFO,App]    SmarAct 1D, SmarAct 1D stage
+2024-09-04T10:48:32.679426 tid70052 [IFO,App]    SmarAct 2D, SmarAct 2D stage
+2024-09-04T10:48:32.679427 tid70052 [IFO,App] SouthPort
+2024-09-04T10:48:32.679875 tid70052 [IFO,App]    MicroZ-Step, MicroZ Stage Step Mode
+2024-09-04T10:48:32.679877 tid70052 [IFO,App]    MicroZ-Jog, MicroZ Stage Jog Mode
+2024-09-04T10:48:32.679878 tid70052 [IFO,App] SpectralLMM5
+2024-09-04T10:48:32.680352 tid70052 [IFO,App]    LMM5-Hub, LMM5 Hub
+2024-09-04T10:48:32.680353 tid70052 [IFO,App]    LMM5-Shutter, LMM5 Shutter
+2024-09-04T10:48:32.680355 tid70052 [IFO,App] SpinnakerCamera
+2024-09-04T10:48:32.680900 tid70052 [IFO,App] Error: Unable to load SpinnakerCamera library: Failed to load device adapter "SpinnakerCamera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_SpinnakerCamera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.680904 tid70052 [IFO,App] Standa
+2024-09-04T10:48:32.681429 tid70052 [IFO,App] Error: Unable to load Standa library: Failed to load device adapter "Standa" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Standa.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.681432 tid70052 [IFO,App] Standa8SMC4
+2024-09-04T10:48:32.681957 tid70052 [IFO,App] Error: Unable to load Standa8SMC4 library: Failed to load device adapter "Standa8SMC4" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Standa8SMC4.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.681960 tid70052 [IFO,App] StandaStage
+2024-09-04T10:48:32.682487 tid70052 [IFO,App] Error: Unable to load StandaStage library: Failed to load device adapter "StandaStage" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_StandaStage.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.682491 tid70052 [IFO,App] StarlightXpress
+2024-09-04T10:48:32.682935 tid70052 [IFO,App]    Filter Wheel, Starlight Xpress Filter Wheel
+2024-09-04T10:48:32.682937 tid70052 [IFO,App] Stradus
+2024-09-04T10:48:32.683385 tid70052 [IFO,App]    VLTStradus, VLTStradus
+2024-09-04T10:48:32.683387 tid70052 [IFO,App] SutterLambda
+2024-09-04T10:48:32.683851 tid70052 [IFO,App]    Shutter, Lambda 721
+2024-09-04T10:48:32.683853 tid70052 [IFO,App]    Wheel-A, Lambda 10 filter wheel A
+2024-09-04T10:48:32.683853 tid70052 [IFO,App]    Wheel-B, Lambda 10 filter wheel B
+2024-09-04T10:48:32.683855 tid70052 [IFO,App]    Wheel-C, Lambda 10 wheel C (10-3 only)
+2024-09-04T10:48:32.683856 tid70052 [IFO,App]    Shutter-A, Lambda 10 shutter A
+2024-09-04T10:48:32.683857 tid70052 [IFO,App]    Shutter-B, Lambda 10 shutter B
+2024-09-04T10:48:32.683858 tid70052 [IFO,App]    Shutter-A 10-2, Lambda 10-2 shutter A
+2024-09-04T10:48:32.683859 tid70052 [IFO,App]    Shutter-B 10-2, Lambda 10-2 shutter B
+2024-09-04T10:48:32.683860 tid70052 [IFO,App]    Shutter-DG4, DG4 shutter
+2024-09-04T10:48:32.683861 tid70052 [IFO,App]    Wheel-DG4, DG4 filter changer
+2024-09-04T10:48:32.683862 tid70052 [IFO,App] SutterLambda2
+2024-09-04T10:48:32.684334 tid70052 [IFO,App]    SutterHub, Lambda Controller Hub
+2024-09-04T10:48:32.684335 tid70052 [IFO,App]    Wheel-A, Lambda 10 filter wheel A
+2024-09-04T10:48:32.684336 tid70052 [IFO,App]    Wheel-B, Lambda 10 filter wheel B
+2024-09-04T10:48:32.684338 tid70052 [IFO,App]    Wheel-C, Lambda 10 wheel C (10-3 only)
+2024-09-04T10:48:32.684338 tid70052 [IFO,App]    Shutter-A, Lambda 10 shutter A
+2024-09-04T10:48:32.684339 tid70052 [IFO,App]    Shutter-B, Lambda 10 shutter B
+2024-09-04T10:48:32.684339 tid70052 [IFO,App]    VF-5, Lambda VF-5 (10-3 only)
+2024-09-04T10:48:32.684341 tid70052 [IFO,App] SutterLambdaParallelArduino
+2024-09-04T10:48:32.684778 tid70052 [IFO,App]    ArduinoWheelA, Lambda Wheel A
+2024-09-04T10:48:32.684780 tid70052 [IFO,App] SutterMPC
+2024-09-04T10:48:32.685240 tid70052 [IFO,App]    Sutter MPC, Sutter MPC200/ROE200
+2024-09-04T10:48:32.685242 tid70052 [IFO,App]    Sutter MPC Z stage, Sutter MPC200/ROE200 Z
+2024-09-04T10:48:32.685244 tid70052 [IFO,App]    Sutter MPC XY stage, Sutter MPC200/ROE200 XY
+2024-09-04T10:48:32.685245 tid70052 [IFO,App] SutterStage
+2024-09-04T10:48:32.685687 tid70052 [IFO,App]    SutterStageController, SutterStage Controller
+2024-09-04T10:48:32.685689 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.685690 tid70052 [IFO,App] TCPIPPort
+2024-09-04T10:48:32.686218 tid70052 [IFO,App]    TCP/IP serial port adapter (1), TCP/IP serial port adapter
+2024-09-04T10:48:32.686233 tid70052 [IFO,App] TeensySLM
+2024-09-04T10:48:32.686670 tid70052 [IFO,App]    Teensy-SLM, Teensy Spatial Light Modulator
+2024-09-04T10:48:32.686672 tid70052 [IFO,App]    Teensy-SLM Virtual Shutter, Virtual Shutter using Teensy Spatial Light Modulator
+2024-09-04T10:48:32.686674 tid70052 [IFO,App] Thorlabs
+2024-09-04T10:48:32.687107 tid70052 [IFO,App]    XYStage, Thorlabs BD102 XY Stage
+2024-09-04T10:48:32.687109 tid70052 [IFO,App]    PiezoZStage, Thorlabs piezo Z Stage
+2024-09-04T10:48:32.687109 tid70052 [IFO,App]    MotorZStage, Thorlabs Motor Z Stage
+2024-09-04T10:48:32.687110 tid70052 [IFO,App]    FilterWheel, Integrated filter wheel
+2024-09-04T10:48:32.687113 tid70052 [IFO,App] ThorlabsAPTStage
+2024-09-04T10:48:32.687660 tid70052 [IFO,App] Error: Unable to load ThorlabsAPTStage library: Failed to load device adapter "ThorlabsAPTStage" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ThorlabsAPTStage.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.687663 tid70052 [IFO,App] ThorlabsCHROLIS
+2024-09-04T10:48:32.688173 tid70052 [IFO,App] Error: Unable to load ThorlabsCHROLIS library: Failed to load device adapter "ThorlabsCHROLIS" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ThorlabsCHROLIS.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.688177 tid70052 [IFO,App] ThorlabsDCxxxx
+2024-09-04T10:48:32.688688 tid70052 [IFO,App] Error: Unable to load ThorlabsDCxxxx library: Failed to load device adapter "ThorlabsDCxxxx" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ThorlabsDCxxxx.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.688693 tid70052 [IFO,App] ThorlabsElliptecSlider
+2024-09-04T10:48:32.689158 tid70052 [IFO,App]    Thorlabs ELL17/ELL20, Thorlabs ELL17/ELL20
+2024-09-04T10:48:32.689160 tid70052 [IFO,App]    Thorlabs ELL9, Thorlabs ELL9
+2024-09-04T10:48:32.689161 tid70052 [IFO,App]    Thorlabs ELL6, Thorlabs ELL6
+2024-09-04T10:48:32.689162 tid70052 [IFO,App]    Thorlabs ELL6 shutter, Thorlabs ELL6 shutter
+2024-09-04T10:48:32.689163 tid70052 [IFO,App] ThorlabsFilterWheel
+2024-09-04T10:48:32.689596 tid70052 [IFO,App]    Thorlabs Filter Wheel, Thorlabs filter wheel
+2024-09-04T10:48:32.689598 tid70052 [IFO,App] ThorlabsPM100x
+2024-09-04T10:48:32.690111 tid70052 [IFO,App] Error: Unable to load ThorlabsPM100x library: Failed to load device adapter "ThorlabsPM100x" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ThorlabsPM100x.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.690114 tid70052 [IFO,App] ThorlabsSC10
+2024-09-04T10:48:32.690585 tid70052 [IFO,App]    SC10, ThorLabs SC10 shutter controller
+2024-09-04T10:48:32.690588 tid70052 [IFO,App] ThorlabsUSBCamera
+2024-09-04T10:48:32.691102 tid70052 [IFO,App] Error: Unable to load ThorlabsUSBCamera library: Failed to load device adapter "ThorlabsUSBCamera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ThorlabsUSBCamera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.691105 tid70052 [IFO,App] Thorlabs_ELL14
+2024-09-04T10:48:32.691547 tid70052 [IFO,App]     ELL14,  ELL14
+2024-09-04T10:48:32.691549 tid70052 [IFO,App] TIScam
+2024-09-04T10:48:32.759428 tid70052 [IFO,App]    TIS_DCAM, The Imaging Source
+2024-09-04T10:48:32.759436 tid70052 [IFO,App] Tofra
+2024-09-04T10:48:32.760101 tid70052 [IFO,App]    TOFRA Filter Wheel, TOFRA Filter Wheel with Integrated Controller
+2024-09-04T10:48:32.760103 tid70052 [IFO,App]    TOFRA Z-Drive, TOFRA Z-Drive with Integrated Controller
+2024-09-04T10:48:32.760104 tid70052 [IFO,App]    TOFRA XYStage, TOFRA XYStage with Integrated Controller
+2024-09-04T10:48:32.760105 tid70052 [IFO,App]    TOFRA Cube Slider, TOFRA Filter Cube Slider with Integrated Controller
+2024-09-04T10:48:32.760108 tid70052 [IFO,App]    TOFRA RGB LED, TOFRA RGB LED Light Source
+2024-09-04T10:48:32.760109 tid70052 [IFO,App]    TOFRA RGB LED Shutter, TOFRA RGB LED as Shutter
+2024-09-04T10:48:32.760111 tid70052 [IFO,App] Toptica_iBeamSmartCW
+2024-09-04T10:48:32.760612 tid70052 [IFO,App]    iBeamSmartCW, Toptica iBeam smart laser in CW mode.
+2024-09-04T10:48:32.760614 tid70052 [IFO,App]    Normal mode, Restore Toptica iBeam smart to normal mode.
+2024-09-04T10:48:32.760615 tid70052 [IFO,App] Toptica_iChrome_MLE
+2024-09-04T10:48:32.761082 tid70052 [IFO,App]    iChrome-MLE, iChrome-MLE
+2024-09-04T10:48:32.761084 tid70052 [IFO,App] Toptica_iChrome_MLE_TCP
+2024-09-04T10:48:32.761551 tid70052 [IFO,App]    iChrome-MLE-TCP, iChrome-MLE
+2024-09-04T10:48:32.761553 tid70052 [IFO,App] TriggerScope
+2024-09-04T10:48:32.762079 tid70052 [IFO,App]    TriggerScope-CAM1, CAM1
+2024-09-04T10:48:32.762081 tid70052 [IFO,App]    TriggerScope-CAM2, CAM2
+2024-09-04T10:48:32.762081 tid70052 [IFO,App]    TriggerScope-DAC01, DAC01
+2024-09-04T10:48:32.762082 tid70052 [IFO,App]    TriggerScope-DAC02, DAC02
+2024-09-04T10:48:32.762082 tid70052 [IFO,App]    TriggerScope-DAC03, DAC03
+2024-09-04T10:48:32.762083 tid70052 [IFO,App]    TriggerScope-DAC04, DAC04
+2024-09-04T10:48:32.762083 tid70052 [IFO,App]    TriggerScope-DAC05, DAC05
+2024-09-04T10:48:32.762084 tid70052 [IFO,App]    TriggerScope-DAC06, DAC06
+2024-09-04T10:48:32.762084 tid70052 [IFO,App]    TriggerScope-DAC07, DAC07
+2024-09-04T10:48:32.762085 tid70052 [IFO,App]    TriggerScope-DAC08, DAC08
+2024-09-04T10:48:32.762085 tid70052 [IFO,App]    TriggerScope-DAC09, DAC09
+2024-09-04T10:48:32.762086 tid70052 [IFO,App]    TriggerScope-DAC10, DAC10
+2024-09-04T10:48:32.762086 tid70052 [IFO,App]    TriggerScope-DAC11, DAC11
+2024-09-04T10:48:32.762087 tid70052 [IFO,App]    TriggerScope-DAC12, DAC12
+2024-09-04T10:48:32.762087 tid70052 [IFO,App]    TriggerScope-DAC13, DAC13
+2024-09-04T10:48:32.762088 tid70052 [IFO,App]    TriggerScope-DAC14, DAC14
+2024-09-04T10:48:32.762088 tid70052 [IFO,App]    TriggerScope-DAC15, DAC15
+2024-09-04T10:48:32.762089 tid70052 [IFO,App]    TriggerScope-DAC16, DAC16
+2024-09-04T10:48:32.762089 tid70052 [IFO,App]    TriggerScope-TTL01, TTL01
+2024-09-04T10:48:32.762090 tid70052 [IFO,App]    TriggerScope-TTL02, TTL02
+2024-09-04T10:48:32.762090 tid70052 [IFO,App]    TriggerScope-TTL03, TTL03
+2024-09-04T10:48:32.762091 tid70052 [IFO,App]    TriggerScope-TTL04, TTL04
+2024-09-04T10:48:32.762091 tid70052 [IFO,App]    TriggerScope-TTL05, TTL05
+2024-09-04T10:48:32.762091 tid70052 [IFO,App]    TriggerScope-TTL06, TTL06
+2024-09-04T10:48:32.762092 tid70052 [IFO,App]    TriggerScope-TTL07, TTL07
+2024-09-04T10:48:32.762092 tid70052 [IFO,App]    TriggerScope-TTL08, TTL08
+2024-09-04T10:48:32.762093 tid70052 [IFO,App]    TriggerScope-TTL09, TTL09
+2024-09-04T10:48:32.762093 tid70052 [IFO,App]    TriggerScope-TTL10, TTL10
+2024-09-04T10:48:32.762094 tid70052 [IFO,App]    TriggerScope-TTL11, TTL11
+2024-09-04T10:48:32.762094 tid70052 [IFO,App]    TriggerScope-TTL12, TTL12
+2024-09-04T10:48:32.762095 tid70052 [IFO,App]    TriggerScope-TTL13, TTL13
+2024-09-04T10:48:32.762095 tid70052 [IFO,App]    TriggerScope-TTL14, TTL14
+2024-09-04T10:48:32.762095 tid70052 [IFO,App]    TriggerScope-TTL15, TTL15
+2024-09-04T10:48:32.762096 tid70052 [IFO,App]    TriggerScope-TTL16, TTL16
+2024-09-04T10:48:32.762096 tid70052 [IFO,App]    TriggerScope-Focus, Focus
+2024-09-04T10:48:32.762097 tid70052 [IFO,App]    TriggerScope-Hub, Hub
+2024-09-04T10:48:32.762098 tid70052 [IFO,App] TriggerScopeMM
+2024-09-04T10:48:32.762630 tid70052 [IFO,App]    TriggerScopeMM-Hub, Hub (required)
+2024-09-04T10:48:32.762632 tid70052 [IFO,App]    TS_TTL1-8, TTL1-8
+2024-09-04T10:48:32.762633 tid70052 [IFO,App]    TS_TTL9-16, TTL9-16
+2024-09-04T10:48:32.762633 tid70052 [IFO,App]    TS_DAC01, DAC01
+2024-09-04T10:48:32.762634 tid70052 [IFO,App]    TS_DAC02, DAC02
+2024-09-04T10:48:32.762634 tid70052 [IFO,App]    TS_DAC03, DAC03
+2024-09-04T10:48:32.762635 tid70052 [IFO,App]    TS_DAC04, DAC04
+2024-09-04T10:48:32.762635 tid70052 [IFO,App]    TS_DAC05, DAC05
+2024-09-04T10:48:32.762635 tid70052 [IFO,App]    TS_DAC06, DAC06
+2024-09-04T10:48:32.762636 tid70052 [IFO,App]    TS_DAC07, DAC07
+2024-09-04T10:48:32.762636 tid70052 [IFO,App]    TS_DAC08, DAC08
+2024-09-04T10:48:32.762637 tid70052 [IFO,App]    TS_DAC09, DAC09
+2024-09-04T10:48:32.762637 tid70052 [IFO,App]    TS_DAC10, DAC10
+2024-09-04T10:48:32.762638 tid70052 [IFO,App]    TS_DAC11, DAC11
+2024-09-04T10:48:32.762638 tid70052 [IFO,App]    TS_DAC12, DAC12
+2024-09-04T10:48:32.762639 tid70052 [IFO,App]    TS_DAC13, DAC13
+2024-09-04T10:48:32.762639 tid70052 [IFO,App]    TS_DAC14, DAC14
+2024-09-04T10:48:32.762640 tid70052 [IFO,App]    TS_DAC15, DAC15
+2024-09-04T10:48:32.762641 tid70052 [IFO,App]    TS_DAC16, DAC16
+2024-09-04T10:48:32.762642 tid70052 [IFO,App] TSI
+2024-09-04T10:48:32.763117 tid70052 [IFO,App]    TSICam, Thorlabs Scientific Imaging camera
+2024-09-04T10:48:32.763119 tid70052 [IFO,App] TUCam
+2024-09-04T10:48:32.763762 tid70052 [IFO,App] Error: Unable to load TUCam library: Failed to load device adapter "TUCam" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_TUCam.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.763766 tid70052 [IFO,App] TwainCamera
+2024-09-04T10:48:32.764250 tid70052 [IFO,App]    TwainCam, Twain camera
+2024-09-04T10:48:32.764252 tid70052 [IFO,App] TwoPhoton
+2024-09-04T10:48:32.764869 tid70052 [IFO,App] Error: Unable to load TwoPhoton library: Failed to load device adapter "TwoPhoton" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_TwoPhoton.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.764872 tid70052 [IFO,App] UniversalMMHubSerial
+2024-09-04T10:48:32.765353 tid70052 [IFO,App]    UniversalMMHubSerial, Universal hardware hub (serial)
+2024-09-04T10:48:32.765355 tid70052 [IFO,App] UniversalMMHubUsb
+2024-09-04T10:48:32.765842 tid70052 [IFO,App]    UniversalMMHubUsb, Universal hardware hub (USB communication)
+2024-09-04T10:48:32.765844 tid70052 [IFO,App] Usb3CamHS
+2024-09-04T10:48:32.766404 tid70052 [IFO,App] Error: Unable to load Usb3CamHS library: Failed to load device adapter "Usb3CamHS" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Usb3CamHS.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.766407 tid70052 [IFO,App] USBManager
+2024-09-04T10:48:32.766956 tid70052 [IFO,App] Error: Unable to load USBManager library: Failed to load device adapter "USBManager" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_USBManager.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.766959 tid70052 [IFO,App] USB_Viper_QPL
+2024-09-04T10:48:32.767523 tid70052 [IFO,App] Error: Unable to load USB_Viper_QPL library: Failed to load device adapter "USB_Viper_QPL" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_USB_Viper_QPL.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.767527 tid70052 [IFO,App] UserDefinedSerial
+2024-09-04T10:48:32.768017 tid70052 [IFO,App]    UserDefinedGenericDevice, Generic device using user-defined serial commands
+2024-09-04T10:48:32.768018 tid70052 [IFO,App]    UserDefinedShutter, Generic shutter using user-defined serial commands
+2024-09-04T10:48:32.768019 tid70052 [IFO,App]    UserDefinedStateDevice, Generic switcher using user-defined serial commands
+2024-09-04T10:48:32.768020 tid70052 [IFO,App] Utilities
+2024-09-04T10:48:32.768044 tid70052 [IFO,App]    Multi Shutter, Combine multiple physical shutters into a single logical shutter
+2024-09-04T10:48:32.768044 tid70052 [IFO,App]    Multi Camera, Combine multiple physical cameras into a single logical camera
+2024-09-04T10:48:32.768045 tid70052 [IFO,App]    Multi Stage, Combine multiple physical 1D stages into a single logical 1D stage
+2024-09-04T10:48:32.768046 tid70052 [IFO,App]    Combo XY Stage, Combine two single-axis stages into an XY stage
+2024-09-04T10:48:32.768046 tid70052 [IFO,App]    Single Axis Stage, Use single axis of XY stage as a logical 1D stage
+2024-09-04T10:48:32.768047 tid70052 [IFO,App]    DA Shutter, DA used as a shutter
+2024-09-04T10:48:32.768049 tid70052 [IFO,App]    DA Monochromator, DA used to control a monochromator
+2024-09-04T10:48:32.768050 tid70052 [IFO,App]    DA Z Stage, DA-controlled Z-stage
+2024-09-04T10:48:32.768051 tid70052 [IFO,App]    DA XY Stage, DA-controlled XY-stage
+2024-09-04T10:48:32.768051 tid70052 [IFO,App]    DA TTL State Device, Several DAs as a TTL state device
+2024-09-04T10:48:32.768053 tid70052 [IFO,App]    DA Galvo, Two DAs operating a Galvo pair
+2024-09-04T10:48:32.768053 tid70052 [IFO,App]    Multi DA State Device, Several DAs as a single state device allowing digital masking
+2024-09-04T10:48:32.768054 tid70052 [IFO,App]    AutoFocus Stage, AutoFocus offset acting as a Z-stage
+2024-09-04T10:48:32.768055 tid70052 [IFO,App]    State Device Shutter, State device used as a shutter
+2024-09-04T10:48:32.768056 tid70052 [IFO,App]    Serial port DTR Shutter, Serial port DTR used as a shutter
+2024-09-04T10:48:32.768057 tid70052 [IFO,App] VariLC
+2024-09-04T10:48:32.768507 tid70052 [IFO,App]    VariLC, VariLC
+2024-09-04T10:48:32.768509 tid70052 [IFO,App] VarispecLCTF
+2024-09-04T10:48:32.768962 tid70052 [IFO,App]    VarispecLCTF, VarispecLCTF
+2024-09-04T10:48:32.768964 tid70052 [IFO,App] VersaLase
+2024-09-04T10:48:32.769412 tid70052 [IFO,App]    VLT_VersaLase, VLT_VersaLase
+2024-09-04T10:48:32.769414 tid70052 [IFO,App] Vincent
+2024-09-04T10:48:32.769878 tid70052 [IFO,App]    Vincent-D1, Vincent controller VMM-D1/T1 and D122
+2024-09-04T10:48:32.769881 tid70052 [IFO,App]    Vincent-D3, Vincent controller VMM-D3/D4
+2024-09-04T10:48:32.769882 tid70052 [IFO,App] VisiTech_iSIM
+2024-09-04T10:48:32.770432 tid70052 [IFO,App] Error: Unable to load VisiTech_iSIM library: Failed to load device adapter "VisiTech_iSIM" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_VisiTech_iSIM.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.770435 tid70052 [IFO,App] WieneckeSinske
+2024-09-04T10:48:32.770896 tid70052 [IFO,App]    XYStage Piezo CAN Controller, Wienecke & Sinske WSB PiezoDrive CAN
+2024-09-04T10:48:32.770897 tid70052 [IFO,App]    Z Piezo CAN Controller, Wienecke & Sinske WSB ZPiezo CAN
+2024-09-04T10:48:32.770899 tid70052 [IFO,App]    Z Piezo Controller, Wienecke & Sinske WSB ZPiezo
+2024-09-04T10:48:32.770901 tid70052 [IFO,App] WOSM
+2024-09-04T10:48:32.771373 tid70052 [IFO,App]    WOSM-Hub, Hub (required)
+2024-09-04T10:48:32.771375 tid70052 [IFO,App]    WOSM-Switch, Switch on/off channels 0 to 10
+2024-09-04T10:48:32.771376 tid70052 [IFO,App]    WOSM-Shutter, Shutter
+2024-09-04T10:48:32.771377 tid70052 [IFO,App]    WOSM-DAC0, DAC channel 0
+2024-09-04T10:48:32.771377 tid70052 [IFO,App]    WOSM-DAC1, DAC channel 1
+2024-09-04T10:48:32.771378 tid70052 [IFO,App]    WOSM-DAC2, DAC channel 2
+2024-09-04T10:48:32.771378 tid70052 [IFO,App]    WOSM-DAC3, DAC channel 3
+2024-09-04T10:48:32.771379 tid70052 [IFO,App]    WOSM-DAC4, DAC channel 4
+2024-09-04T10:48:32.771380 tid70052 [IFO,App]    ZStage, Z Stage
+2024-09-04T10:48:32.771380 tid70052 [IFO,App]    XYStage, XY Stage
+2024-09-04T10:48:32.771381 tid70052 [IFO,App]    WOSM-Input, ADC
+2024-09-04T10:48:32.771382 tid70052 [IFO,App] Xcite
+2024-09-04T10:48:32.771821 tid70052 [IFO,App]    X-Cite120PC, EXFO X-Cite 120 PC
+2024-09-04T10:48:32.771824 tid70052 [IFO,App] XCite120PC_Exacte
+2024-09-04T10:48:32.772262 tid70052 [IFO,App]    XCite-120PC, X-Cite 120PC
+2024-09-04T10:48:32.772264 tid70052 [IFO,App]    XCite-Exacte, X-Cite exacte or XYLIS
+2024-09-04T10:48:32.772265 tid70052 [IFO,App] XCiteLed
+2024-09-04T10:48:32.772745 tid70052 [IFO,App]    XLED1 Controller, XLED1 Controller
+2024-09-04T10:48:32.772747 tid70052 [IFO,App]    LED1 Device, LED1 Device
+2024-09-04T10:48:32.772748 tid70052 [IFO,App]    LED2 Device, LED2 Device
+2024-09-04T10:48:32.772748 tid70052 [IFO,App]    LED3 Device, LED3 Device
+2024-09-04T10:48:32.772749 tid70052 [IFO,App]    LED4 Device, LED4 Device
+2024-09-04T10:48:32.772750 tid70052 [IFO,App] XCiteXT600
+2024-09-04T10:48:32.773257 tid70052 [IFO,App]    Turbo/XT600 Controller, Turbo/XT600 Controller
+2024-09-04T10:48:32.773260 tid70052 [IFO,App]    NOVEM/XT900 Controller, NOVEM/XT900 Controller
+2024-09-04T10:48:32.773261 tid70052 [IFO,App]    LED1 Device, LED1 Device
+2024-09-04T10:48:32.773261 tid70052 [IFO,App]    LED2 Device, LED2 Device
+2024-09-04T10:48:32.773262 tid70052 [IFO,App]    LED3 Device, LED3 Device
+2024-09-04T10:48:32.773262 tid70052 [IFO,App]    LED4 Device, LED4 Device
+2024-09-04T10:48:32.773263 tid70052 [IFO,App]    LED5 Device, LED5 Device
+2024-09-04T10:48:32.773263 tid70052 [IFO,App]    LED6 Device, LED6 Device
+2024-09-04T10:48:32.773264 tid70052 [IFO,App]    LED7 Device, LED7 Device (NOVEM/XT900 only)
+2024-09-04T10:48:32.773266 tid70052 [IFO,App]    LED8 Device, LED8 Device (NOVEM/XT900 only)
+2024-09-04T10:48:32.773267 tid70052 [IFO,App]    LED9 Device, LED9 Device (NOVEM/XT900 only)
+2024-09-04T10:48:32.773271 tid70052 [IFO,App] XIMEACamera
+2024-09-04T10:48:32.773893 tid70052 [IFO,App] Error: Unable to load XIMEACamera library: Failed to load device adapter "XIMEACamera" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_XIMEACamera.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.773896 tid70052 [IFO,App] XLight
+2024-09-04T10:48:32.774405 tid70052 [IFO,App]    XLIGHT Hub, Hub (Needed for XLIGHT)
+2024-09-04T10:48:32.774408 tid70052 [IFO,App]    XLIGHT Dichroic, Confocal dichroic wheel
+2024-09-04T10:48:32.774410 tid70052 [IFO,App]    XLIGHT Disk slider, Spinning disk slider
+2024-09-04T10:48:32.774411 tid70052 [IFO,App]    XLIGHT Spin motor, Spinning disk motor
+2024-09-04T10:48:32.774412 tid70052 [IFO,App]    XLIGHT Emission Wheel, Confocal Emission wheel
+2024-09-04T10:48:32.774414 tid70052 [IFO,App]    XLIGHT Excitation Wheel, Confocal Excitation wheel
+2024-09-04T10:48:32.774415 tid70052 [IFO,App]    XLIGHT Touchscreen, Touchscreen lockout control
+2024-09-04T10:48:32.774416 tid70052 [IFO,App] XLightV3
+2024-09-04T10:48:32.774911 tid70052 [IFO,App]    Dichroic wheel, Dichroic wheel device
+2024-09-04T10:48:32.774913 tid70052 [IFO,App]    Emission wheel, Emission wheel device
+2024-09-04T10:48:32.774915 tid70052 [IFO,App]    Excitation wheel, Excitation wheel device
+2024-09-04T10:48:32.774916 tid70052 [IFO,App]    Spinning slider, Spinning slider device
+2024-09-04T10:48:32.774917 tid70052 [IFO,App]    Camera slider, Dual camera slider device
+2024-09-04T10:48:32.774919 tid70052 [IFO,App]    Spinning motor, Spinning motor device
+2024-09-04T10:48:32.774919 tid70052 [IFO,App]    Emission Iris, Emission iris device
+2024-09-04T10:48:32.774921 tid70052 [IFO,App]    Illumination Iris, Illumination iris device
+2024-09-04T10:48:32.774922 tid70052 [IFO,App]    XLightMMHub, XLight Hub for MM
+2024-09-04T10:48:32.774923 tid70052 [IFO,App] YodnE600
+2024-09-04T10:48:32.775392 tid70052 [IFO,App]    YodnE600, YODN Hyper E600
+2024-09-04T10:48:32.775394 tid70052 [IFO,App] Yokogawa
+2024-09-04T10:48:32.775859 tid70052 [IFO,App]    Hub, CSU22 Hub (Needed for CSU22)
+2024-09-04T10:48:32.775860 tid70052 [IFO,App]    ND Filter, Neutral Density Filter
+2024-09-04T10:48:32.775861 tid70052 [IFO,App]    Filter Set, Filter Set (Dichroics)
+2024-09-04T10:48:32.775861 tid70052 [IFO,App]    Shutter, Shutter
+2024-09-04T10:48:32.775862 tid70052 [IFO,App]    DriveSpeed, DriveSpeed
+2024-09-04T10:48:32.775863 tid70052 [IFO,App] Zaber
+2024-09-04T10:48:32.776562 tid70052 [IFO,App] Error: Unable to load Zaber library: Failed to load device adapter "Zaber" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_Zaber.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:32.776566 tid70052 [IFO,App] ZeissAxioZoom
+2024-09-04T10:48:32.777096 tid70052 [IFO,App]    ZeissScope, Zeiss AxioZoom controlled through serial interface
+2024-09-04T10:48:32.777097 tid70052 [IFO,App]    ZeissMotorFocus, Motor Focus
+2024-09-04T10:48:32.777098 tid70052 [IFO,App]    ZeissXYStage, XYStage
+2024-09-04T10:48:32.777099 tid70052 [IFO,App]    OpticsUnit, OpticsUnit
+2024-09-04T10:48:32.777099 tid70052 [IFO,App]    Reflector, Reflector
+2024-09-04T10:48:32.777100 tid70052 [IFO,App]    DL450, DL450
+2024-09-04T10:48:32.777101 tid70052 [IFO,App] ZeissCAN
+2024-09-04T10:48:32.777624 tid70052 [IFO,App]    ZeissScope, Zeiss Axiovert 200m controlled through serial interface
+2024-09-04T10:48:32.777626 tid70052 [IFO,App]    ZeissShutter, Shutter
+2024-09-04T10:48:32.777628 tid70052 [IFO,App]    ZeissShutterMFFirmware, ShutterMFFirmware
+2024-09-04T10:48:32.777629 tid70052 [IFO,App]    ZeissReflectorTurret, Reflector Turret (dichroics)
+2024-09-04T10:48:32.777631 tid70052 [IFO,App]    ZeissSidePortTurret, SidePort switcher
+2024-09-04T10:48:32.777631 tid70052 [IFO,App]    ZeissBasePortSlider, BasePort Slider
+2024-09-04T10:48:32.777632 tid70052 [IFO,App]    ZeissObjectives, Objective Turret
+2024-09-04T10:48:32.777633 tid70052 [IFO,App]    ZeissCondenser, Condenser Turret
+2024-09-04T10:48:32.777633 tid70052 [IFO,App]    ZeissOptovar, Optovar
+2024-09-04T10:48:32.777634 tid70052 [IFO,App]    ZeissTubelens, Tubelens
+2024-09-04T10:48:32.777635 tid70052 [IFO,App]    ZeissExcitationLampSwitcher, Lamp Switcher
+2024-09-04T10:48:32.777636 tid70052 [IFO,App]    ZeissHalogenLamp, Halogen Lamp
+2024-09-04T10:48:32.777636 tid70052 [IFO,App]    Focus, Z-Drive
+2024-09-04T10:48:32.777638 tid70052 [IFO,App]    ZeissExternalFilterWheel, External FilterWheel
+2024-09-04T10:48:32.777638 tid70052 [IFO,App]    ZeissFilterWheel1, FilterWheel 1
+2024-09-04T10:48:32.777639 tid70052 [IFO,App]    ZeissFilterWheel2, FilterWheel 2
+2024-09-04T10:48:32.777639 tid70052 [IFO,App]    XYStage, XY Stage (MCU 28)
+2024-09-04T10:48:32.777640 tid70052 [IFO,App]    ZStage, Z Stage on Axioskop 2
+2024-09-04T10:48:32.777640 tid70052 [IFO,App]    PhotoModule, AxioPhot 2 Photo Module
+2024-09-04T10:48:32.777642 tid70052 [IFO,App] ZeissCAN29
+2024-09-04T10:48:32.778249 tid70052 [IFO,App]    ZeissScope, Zeiss AxioObserver controlled through serial interface
+2024-09-04T10:48:32.778252 tid70052 [IFO,App]    ZeissReflectorTurret, Reflector Turret (dichroics)
+2024-09-04T10:48:32.778254 tid70052 [IFO,App]    ZeissObjectiveTurret, Objective Turret
+2024-09-04T10:48:32.778255 tid70052 [IFO,App]    ZeissNDWheel1RL, ND Filter Wheel 1 Fluorescence Light Path
+2024-09-04T10:48:32.778256 tid70052 [IFO,App]    ZeissNDWheel2RL, ND Filter Wheel 2 Fluorescence Light Path
+2024-09-04T10:48:32.778257 tid70052 [IFO,App]    ZeissFieldDiaphragm, Field Diaphragm (fluorescence)
+2024-09-04T10:48:32.778258 tid70052 [IFO,App]    ZeissApertureDiaphragm, Aperture Diaphragm (fluorescence)
+2024-09-04T10:48:32.778259 tid70052 [IFO,App]    ZeissNDWheel1TL, ND Filter Wheel 1 Transmitted Light Path
+2024-09-04T10:48:32.778259 tid70052 [IFO,App]    ZeissNDWheel2TL, ND Filter Wheel 2 Transmitted Light Path
+2024-09-04T10:48:32.778260 tid70052 [IFO,App]    ZeissFocusAxis, Z-drive
+2024-09-04T10:48:32.778260 tid70052 [IFO,App]    ZeissXYStage, XYStage
+2024-09-04T10:48:32.778261 tid70052 [IFO,App]    ZeissTubeLens, Tube Lens (optovar)
+2024-09-04T10:48:32.778262 tid70052 [IFO,App]    ZeissTubeLensShutter, Tube Lens Shutter
+2024-09-04T10:48:32.778263 tid70052 [IFO,App]    ZeissSidePort, Side Port
+2024-09-04T10:48:32.778264 tid70052 [IFO,App]    ZeissExcitationSwitcher, Excitation Switcher
+2024-09-04T10:48:32.778266 tid70052 [IFO,App]    ZeissReflectedLightShutter, Reflected Light Shutter
+2024-09-04T10:48:32.778267 tid70052 [IFO,App]    ZeissTransmittedLightShutter, Transmitted Light Shutter
+2024-09-04T10:48:32.778267 tid70052 [IFO,App]    ZeissRL-FLAttenuator, Reflected (fluorescence) light attenuator
+2024-09-04T10:48:32.778269 tid70052 [IFO,App]    ZeissCondenserContrast, Condenser Contrast
+2024-09-04T10:48:32.778271 tid70052 [IFO,App]    ZeissCondenserAperture, Condenser Aperture
+2024-09-04T10:48:32.778272 tid70052 [IFO,App]    ZeissHBOLamp, HBO Lamp
+2024-09-04T10:48:32.778272 tid70052 [IFO,App]    ZeissHalogenLamp, Halogen Lamp
+2024-09-04T10:48:32.778273 tid70052 [IFO,App]    ZeissLSMPort, LSM Port (rearPort)
+2024-09-04T10:48:32.778273 tid70052 [IFO,App]    ZeissBasePort, Base Port switcher
+2024-09-04T10:48:32.778275 tid70052 [IFO,App]    ZeissExternalLampMirror, External Lamp Mirror
+2024-09-04T10:48:32.778275 tid70052 [IFO,App]    ZeissUniblitz, Uniblitz Shutter
+2024-09-04T10:48:32.778276 tid70052 [IFO,App]    ZeissFilterWheel, Filter Wheel
+2024-09-04T10:48:32.778276 tid70052 [IFO,App]    ZeissDefiniteFocus, Definite Focus
+2024-09-04T10:48:32.778282 tid70052 [IFO,App]    ZeissDefiniteFocusOffset, Definite Focus Offset-drive
+2024-09-04T10:48:32.778282 tid70052 [IFO,App]    ZeissColibri, Colibri
+2024-09-04T10:48:32.778288 tid70052 [IFO,App]    Zeiss2TVTubePrism, g_Zeiss2TVTubePrism
+2024-09-04T10:48:32.778290 tid70052 [IFO,App]    Zeiss2TVTubeSlider, g_Zeiss2TVTubeSlider
+2024-09-04T10:48:32.778291 tid70052 [IFO,App]    Zeiss2TVTubeShutter, g_Zeiss2TVTubeShutter
+2024-09-04T10:48:32.778292 tid70052 [IFO,App]    ZeissHXPShutter, g_ZeissHXPShutter
+2024-09-04T10:48:32.778293 tid70052 [IFO,App] ZWO
+2024-09-04T10:48:32.778907 tid70052 [IFO,App] Error: Unable to load ZWO library: Failed to load device adapter "ZWO" [ Failed to load module "C:\Program Files\Micro-Manager-2.0\mmgr_dal_ZWO.dll" [ The module, or a module it depends upon, could not be found (Windows error: The specified module could not be found.) ] ]
+2024-09-04T10:48:37.637448 tid70600 [IFO,Core] Did load device TCP/IP serial port adapter (1) from TCPIPPort; label = TCP/IP serial port adapter (1)
+2024-09-04T10:48:52.112731 tid11080 [IFO,Core] Did load device Andor from Andor; label = Andor
+2024-09-04T10:48:55.092729 tid11080 [IFO,Core] Will initialize device Andor
