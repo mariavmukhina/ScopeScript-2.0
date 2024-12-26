@@ -11,10 +11,4 @@
 *.sldd binary
 *.p binary
 *.mexa64 binary
-*.mexmaci64 binary
-*.mexmaca64 binary
-*.mexw64 binary
-*.xlsx binary
-*.jpg binary
-*.pdf binary
-*.docx binary
+*.mexmaci64, .mexmaca64, and .mexw64
