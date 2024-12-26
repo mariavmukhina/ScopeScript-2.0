@@ -225,12 +225,12 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %-USER FOLDER TO SAVE IN------------------------------------------
         defaultUser             = 'test';
         %-DRIVE TO SAVE IN
-        drive                   = 'G:';
+        drive                   = 'D:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
-        micromanagerPath        = 'C:\Users\yclenman\MATLAB Drive\ScopeScript-UMD\binaries\Micro-Manager-2.0\';
+        micromanagerPath        = 'C:\Users\mukhina\Documents\MATLAB\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
-        configPath              = 'C:\Users\yclenman\MATLAB Drive\ScopeScript-UMD\binaries\microscope_config.cfg';
+        configPath              = 'C:\Users\mukhina\Documents\MATLAB\ScopeScript-2.0\binaries\microscope_config.cfg';
         bufferSize              = 1000;
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM4';    
