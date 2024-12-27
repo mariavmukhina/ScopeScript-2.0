@@ -2,7 +2,7 @@ function fileLocation = executeContZCommand(flattenedInstructions,fcScope,stream
 %EXECUTECONTZCOMMAND Summary of this function goes here
 %   Detailed explanation goes here
 
-display('----executeContZCommand()------');
+disp('----executeContZCommand()------');
 Nframes = flattenedInstructions.N*streamNFrames;
 %% open all shutters since illumination is TTL controlled
 openTurretShutter();
@@ -16,16 +16,11 @@ turnOffPFS();
 fcScope.setExposure();
 
 %% display system parameters that z stack will do
-if mmc.getCameraDevice == 'C13440'
-    display(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()*1000) 'ms']);
-elseif mmc.getCameraDevice == 'Andor'
-    display(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()) 'ms']);
-end
-        
-display(['streaming ' num2str(Nframes) ' frames consisting of:']);
+disp(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()) 'ms']);        
+disp(['streaming ' num2str(Nframes) ' frames consisting of:']);
 
 
-display('1)');
+disp('1)');
 currComandAsString = insertAStringBetweenCells(',',[flattenedInstructions.commands{1}]);
 fprintf('\b protocol: %s\n',currComandAsString);
 currZStackParams = ['N:' num2str(flattenedInstructions.dacInstructions{1}.N) ...
