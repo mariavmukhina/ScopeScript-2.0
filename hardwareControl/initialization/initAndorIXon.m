@@ -2,7 +2,7 @@ function [] = initAndorIXon()
 global mmc;
 global ti2;
 disp('initializing Andor iXon');
-ti2.LightPath.Value = 2;
+ti2.LightPath.Value = 4;
 mmc.setCameraDevice('Andor');
 mmc.setProperty('Andor','BaselineClamp','Enabled');
 mmc.setProperty('Andor','CCDTemperatureSetPoint','-75');

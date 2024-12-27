@@ -1,6 +1,5 @@
 function [zCommandOutput] = executeZCommand(flattenedInstructions,fcScope)
 %EXECUTEZCOMMAND will acquire N frames specified by command in fcScope then parse it in zCommandOutput
-% If livestage on, it will also record Z positions of the stage
 
 global mmc;
 global ti2;
@@ -17,20 +16,10 @@ if currentPFSState
    waitForPFS(); 
 end
 
-%% check the lightpath
-if mmc.getCameraDevice() == 'Andor'
-    ti2.LightPath.Value = 2;
-elseif mmc.getCameraDevice() == 'C13440'
-    ti2.LightPath.Value = 4;
-end
-
 %% display system parameters that z stack will do
-if mmc.getCameraDevice == 'C13440'
-    disp(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()) 'ms']);
-elseif mmc.getCameraDevice == 'Andor'
-    disp(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()) 'ms']);
-end
+disp(['exposure is ' num2str(getExposure) 'ms with sensor read out time of ' num2str(getSensorReadOutTime()) 'ms']);
 disp(['streaming ' num2str(Nframes) ' frames consisting of:']);
+
 for i = 1:2:numel(flattenedInstructions.commands)
     disp([num2str((i-1)/2+1) ')']);
     currComandAsString = insertAStringBetweenCells(',',[flattenedInstructions.commands{i}]);
@@ -52,6 +41,7 @@ waitForSystem();
 if ~isequal(currComandAsString,'zStackZeroStep') 
     resetZStack();
 end
+
 streamAcq = getStream(Nframes);
 zCommandOutput = parseZStream(streamAcq,flattenedInstructions,fcScope);
 % generate meta data for each zstack taken in the stream
@@ -59,8 +49,6 @@ for i= 1:numel(zCommandOutput)
    zCommandOutput{i}.zMeta = genMetaData(fcScope, zCommandOutput{i}.zMeta);
 
 end 
-%% if generateWave() is called in the channel, stop wave generator
-stopWaveGenerator();
 
 %% save output
 global masterFileMaker;
@@ -83,11 +71,8 @@ if currentPFSState
    waitForPFS(); 
 end
 
-%% set BF configuration (EM =0) if Andor camera is selected
+%% set BF configuration (EM =0) 
 BF();
-%% switch DIA LED to manual
-% if contains(lower(TTLtrigger),'brightfield')
-%     setBrightFieldManual('4300K',0);
-% end
+
 end
 

@@ -19,13 +19,8 @@ fastStage();
 initAndorIXon(); %user-defined ROI may be selected to be shown as a white rectangle in all acquired images
 showROI = [1, 1, 1024, 1024];
 
-%set brightfield light source (ScopeLED) to manual regime, in which color and intesity can be changed by LED controls
-%setBrightFieldManual('4300K',1);
-
 %print all the filtercubes in Nikon turret
 printAvailableFilterCubes();
-%holdPiezoBF keeps stage TTL constant, BF TTL constant, PL is TTL triggered
-holdPiezoBF();
 
 %initialize laser
 initLaser();
@@ -33,5 +28,7 @@ initLaser();
 %initialize UV LED
 initUVLED();
 
+%holdPiezoBF keeps stage TTL constant, BF TTL constant, PL is TTL triggered
+holdPiezoBF();
 
 end
