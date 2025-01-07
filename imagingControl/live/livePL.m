@@ -21,7 +21,7 @@ openTurretShutter();
 printScopeSettings();
 PL();
 doLive(oldROI,channel,energy);
-turnOffAllLEDs();
+setAllLightSourceTTLsToZero();
 setROI(oldROI);
 fprintf('\n\n');
 BF();

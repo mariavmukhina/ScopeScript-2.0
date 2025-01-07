@@ -20,10 +20,12 @@ energy  = varargin{2};
 %% setup channel
 if contains(channel,'BF')
     %% if the channel is brightfield, set the intensity
-    turnONBFLED(energy)
+    turnOnBFLED(energy)
+    % close shutter of luminescence sources
+    closeTurretShutter();
     return;
 else
-    %% if the channel is fluorescent, execute filter cube change and update Toptica laser or Retra LED parameters
+    %% if the channel is fluorescent, execute filter cube change, switch mirror on the main branch of Ti2-LAPP attachment, and update Toptica laser or Retra LED parameters
     global mmc;
     currFilterCube = getCurrentFilterCube();
     newFilterCube = mapChannelToFilterCube(channel);
@@ -31,19 +33,26 @@ else
     pauseTimeFilterCube = fcScope.pauseTimeFilterCube;
 
     % make sure that BF LED is off
-    turnOFFBFLED();
+    turnOffBFLED();
 
     %update laser or led
     switch channel
 
         %UV LED
         case {'led-340'}
-            mmc.setProperty('UV LED', 'UV340_Intensity', energy);
-            mmc.setProperty('UV LED', 'UV380_Intensity', '0');
+            if energy < 1 || energy > 1000
+                error('Invalid intensity. Must be between 1 and 1000.');
+            else
+                mmc.setProperty('UV LED', 'UV340_Intensity', energy);
+                mmc.setProperty('UV LED', 'UV380_Intensity', '0');
+            end
         case {'led-380'}
-            mmc.setProperty('UV LED', 'UV340_Intensity', '0');
-            mmc.setProperty('UV LED', 'UV380_Intensity', energy);
-
+            if energy < 1 || energy > 1000
+                error('Invalid intensity. Must be between 1 and 1000.');
+            else
+                mmc.setProperty('UV LED', 'UV340_Intensity', '0');
+                mmc.setProperty('UV LED', 'UV380_Intensity', energy);
+            end
         %lasers    
         case 'laser-488'
             mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %','0');
@@ -77,13 +86,21 @@ else
     
         disp(['pausing ' num2str(pauseTimeFilterCube) ' sec(s) to wait for vibrations to go down...']);
         pause(pauseTimeFilterCube);
-        
+
+        %switch mirror on the main branch of Ti2-LAPP attachment between laser and LED positions
+        if contains(channel,'led')
+            switchLAPPMainBranchMirror(2);
+        else
+            switchLAPPMainBranchMirror(1);
+        end
+            
         if iscell(energy)
             disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',energy)]);
         else
             disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',{energy})]);
         end
-    end  
+    end
+    
  end
 
 end

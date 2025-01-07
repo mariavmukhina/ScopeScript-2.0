@@ -23,7 +23,7 @@ setExposure(fcScope.cameraExposureLiveBF)
 doLive(oldROI,channel,energy);
 fprintf('\n\n');
 setROI(oldROI);
-turnOffAllLEDs();
+setAllLightSourceTTLsToZero();
 
 end
 

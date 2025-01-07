@@ -6,7 +6,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
-        cameraExposureLiveBF = 50;    % in ms      
+        cameraExposureLiveBF = 10;    % in ms      
         
         %% DEFINITION OF FUNCTIONS FOR EXECUTEFUNCTION() OR DOTIMELAPSE()
         % define experiments here; executeFunctions() uses setChannel,function and exposure; doTimeLapse() also uses timePoints

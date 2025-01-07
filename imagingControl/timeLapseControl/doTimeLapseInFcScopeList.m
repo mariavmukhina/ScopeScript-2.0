@@ -83,7 +83,7 @@ function stopFunc(obj,event)
         disp('running stop function in timer');
         endFunction();
     end
-    turnOffAllLasers();
+    turnOffAllEpiChannels();
     disp('TimeLapse Finished');
     masterFileMaker.reset();
 end

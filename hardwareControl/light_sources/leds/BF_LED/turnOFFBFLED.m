@@ -1,4 +1,4 @@
-function [] = turnOFFBFLED()
+function [] = turnOffBFLED()
     % turnOFFBFLED: switches the PEKA LED's power state to 0 ("OFF") 
 
     

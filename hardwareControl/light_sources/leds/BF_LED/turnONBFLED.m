@@ -1,4 +1,4 @@
-function [] = turnONBFLED(energy)
+function [] = turnOnBFLED(energy)
     % turnONBFLED: switches the PEKA LED's power state to 1 ("ON") and
     % adjusts the intensity
 

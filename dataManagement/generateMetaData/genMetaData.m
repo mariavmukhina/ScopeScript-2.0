@@ -21,7 +21,7 @@ elseif nargin ==2
     zMeta = varargin{2};
     TTLtrigger = insertAStringBetweenCells(',',zMeta.TTLtrigger);
     % get illumination energies
-    LEDlevels = char(printCurrentLEDState(TTLtrigger));
+    EpiLightslevels = char(printCurrentEpiLightSourceState(TTLtrigger));
     z0 = num2str(zMeta.zParams.z0);
     N  = num2str(zMeta.zParams.N);
     dz = num2str(zMeta.zParams.dz);
@@ -42,18 +42,11 @@ exposure = num2str(mmc.getExposure());
 stagePosX = num2str(ti2.iXPOSITION);
 stagePosY = num2str(ti2.iYPOSITION);
 % save camera parameters
-if mmc.getCameraDevice == 'C13440'
-        cameraName = 'Hamamatsu Flash';
-        cameraPixelSize = num2str(6.5);
-        cameraGain = 'none';
-        cameraSensorReadOutTime = [num2str(getSensorReadOutTime()*1000) 'ms'];
-        defectCorrection = char(mmc.getProperty('C13440','DEFECT CORRECT MODE'));
-elseif mmc.getCameraDevice == 'Andor'
+if mmc.getCameraDevice == 'Andor'
         cameraName = 'Andor iXon';
         cameraPixelSize = num2str(13);
         cameraGain = char(mmc.getProperty(mmc.getCameraDevice,'Gain'));
         cameraSensorReadOutTime = [num2str(getSensorReadOutTime()) ' ms'];
-        defectCorrection = 'Unidentified';
 else
         error('did not specify meta data for the camera you are using');
 end
@@ -62,8 +55,8 @@ strainName = fcScope.defaultSampleName;
 % save all the meta data into a formatted string
 metaData = {'fcScope parameters',['strainName: ' strainName],['timestamp: ' timestamp],...
     ['magnification: ' currMag],['objective: ' objName], ['exposure: ' exposure],['cameraName: ' cameraName],...
-    ['cameraPixelSize: ' cameraPixelSize],['cameraGain: ' cameraGain],['cameraSensorReadoutTime: ' cameraSensorReadOutTime],['cameraDefectCorrection: ' defectCorrection],...
-    ['filterCube: ' filter],['LED levels: ' LEDlevels],...
+    ['cameraPixelSize: ' cameraPixelSize],['cameraGain: ' cameraGain],['cameraSensorReadoutTime: ' cameraSensorReadOutTime],...
+    ['filterCube: ' filter],['Epi Lights levels: ' EpiLightslevels],...
     ['xpos: ' stagePosX],['ypos: ' stagePosY]};
 if nargin==2
     metaData = {metaData{:}, ['TTLtrigger: ' TTLtrigger], ['z0: ' z0], ['N: ' N], ['dz: ' dz]};

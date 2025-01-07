@@ -4,8 +4,8 @@ function filterCube = mapChannelToFilterCube(channel)
 if ismember(channel,{'laser-488', 'laser-561', 'laser-640','laser-561-640'})
     filterCube = '1-QUAD';
 elseif strcmp(channel,'led-340')
-
+     filterCube = '1-QUAD'; % FIX!!!!!!!!!!!!
 elseif strcmp(channel,'led-380')
-
+     filterCube = '1-QUAD'; % FIX!!!!!!!!!!!!!
 end
 

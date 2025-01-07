@@ -1,20 +1,26 @@
 function arduinoPortVal = mapChannelToTTLPin(varargin)
 %MAPCHANNELTOTTLPIN returns the mapping between illumination channels (BF (Peka LED) and PL (Toptica Laser and Retra UV LED)) and pins of the Arduino hardware controller, 
-% so the arduino triggers the correct light source for the corresponding channel
+% so the arduino triggers the correct leds for the corresponding channel
 % valueSet is provided as decimal numbers to be sent as 8-bit binary input
 % to Arduino's PORTF corresponding to analog pins A0-A7
  
 
 keySet =   {'UVTTL','Laser488TTL', 'Laser561TTL', 'Laser640TTL','Laser561&640','BrightFieldTTL'};
-valueSet = [1, 2, 4, 8, 12, 64];
 
-% Decimal	8-bit Binary   Arduino Pin     Device
-% 1         00000001       A0              Retra UV LED
-% 2	        00000010       A1              Toptica Laser 488
-% 4	        00000100       A2              Toptica Laser 561
-% 8	        00001000       A3              Toptica Laser 640
-% 12        00001100       A2&3            Toptica Lasers 561&640
-% 64	    01000000       A6              Peka Brightfield LED
+% Decimal	8-bit Binary  Device
+% 1         00000001      Retra UV LED
+% 2	        00000010      Toptica Laser 488
+% 4	        00000100      Toptica Laser 561
+% 8	        00001000      Toptica Laser 640
+% 12        00001100      Toptica Lasers 561&640
+% 64	    01000000      Peka Brightfield LED
+
+%old
+%keySet =   {'AllFourTTL', 'ChDTTL', 'ChCTTL', 'ChBTTL','ChATTL','ChABTTL','ChBCTTL','ChABCTTL','BrightFieldTTL','AllOnTTL'};
+%old
+%valueSet = [1, 2, 4, 8, 16, 24, 12, 28, 64, 65];
+
+valueSet = [1, 2, 4, 8, 12, 64];
 
 if nargin == 0
     display(insertAStringBetweenCells(',',keySet));

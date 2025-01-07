@@ -6,7 +6,7 @@ parpool();
 disp('!!! all hardware shoould be on at the moment of initialization for it to run successfully !!!');
 disp('you can turn off any unused hardware after initialization');
 
-turnOffAllLEDs();
+setAllLightSourceTTLsToZero();
 
 %close epifluor excitation shutter
 closeTurretShutter();

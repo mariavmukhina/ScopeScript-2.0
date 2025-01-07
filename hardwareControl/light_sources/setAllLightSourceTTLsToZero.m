@@ -1,4 +1,4 @@
-function [] = turnOffAllLEDs()
+function [] =  setAllLightSourceTTLsToZero()
 global mmc;
 fcScope = scopeParams();
 comPort = fcScope.fcPiezoCircuitCOMPort;
