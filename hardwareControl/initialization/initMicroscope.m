@@ -5,8 +5,7 @@ parpool();
 
 disp('!!! all hardware shoould be on at the moment of initialization for it to run successfully !!!');
 disp('you can turn off any unused hardware after initialization');
-
-setAllLightSourceTTLsToZero();
+fprintf('\n\n');
 
 %close epifluor excitation shutter
 closeTurretShutter();
@@ -18,17 +17,21 @@ fastStage();
 %start the camera
 initAndorIXon(); %user-defined ROI may be selected to be shown as a white rectangle in all acquired images
 showROI = [1, 1, 1024, 1024];
+fprintf('\n\n');
 
-%print all the filtercubes in Nikon turret
-printAvailableFilterCubes();
+%print all available illumination channels
+printAvailableChannels();
+fprintf('\n\n');
 
 %initialize laser
 initLaser();
+fprintf('\n\n');
 
 %initialize UV LED
 initUVLED();
+fprintf('\n\n');
 
-%holdPiezoBF keeps stage TTL constant, BF TTL constant, PL is TTL triggered
-holdPiezoBF();
+%cameraTogglesBF keeps stage constant and toggles BF channel on and off when triggered by the camera
+cameraTogglesBF();
 
 end

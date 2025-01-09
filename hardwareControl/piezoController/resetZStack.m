@@ -1,6 +1,5 @@
 function [] = resetZStack()
-%RESETZSTACK Summary of this function goes here
-%   Detailed explanation goes here
+%RESETZSTACK sets the piezo stage to initial position selected by user
 global mmc;
 comPort = scopeParams.fcPiezoCircuitCOMPort;
 mmc.setSerialPortCommand(comPort,'r','');

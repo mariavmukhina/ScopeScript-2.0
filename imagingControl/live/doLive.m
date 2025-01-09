@@ -18,9 +18,9 @@ clearBuffer();
 startStream();
 
 if contains(iscaller(),'PL')
-   holdPiezoPL();
+   cameraTogglesPL();
 else
-   holdPiezoBF();
+   cameraTogglesBF();
 end
 
 % state variables
@@ -35,7 +35,7 @@ fig = [];
 doShow();
 close(fig);
 
-ttlPiezo();
+%ttlPiezo();
 
 
 function doShow()
@@ -107,12 +107,12 @@ function doShow()
                     fcScope = scopeParams;
                     setExposure(fcScope.cameraExposureLiveBF);
                     closeTurretShutter();
-                    holdPiezoBF();
+                    cameraTogglesBF();
                 else
                     fcScope = scopeParams;
                     setExposure(fcScope.cameraExposureLivePL);
                     openTurretShutter();
-                    holdPiezoPL();
+                    cameraTogglesPL();
                 end
 
                 waitForSystem();

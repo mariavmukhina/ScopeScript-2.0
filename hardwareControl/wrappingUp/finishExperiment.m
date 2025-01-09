@@ -1,17 +1,17 @@
 function [ ] = finishExperiment()
-%finishExperiment is to be run at the end of an experiment to turn off all the LEDs
+%finishExperiment is to be run at the end of an experiment.
+%It does the following:
 
-% set TTL triggers for all illumination channels (Laser, UV LED, BF LED) to zero
-setAllLightSourceTTLsToZero();
+% (1) sets TTL triggers for all illumination channels (Laser, UV LED, BF LED) to zero
+% (2) moves z stage to zero position
+% (3) turns off Arduino's interruptPin (camera cannot toggle light sources)
+resetZStackToZero();
 
-%set all PL and BF light sources to inactive state with zero intensities
+% (4) sets all PL and BF light sources to inactive state with zero intensities (via serial interface)
 turnOffAllEpiChannels();
 turnOffBFLED();
 
-%holdPiezoBF keeps stage TTL constant, BF TTL constant, PL is TTL triggered
-holdPiezoBF();
-
-%turn off EM gain on Andor camera
+% (5) turns off EM gain on Andor camera
 BF();
 
 end

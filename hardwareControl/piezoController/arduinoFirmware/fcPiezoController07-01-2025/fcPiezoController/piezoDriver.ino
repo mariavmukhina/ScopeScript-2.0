@@ -54,7 +54,7 @@ void resetInterruptState(){
   interruptState = 0;
 }
 
-/* passThroughMode toggles the channel on and off when triggered by the camera */
+/* passThroughModeBF toggles the channel on and off when triggered by the camera */
 void passThroughModeBF(){
   PORTF = B00000000;				
   PORTB = B00000000;
@@ -70,6 +70,7 @@ void passThroughModeBF(){
   interruptState = !interruptState;
 }
 
+/* passThroughModeEpi toggles (!)ALL epi channels on and off when triggered by the camera */
 void passThroughModeEpi(){
   PORTF = B00000000;
   PORTB = B00000000;
@@ -79,7 +80,7 @@ void passThroughModeEpi(){
   }
   else{
     /* rising edge */
-    PORTF = B00000001;
+    PORTF = B00001111;
     turnOnRedLED();
   }
   interruptState = !interruptState;
@@ -98,7 +99,7 @@ void triggerPassThroughMode(){
   }
   else{
     /* rising edge */
-    PORTF = B01111111;
+    PORTF = B01001111;
     turnOnRedLED();
     turnOnBlueLED();
   }

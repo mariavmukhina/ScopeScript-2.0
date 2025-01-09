@@ -1,6 +1,6 @@
 function [] = liveBF(varargin)
 %LIVEBF runs imaging in the BF channel in a current focal plane with real-time display, data are not saved
-% BF channel can be either preselected with setupChannel or specified as function input: liveBF('GreenBrightField',50)
+% BF channel can be either preselected with setupChannel or specified as function input: liveBF('led-BF',50)
 
 if ~isempty(varargin)
    channel =  varargin{1};
@@ -10,20 +10,26 @@ else
     channel = [];
     energy = [];
 end
-stopStreaming();
-disp('--liveBF()-----------------------');
-%clearROI();
+
+fcScope = scopeParams;
+setExposure(fcScope.cameraExposureLiveBF);
 closeTurretShutter();
-BF();
+
 % save current ROI
 oldROI = getROI();
 clearROI();
-fcScope = scopeParams;
-setExposure(fcScope.cameraExposureLiveBF)
+
+BF();
+
+stopStreaming();
+disp('--liveBF()-----------------------');
+
 doLive(oldROI,channel,energy);
-fprintf('\n\n');
+
 setROI(oldROI);
-setAllLightSourceTTLsToZero();
+turnOffCameraToggles();
+
+fprintf('\n\n');
 
 end
 

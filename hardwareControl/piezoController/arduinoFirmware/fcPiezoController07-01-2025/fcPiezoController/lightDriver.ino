@@ -1,4 +1,4 @@
-// setup light sources of the microsope
+// setup light sources of the microsopeAllLights
 void setupLights(){
   DDRF = B11111111; 
   PORTF = B01000000;
@@ -13,17 +13,12 @@ void turnOnAllEpiLED(){
 }
 
 void turnOnAllLights(){
-  PORTF = B01000001;
+  PORTF = B01001111;
 }
 
 void turnOffAllLights(){
   PORTF = B00000000;
 }
-
-void testAllLights(){
-  PORTF = B01011111;
-}
-
 
 
 // setup LEDs on the board

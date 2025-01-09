@@ -1,6 +1,6 @@
 /* 
 Frederick Chang fchang@fas.harvard.edu, Kleckner Lab, 20150307, Piezo Controller
-Maria Mukhina mukhina@umd.edu, Mukhina Lab, 20250107, updates forScopeScript 2.0
+Maria Mukhina mukhina@umd.edu, Mukhina Lab, 20250107, updates for ScopeScript 2.0
  
  This circuit controls an analogue voltage controlled piezo z-stage and light sources slaved to the
  TTL pulses of a CCD camera (either sCMOS or EMCCD). 
@@ -23,7 +23,7 @@ Maria Mukhina mukhina@umd.edu, Mukhina Lab, 20250107, updates forScopeScript 2.0
  the LED status outputs
  RED_LED     ->  PB6
  GREEN_LED   ->  PB5
- BLUE_LED  ->  PB4
+ BLUE_LED    ->  PB4
  
  the TTL control mapping from arduino to Toptica Laser, Retra UV LED, and Peka LED, zWavelength[i] is Bxxxxxxxx
  PORTF = B00000001; // Retra UV TTL
@@ -34,6 +34,7 @@ Maria Mukhina mukhina@umd.edu, Mukhina Lab, 20250107, updates forScopeScript 2.0
  PORTF = B00100000; // empty
  PORTF = B01000000; // Peka Brightfield TTL 
  PORTF = B00000000; //all off
+ PORTF = B01001111; //all on
  
  Serial Baud Rate
  myBaudRate = 115200
@@ -51,8 +52,8 @@ from the camera
  
  ___---____---___---___---___  TTL integration signal of scmos camera
    |  | 
-   |  on falling edge turn off all led lights and actuate piezo to next stage position
-   on rising edge turn on led light
+   |  on falling edge turn off all light sources and actuate piezo to next stage position
+   on rising edge turn on light source
 
 ==CONTROLLER VARIABLES============================================================
 #define maxSteps 256                   // maximum number of programmed z positions

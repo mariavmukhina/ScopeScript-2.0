@@ -11,7 +11,7 @@ for i = lower : higher
 end
 
 if nargout ==0
-   display(['fluorescent channels: ' insertAStringBetweenCells(',',filterCubes)])
+   display(['fluorescent filter cubes: ' insertAStringBetweenCells(',',filterCubes)])
 elseif nargout ==1
     varargout{1} = filterCubes;
 else

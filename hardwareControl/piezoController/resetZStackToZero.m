@@ -1,6 +1,7 @@
 function [] = resetZStackToZero()
-%RESETZSTACK Summary of this function goes here
-%   Detailed explanation goes here
+%RESETZSTACKTOZERO sets the piezo stage to zero
+
+
 global mmc;
 comPort = scopeParams.fcPiezoCircuitCOMPort;
 mmc.setSerialPortCommand(comPort,'a','');

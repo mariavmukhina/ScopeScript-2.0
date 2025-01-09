@@ -36,7 +36,7 @@ void pollSerialInterface(){
       resetZstackToZero();
       sendConfirmation();
       break;
-    case 'p':
+    case 'p': /* delete? in matlab it is used by readPiezoZFunc() which doesn't have any dependencies*/
       printZData();
       break;    
     case 's':
@@ -48,17 +48,15 @@ void pollSerialInterface(){
     case 'w':
       parseZData();
       break;
-	case 'b':
+	case 'b': 
 	  holdPositionBF();
       break;
-	case 'f':
+	case 'f': 
 	  holdPositionEpi();
 	  break;
 	case 'o':
 	  turnOffAllLights();
-	  break;
-    case 'z':
-	  testAllLights();
+    turnOffInterrupt(); 
 	  break;
     }
   }

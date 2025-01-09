@@ -29,3 +29,6 @@ mmc.initializeCircularBuffer();
 
 initMicroscope();
 
+disp('INITIALIZATION IS SUCCESSFULLY COMPLETED')
+disp('============================================================')
+

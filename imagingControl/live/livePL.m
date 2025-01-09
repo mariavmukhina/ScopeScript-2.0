@@ -10,20 +10,28 @@ else
     channel = [];
     energy = [];
 end
-stopStreaming();
-disp('--livePL()-----------------------');
+
 fcScope = scopeParams;
+setExposure(fcScope.cameraExposureLivePL);
+openTurretShutter();
+
 % save current ROI
 oldROI = getROI();
 %clearROI();
-setExposure(fcScope.cameraExposureLivePL);
-openTurretShutter();
-printScopeSettings();
+
 PL();
+
+stopStreaming();
+disp('--livePL()-----------------------');
+
+printScopeSettings();
+
 doLive(oldROI,channel,energy);
-setAllLightSourceTTLsToZero();
+
 setROI(oldROI);
-fprintf('\n\n');
+turnOffCameraToggles();
 BF();
+
+fprintf('\n\n');
 end
 
