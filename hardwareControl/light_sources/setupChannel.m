@@ -43,15 +43,15 @@ else
             if energy < 1 || energy > 1000
                 error('Invalid intensity. Must be between 1 and 1000.');
             else
-                mmc.setProperty('UV LED', 'UV340_Intensity', energy);
-                mmc.setProperty('UV LED', 'UV380_Intensity', '0');
+                mmc.setProperty('Retra UV LED', 'UV340_Intensity', energy);
+                mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
             end
         case {'led-380'}
             if energy < 1 || energy > 1000
                 error('Invalid intensity. Must be between 1 and 1000.');
             else
-                mmc.setProperty('UV LED', 'UV340_Intensity', '0');
-                mmc.setProperty('UV LED', 'UV380_Intensity', energy);
+                mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
+                mmc.setProperty('Retra UV LED', 'UV380_Intensity', energy);
             end
         %lasers    
         case 'laser-488'

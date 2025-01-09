@@ -4,6 +4,8 @@ function [] = loadMMJarFiles()
 fcScope = scopeParams;
 % Temporarily adds Micro-Manager path to MATLAB's environment PATH for this session
 setenv('PATH', [getenv('PATH') ';' fcScope.micromanagerPath]);
+%% 
+
 
 %Temporarily adds  Micro-Manager path to MATLAB's Java path
 jarPath = 'plugins\Micro-Manager';

@@ -3,8 +3,8 @@ function varargout = printCurrentEpiLightSourceState(varargin)
 
 global mmc;
 
-I340 = num2str(str2double(mmc.getProperty('UV LED', 'UV340_Intensity')));
-I380 = num2str(str2double(mmc.getProperty('UV LED', 'UV380_Intensity')));
+I340 = num2str(str2double(mmc.getProperty('Retra UV LED', 'UV340_Intensity')));
+I380 = num2str(str2double(mmc.getProperty('Retra UV LED', 'UV380_Intensity')));
 I488 = num2str(str2double(mmc.getProperty('iChrome-MLE','Laser 3: 3. Level %')));
 I561 = num2str(str2double(mmc.getProperty('iChrome-MLE','Laser 2: 3. Level %')));
 I640 = num2str(str2double(mmc.getProperty('iChrome-MLE','Laser 1: 3. Level %')));
