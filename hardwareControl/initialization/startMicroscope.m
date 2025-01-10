@@ -27,6 +27,10 @@ masterFileMaker = masterFileGenerator();
 mmc.setCircularBufferMemoryFootprint(scopeParams.bufferSize);
 mmc.initializeCircularBuffer();
 
+parpool();
+
+fprintf('\n\n');
+
 initMicroscope();
 
 disp('INITIALIZATION IS SUCCESSFULLY COMPLETED')

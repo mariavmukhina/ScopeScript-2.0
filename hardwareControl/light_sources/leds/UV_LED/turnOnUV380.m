@@ -2,6 +2,6 @@ function [] = turnOnUV380()
 
 global mmc;
 
-mmc.setProperty('UV LED','UV380','1');
+mmc.setProperty('Retra UV LED','UV380','1');
 
 end

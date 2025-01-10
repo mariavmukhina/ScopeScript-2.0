@@ -88,19 +88,20 @@ else
         pause(pauseTimeFilterCube);
 
         %switch mirror on the main branch of Ti2-LAPP attachment between laser and LED positions
-        if contains(channel,'led')
-            switchLAPPMainBranchMirror(2);
-        else
-            switchLAPPMainBranchMirror(1);
+        currMirrorPosition = getMirrorPosition();
+        newMirrorPosition = mapChannelToMirrorPosition(channel);
+        if ~strcmp(newMirrorPosition,currMirrorPosition)
+            switchLAPPMainBranchMirror(newMirrorPosition);
         end
             
-        if iscell(energy)
-            disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',energy)]);
-        else
-            disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',{energy})]);
-        end
     end
     
- end
+end
+
+if iscell(energy)
+    disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',energy)]);
+else
+    disp(['channel changed to ' channel ' with energy ' insertAStringBetweenCells(',',{energy})]);
+end
 
 end
