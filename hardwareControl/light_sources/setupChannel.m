@@ -45,6 +45,9 @@ else
             else
                 mmc.setProperty('Retra UV LED', 'UV340_Intensity', energy);
                 mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
+
+                %mmc.setProperty('Retra UV LED','UV340','1');
+                %mmc.setProperty('Retra UV LED','UV380','0');
             end
         case {'led-380'}
             if energy < 1 || energy > 1000
@@ -52,6 +55,9 @@ else
             else
                 mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
                 mmc.setProperty('Retra UV LED', 'UV380_Intensity', energy);
+
+                %mmc.setProperty('Retra UV LED','UV340','0');
+                %mmc.setProperty('Retra UV LED','UV380','1');
             end
         %lasers    
         case 'laser-488'
@@ -90,7 +96,7 @@ else
         %switch mirror on the main branch of Ti2-LAPP attachment between laser and LED positions
         currMirrorPosition = getMirrorPosition();
         newMirrorPosition = mapChannelToMirrorPosition(channel);
-        if ~strcmp(newMirrorPosition,currMirrorPosition)
+        if newMirrorPosition ~= currMirrorPosition
             switchLAPPMainBranchMirror(newMirrorPosition);
         end
             
