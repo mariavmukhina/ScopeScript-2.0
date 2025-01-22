@@ -20,9 +20,17 @@ energy  = varargin{2};
 %% setup channel
 if contains(channel,'BF')
     %% if the channel is brightfield, set the intensity
-    turnOnBFLED(energy)
+    global ti2;
     % close shutter of luminescence sources
     closeTurretShutter();
+
+    % Set LED power state
+    if energy < 1 || energy > 2090
+        error('Invalid intensity. Must be between 1 and 2090.');
+    else
+        ti2.DiaLampSwitch.Value = 1;
+        ti2.DiaLampPos.Value = energy;
+    end
     return;
 else
     %% if the channel is fluorescent, execute filter cube change, switch mirror on the main branch of Ti2-LAPP attachment, and update Toptica laser or Retra LED parameters
@@ -45,9 +53,6 @@ else
             else
                 mmc.setProperty('Retra UV LED', 'UV340_Intensity', energy);
                 mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
-
-                %mmc.setProperty('Retra UV LED','UV340','1');
-                %mmc.setProperty('Retra UV LED','UV380','0');
             end
         case {'led-380'}
             if energy < 1 || energy > 1000
@@ -55,23 +60,26 @@ else
             else
                 mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
                 mmc.setProperty('Retra UV LED', 'UV380_Intensity', energy);
-
-                %mmc.setProperty('Retra UV LED','UV340','0');
-                %mmc.setProperty('Retra UV LED','UV380','1');
             end
         %lasers    
         case 'laser-488'
             mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %','0');
             mmc.setProperty('iChrome-MLE','Laser 2: 3. Level %','0');
             mmc.setProperty('iChrome-MLE','Laser 3: 3. Level %',energy);
+            %mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0'); %switching intensity of the UV LED source to zero adds ~20 msec
+            %mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
         case 'laser-561'
             mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %','0');
             mmc.setProperty('iChrome-MLE','Laser 2: 3. Level %',energy);
             mmc.setProperty('iChrome-MLE','Laser 3: 3. Level %','0');
+            %mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
+            %mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
         case 'laser-640'
             mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %',energy);
             mmc.setProperty('iChrome-MLE','Laser 2: 3. Level %','0');
             mmc.setProperty('iChrome-MLE','Laser 3: 3. Level %','0');
+            %mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
+            %mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
         case 'laser-561-640'
             if iscell(energy)
                 energy1 = energy{1};
@@ -82,6 +90,8 @@ else
             mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %',energy2);
             mmc.setProperty('iChrome-MLE','Laser 2: 3. Level %',energy1);
             mmc.setProperty('iChrome-MLE','Laser 3: 3. Level %','0');
+            %mmc.setProperty('Retra UV LED', 'UV340_Intensity', '0');
+            %mmc.setProperty('Retra UV LED', 'UV380_Intensity', '0');
         otherwise
             error(['unknown channel:' channel]);
     end

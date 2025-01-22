@@ -12,6 +12,9 @@ function [] = initLaser()
     mmc.setProperty('iChrome-MLE','All: 4. TTL High Active','1');
     mmc.setProperty('iChrome-MLE','All: 5. TTL Master Mode','0');
     mmc.setProperty('iChrome-MLE','All: 6. Analog Mode','0');
+    mmc.setProperty('iChrome-MLE','Laser 1: 3. Level %','0');
+    mmc.setProperty('iChrome-MLE','Laser 2: 3. Level %','0');
+    mmc.setProperty('iChrome-MLE','Laser 3: 3. Level %','0');
 
     switchLAPPMainBranchMirror(1);
 

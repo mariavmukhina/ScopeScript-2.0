@@ -55,7 +55,7 @@ void pollSerialInterface(){
 	  holdPositionEpi();
 	  break;
 	case 'o':
-	  turnOffAllLights();
+	  turnOnBrightFieldLED();
     turnOffInterrupt(); 
 	  break;
     }

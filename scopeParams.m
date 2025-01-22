@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [1]; 
+        executeOnly = [9]; 
 
         % then execute
         % i)   setChannel_i, if does not exist, do nothing
@@ -67,22 +67,16 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         timePoints7  = inf;
         exposure7    = 100;
         
-        setChannel8  = {{'GreenBrightField',20}};
-        function8    = {'takeA3DStack',{'zStack8','BrightFieldTTL'},''};
+        setChannel8  = {{'led-BF',200}};
+        function8    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'}};
         timePoints8  = 0:10:60;
-        exposure8    = 100;
+        exposure8    = 10;
         
-        setChannel9  = {{'4-mCherry',50}};
-        function9    = {'takeA3DStack',{'zStack4','ChCTTL'},''};
-        timePoints9  = 0:10:60;
-        exposure9    = 50;
+        setChannel9  = {{'laser-640',1}};
+        function9    = {'takeA3DStack',{'zStack2','Laser640TTL'},''};
+        timePoints9  = 0:10:50;
+        exposure9    = 10;
         
-        % fcScope[10] takes 2D stack at the PL channel "1-QDot" and simultaneously runs generateWave() to apply mechanical pressure wave to the sample
-        % "6" defines number of recordings of Z position of the stage per frame
-        setChannel10  = {{'1-QDot',0}};
-        function10    = {'takeA3DStack',{'zStackZeroStep','ChATTL'},'generateWave',6};
-        timePoints10  = 0:5:60*30;
-        exposure10    = 200;
         
         %fcScope[11] takes 2D stack with 2 PL channels triggered
         %simultaneously for Optosplit
@@ -204,8 +198,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         laggingGarbageFrames    = 2;
 
         % setupChannel() - pause for vibration induced by moving filter turret
-        pauseTimeFilterCube     = 1;
-        pauseTimeShutters       = 1;
+        pauseTimeFilterCube     = 0;
+        pauseTimeShutters       = 0;
 
         % timelapse start delay in seconds
         startDelay              = 0;
@@ -231,7 +225,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         micromanagerPath        = 'C:\Users\mukhina\Documents\MATLAB\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
         configPath              = 'C:\Users\mukhina\Documents\MATLAB\ScopeScript-2.0\binaries\microscope_config.cfg';
-        bufferSize              = 1000;
+        bufferSize              = 10000;
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM4';    
         fcPiezoCircuitBaudRate  = 115200;

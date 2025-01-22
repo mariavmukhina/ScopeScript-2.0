@@ -8,10 +8,6 @@ void turnOnBrightFieldLED(){
   PORTF = B01000000;
 }
 
-void turnOnAllEpiLED(){
-  PORTF = B00000001;
-}
-
 void turnOnAllLights(){
   PORTF = B01001111;
 }

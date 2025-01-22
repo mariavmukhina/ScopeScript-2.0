@@ -106,7 +106,7 @@ void writeTriggerThroughLCD(){
 }
 
 void printVersionf(){
-  Serial1.print(F("mmukhina v20250107")); 
+  Serial1.print(F(" muxika v20250107")); 
 }
 
 void firstLCDLine(){

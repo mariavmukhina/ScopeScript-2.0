@@ -27,7 +27,7 @@ masterFileMaker = masterFileGenerator();
 mmc.setCircularBufferMemoryFootprint(scopeParams.bufferSize);
 mmc.initializeCircularBuffer();
 
-parpool();
+%parpool(); !!!!!!!!UNCOMMENT 
 
 fprintf('\n\n');
 
