@@ -1,20 +1,14 @@
 function [] = switchToTIRF()
 %Moves TIRF lens of TiLAPP attachment to TIRF position
 % range of values for POSITION = [-24320 24320];
-%                     Speed = 
+%                     Speed = [1 9]
 
 global ti2;
 
 ti2.LappMainBranch1.Value = position;
-if position == 1
-    disp('Mirror on the main branch of TiLAPP attachment is switched to laser')
-elseif position == 2
-    disp('Mirror on the main branch of TiLAPP attachment is switched to LED')
-else
-    disp('Mirror position was not switched. Available positions: 1 - laser, 2 - LED');
-end
 
-end
+disp('Mirror on the main branch of TiLAPP attachment is switched to laser')
+
 
 
 % % for tirf1, tirf2, and tirf3, has X and Y: %
