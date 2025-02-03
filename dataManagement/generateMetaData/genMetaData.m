@@ -29,6 +29,33 @@ else
     error('incorrect number of arguments');
 end
 
+% (new) grab timepoint information
+% Determine which imaging recipe was executed
+if isempty(fcScope.executeOnly)
+    timePointsStr = 'N/A'; % No imaging sequence used
+else
+    recipeIdx = fcScope.executeOnly(1); % Get the first selected recipe
+    timePointsField = sprintf('timePoints%d', recipeIdx); % Generate field name dynamically
+
+    % Check if the field exists in fcScope
+    if isprop(fcScope, timePointsField)
+        timePointsArray = get(fcScope, timePointsField); % Get the timePoints data
+
+        % Check if the timePoints were originally in a colon notation format
+        if length(timePointsArray) > 1 && all(diff(timePointsArray) == timePointsArray(2) - timePointsArray(1))
+            % Reconstruct the original colon notation
+            timePointsStr = sprintf('%d:%d:%d', timePointsArray(1), timePointsArray(2) - timePointsArray(1), timePointsArray(end));
+        else
+            % If irregular, fallback to comma-separated values
+            timePointsStr = strjoin(string(timePointsArray), ', ');
+        end
+    else
+        timePointsStr = 'Unknown'; % If the field is missing, default to Unknown
+    end
+end
+
+
+
 global mmc;
 global ti2;
 % get current magnification
@@ -57,7 +84,7 @@ metaData = {'fcScope parameters',['strainName: ' strainName],['timestamp: ' time
     ['magnification: ' currMag],['objective: ' objName], ['exposure: ' exposure],['cameraName: ' cameraName],...
     ['cameraPixelSize: ' cameraPixelSize],['cameraGain: ' cameraGain],['cameraSensorReadoutTime: ' cameraSensorReadOutTime],...
     ['filterCube: ' filter],['Epi Lights levels: ' EpiLightslevels],...
-    ['xpos: ' stagePosX],['ypos: ' stagePosY]};
+    ['xpos: ' stagePosX],['ypos: ' stagePosY],['timePoints: ' timePointsStr]};
 if nargin==2
     metaData = {metaData{:}, ['TTLtrigger: ' TTLtrigger], ['z0: ' z0], ['N: ' N], ['dz: ' dz]};
 end

@@ -1,5 +1,5 @@
 function [] = initTirf()
-%Moves TIRF lens of TiLAPP attachment to TIRF position
+%Moves TIRF lens of TiLAPP attachment 
 % range of values for POSITION = [-24320 24320];
 %                     Speed = [1 9]
 
