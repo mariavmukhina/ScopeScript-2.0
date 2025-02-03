@@ -19,6 +19,9 @@ initAndorIXon(); %user-defined ROI may be selected to be shown as a white rectan
 showROI = [1, 1, 1024, 1024];
 fprintf('\n\n');
 
+%center Tirf 
+initTirf();
+
 %initialize laser
 initLaser();
 fprintf('\n\n');

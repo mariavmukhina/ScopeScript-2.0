@@ -1,7 +1,7 @@
-function [] = switchToTIRF()
-%Moves TIRF lens of TiLAPP attachment to TIRF position
-% range of values for POSITION = [-24320 24320];
-%                     Speed = 
+function [] = switchLAPPMainBranchMirror(position)
+%Switches The mirror on the main branch of TiLAPP attachment between laser and UV LED
+% position = 1 - laser
+% position = 2 - LED
 
 global ti2;
 
@@ -16,16 +16,3 @@ end
 
 end
 
-
-% % for tirf1, tirf2, and tirf3, has X and Y: %
-% Max value is ti2.tirf1XPOSITION.Value = 24320;
-
-
-
-
-
-% ti2.tirf1XPOSITION
-% ti2.tirf1XSpeed
-% 
-% ti2.tirf1YPOSITION
-% ti2.tirf1YSpeed
