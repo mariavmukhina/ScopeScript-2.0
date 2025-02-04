@@ -9,7 +9,7 @@ if mmc.getCameraDevice() == 'Andor'
     mmc.setProperty('Andor','Gain','1000');
     mmc.setProperty('Andor','ReadoutMode','10.000 MHz');
     mmc.setProperty('Andor','VerticalClockVoltage','Normal');
-    mmc.setProperty('Andor','VerticalSpeed','1.13');
+    mmc.setProperty('Andor','VerticalSpeed (microseconds)','1.13');
     mmc.setProperty('Andor','Region of Interest','1. 512 x 512 (centered)');
     mmc.setProperty('Andor','CCDTemperatureSetPoint','-95');
     disp('Waiting for sensor to cool down to -93C');
