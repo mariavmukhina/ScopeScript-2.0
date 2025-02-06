@@ -9,7 +9,8 @@ ti2.tirf1XSpeed.Value = 1;
 ti2.tirf1YSpeed.Value = 1;
 
 %set tirf position to zero
-ti2.tirf1XPOSITION.Value = 0;
-ti2.tirf1YPOSITION.Value = 0;
+% ti2.tirf1XPOSITION.Value = 0;
+% ti2.tirf1YPOSITION.Value = 0;
+setTirf('EPI');
 
-disp('TIRF set to (0,0)')
+disp('TIRF set to EPI')

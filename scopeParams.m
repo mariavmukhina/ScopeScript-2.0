@@ -21,17 +21,23 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % ii)  function_i
         % iii) at timePoints_i (seconds), if does not exist, do always
         
-        % fcScope[1] takes zstacks at two channels defined by setupChannel(): 1 - in the PL channel "1-QDot" at 100% LED intensity, 2 - in the green BF channel at 50% intensity 
-        setChannel1  = {{'1-QDot',100},{'GreenBrightField',50}};
-        % parameters for zstacks are passed to takeA3DStack() to be sent to a custom TTL control board
-        % "zstack[i]" (defined below) - number and size of steps of piezo stage
-        % "ChATTL" - TTL trigger for CoolLED to be used with "1-QDot" channel
-        % the full list of TTL triggers for Toptica laser and Retra UV LED (PL), and Peka LED (BF): 'AllFourTTL','ChDTTL','ChCTTL','ChBTTL','ChATTL','ChABTTL','ChBCTTL','ChABCTTL','BrightFieldTTL','AllOnTTL';
-        function1    = {'takeA3DStack',{'zStack2','ChATTL','zStack2','BrightFieldTTL'},''};
-        % if doTimeLapse() is called, 2 zstacks are taken at time points defined in timePoints[1]
+        % % fcScope[1] takes zstacks at two channels defined by setupChannel(): 1 - in the PL channel "1-QDot" at 100% LED intensity, 2 - in the green BF channel at 50% intensity 
+        % setChannel1  = {{'1-QDot',100},{'GreenBrightField',50}};
+        % % parameters for zstacks are passed to takeA3DStack() to be sent to a custom TTL control board
+        % % "zstack[i]" (defined below) - number and size of steps of piezo stage
+        % % "ChATTL" - TTL trigger for CoolLED to be used with "1-QDot" channel
+        % % the full list of TTL triggers for Toptica laser and Retra UV LED (PL), and Peka LED (BF): 'AllFourTTL','ChDTTL','ChCTTL','ChBTTL','ChATTL','ChABTTL','ChBCTTL','ChABCTTL','BrightFieldTTL','AllOnTTL';
+        % function1    = {'takeA3DStack',{'zStack2','ChATTL','zStack2','BrightFieldTTL'},''};
+        % % if doTimeLapse() is called, 2 zstacks are taken at time points defined in timePoints[1]
+        % timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
+        % % both zstacks are taken with exposure[1]
+        % exposure1    = 100; %ms
+
+        setChannel1 = {{'BF', 100}};
+        function1    = {'takeA3DStack',{'zStack1','BrightFieldTTL'},''};
         timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        % both zstacks are taken with exposure[1]
-        exposure1    = 100; %ms
+        exposure1 = 10;
+
         
         % fcScope[2] takes only 1 zstack in the PL channel "2-mTeal"
         setChannel2  = {{'2-mTeal',100}};
