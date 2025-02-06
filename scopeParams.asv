@@ -55,14 +55,20 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         timePoints4  = 0:15:60*60*4;
         exposure4    = 10;
         
-               
-        setChannel5  = {{'led-340',1}};
-        function5    = {'takeA3DStack',{'zStackZeroStep','UVTTL'},''};
+        % % fcScope[5] takes 2D stack in the PL channel "5-YFP"
+        % setChannel5  = {{'5-YFP',100}};
+        % function5    = {'takeA3DStack',{'zStackZeroStep','ChBCTTL'},''};
+        % timePoints5  = 0:15:60*60*3;
+        % exposure5    = 10;
+
+        % fcScope[5] takes 2D stack in the PL channel "5-YFP"
+        setChannel5  = {{'led-',100}};
+        function5    = {'takeA3DStack',{'zStackZeroStep','ChBCTTL'},''};
         timePoints5  = 0:15:60*60*3;
         exposure5    = 10;
         
-        setChannel6  = {{'laser-561-640',{1,1}}};
-        function6    = {'takeA3DStack',{'zStack4','Laser561&640'},''};
+        setChannel6  = {{'6-CY5',100}};
+        function6    = {'takeA3DStack',{'zStack4','ChDTTL'},''};
         timePoints6  = 0:10:60;
         exposure6    = 10;
         
