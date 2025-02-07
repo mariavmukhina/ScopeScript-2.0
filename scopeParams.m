@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test';
-        defaultExpFolder        = 'test';
+        defaultSampleName       = 'testing_recipies2';
+        defaultExpFolder        = 'Yaakov';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 1;    % in ms
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [9]; 
+        executeOnly = [2]; 
 
         % then execute
         % i)   setChannel_i, if does not exist, do nothing
@@ -36,14 +36,14 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         setChannel1 = {{'BF', 100}};
         function1    = {'takeA3DStack',{'zStack1','BrightFieldTTL'},''};
         timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        exposure1 = 10;
+        exposure1 = 1;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
         setChannel2  = {{'laser-640',1}};
         function2    = {'takeA3DStack',{'zStack1','Laser640TTL'},''};
         timePoints2  = 0:60*20:60*60*8;
-        exposure2    = 10;
+        exposure2    = 1;
         
         setChannel3  = {{'laser-561',1}};
         function3    = {'takeA3DStack',{'zStack1','Laser561TTL'},''};
@@ -66,21 +66,20 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         timePoints6  = 0:10:60;
         exposure6    = 10;
         
-        % fcScope[7] takes 3 zstacks: 2 in the PL channel "2-redGr" with a double band filter cube and 1 in the red BF channel
-        %TTL triggers ChB and ChC alternate on frame by frame basis 
-        setChannel7  = {{'2-redGr',{100,30}},{'RedBrightField',50}};
-        function7    = {'takeA3DStack',{{'zStack1','zStack1'},{'ChBTTL','ChCTTL'},'zStack2','BrightFieldTTL'},''};
-        timePoints7  = inf;
-        exposure7    = 100;
+
+        setChannel7  = {{'laser-640',1},{'BF',100}};
+        function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
+        timePoints7  = 0:10:60;
+        exposure7    = 1;
         
-        setChannel8  = {{'led-BF',200}};
-        function8    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'}};
+        setChannel8  = {{'laser-561',1},{'BF',100}};
+        function8    = {'takeA3DStack',{'zStack1','Laser561TTL','zStack2','BrightFieldTTL'},''};
         timePoints8  = 0:10:60;
         exposure8    = 10;
         
-        setChannel9  = {{'laser-640',1}};
-        function9    = {'takeA3DStack',{'zStack2','Laser640TTL'},''};
-        timePoints9  = 0:10:50;
+        setChannel9  = {{'laser-488',1},{'BF',100}};
+        function9    = {'takeA3DStack',{'zStack1','Laser488TTL','zStack2','BrightFieldTTL'},''};
+        timePoints9  = 0:10:60;
         exposure9    = 10;
         
         
@@ -94,13 +93,13 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %-zStack recipes---------------------------------------------------
         % z step is defined in DAC units, not nanometers
         % 1 DAC unit = 220 um[max stage range]/65536 ~= 3 nm
-        zStack1_N   = 60; % number of slices
+        zStack1_N   = 100; % number of slices
         zStack1_dz  = 75; % size of a piezo step; stage goes up
-        zStack1_z0  = 0;  % starting plane
+        zStack1_z0  = -50*75;  % starting plane
         
-        zStack2_N   = 50;
-        zStack2_dz  = -150; % stage goes down
-        zStack2_z0  = 19*150;
+        zStack2_N   = 100;
+        zStack2_dz  = -75; % stage goes down
+        zStack2_z0  = 50*75;
         
         zStack3_N   = 15;
         zStack3_dz  = -300;
@@ -138,59 +137,59 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % by default, the z stage is set up to the closed-loop mode to ensure stability, additional acceleration is not used
         % if parameter for chosen dz step is absent then stage will be moved with a standard rate 
         
-        %ff1_dz          = 300;
-        %ff1_deltaUp     = 1500;
-        %ff1_delayUp     = 1;
-        %ff1_deltaDown   = -500;
-        %ff1_delayDown   = 1;
+        ff1_dz          = 300;
+        ff1_deltaUp     = 1500;
+        ff1_delayUp     = 1;
+        ff1_deltaDown   = -500;
+        ff1_delayDown   = 1;
         
-        %ff2_dz          = -300;
-        %ff2_deltaUp     = -2850;
-        %ff2_delayUp     = 1;
-        %ff2_deltaDown   = 100;
-        %ff2_delayDown   = 1;
+        ff2_dz          = -300;
+        ff2_deltaUp     = -2850;
+        ff2_delayUp     = 1;
+        ff2_deltaDown   = 100;
+        ff2_delayDown   = 1;
         
-        %ff3_dz          = -3000;
-        %ff3_deltaUp     = -5000;
-        %ff3_delayUp     = 20;
-        %ff3_deltaDown   = 1000;
-        %ff3_delayDown   = 1;
+        ff3_dz          = -3000;
+        ff3_deltaUp     = -5000;
+        ff3_delayUp     = 20;
+        ff3_deltaDown   = 1000;
+        ff3_delayDown   = 1;
         
-        %ff4_dz          = -1200;
-        %ff4_deltaUp     = -5000;
-        %ff4_delayUp     = 20;
-        %ff4_deltaDown   = 1000;
-        %ff4_delayDown   = 1;
+        ff4_dz          = -1200;
+        ff4_deltaUp     = -5000;
+        ff4_delayUp     = 20;
+        ff4_deltaDown   = 1000;
+        ff4_delayDown   = 1;
         
-        %ff5_dz          = 2700;
-        %ff5_deltaUp     = 2930;
-        %ff5_delayUp     = 1;
-        %ff5_deltaDown   = -1000;
-        %ff5_delayDown   = 1;
+        ff5_dz          = 2700;
+        ff5_deltaUp     = 2930;
+        ff5_delayUp     = 1;
+        ff5_deltaDown   = -1000;
+        ff5_delayDown   = 1;
         
-        %ff6_dz          = 400;
-        %ff6_deltaUp     = 2230;
-        %ff6_delayUp     = 1;
-        %ff6_deltaDown   = -1000;
-        %ff6_delayDown   = 1;
+        ff6_dz          = 400;
+        ff6_deltaUp     = 2230;
+        ff6_delayUp     = 1;
+        ff6_deltaDown   = -1000;
+        ff6_delayDown   = 1;
         
-        %ff7_dz          = -400;
-        %ff7_deltaUp     = -2850;
-        %ff7_delayUp     = 1;
-        %ff7_deltaDown   = 100;
-        %ff7_delayDown   = 1;
+        ff7_dz          = -400;
+        ff7_deltaUp     = -2850;
+        ff7_delayUp     = 1;
+        ff7_deltaDown   = 100;
+        ff7_delayDown   = 1;
         
-        %ff8_dz          = -800;
-        %ff8_deltaUp     = -3230;
-        %ff8_delayUp     = 1;
-        %ff8_deltaDown   = 100;
-        %ff8_delayDown   = 1;
+        ff8_dz          = -800;
+        ff8_deltaUp     = -3230;
+        ff8_delayUp     = 1;
+        ff8_deltaDown   = 100;
+        ff8_delayDown   = 1;
         
-        %ff9_dz          = 800;
-        %ff9_deltaUp     = 2230;
-        %ff9_delayUp     = 1;
-        %ff9_deltaDown   = -1000;
-        %ff9_delayDown   = 1;
+        ff9_dz          = 800;
+        ff9_deltaUp     = 2230;
+        ff9_delayUp     = 1;
+        ff9_deltaDown   = -1000;
+        ff9_delayDown   = 1;
         
         %% -- OPTIONAL PARAMETERS ----------------------------------------------
 
