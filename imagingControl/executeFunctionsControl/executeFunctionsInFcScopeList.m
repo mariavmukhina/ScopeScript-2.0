@@ -30,7 +30,7 @@ for i = 1:numFcScope
     executeOnly = fcScopeList{i}.executeOnly;
     for j = executeOnly
         % If EMCCD Andor is used, switch EM camera settings 
-        if contains(parsedAndValues.values{j}{2}{1}{1},'BrightField')
+        if contains(parsedAndValues.values{j}{2}{1}{1},'BF')
             BF();
         else
             PL();

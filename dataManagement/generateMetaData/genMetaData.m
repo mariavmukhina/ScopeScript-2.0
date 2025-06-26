@@ -72,7 +72,11 @@ stagePosY = num2str(ti2.iYPOSITION);
 if mmc.getCameraDevice == 'Andor'
         cameraName = 'Andor iXon';
         cameraPixelSize = num2str(13);
-        cameraGain = char(mmc.getProperty(mmc.getCameraDevice,'Gain'));
+        if strcmp(char(mmc.getProperty('Andor','EMSwitch')),'Off')
+            cameraGain = '0';
+        elseif strcmp(char(mmc.getProperty('Andor','EMSwitch')),'On')
+            cameraGain = char(mmc.getProperty(mmc.getCameraDevice,'Gain'));
+        end
         cameraSensorReadOutTime = [num2str(getSensorReadOutTime()) ' ms'];
 else
         error('did not specify meta data for the camera you are using');

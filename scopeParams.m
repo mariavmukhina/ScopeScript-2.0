@@ -1,11 +1,11 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'testing_recipies2';
-        defaultExpFolder        = 'Yaakov';
+        defaultSampleName       = 'closed_shutter_EM_off';
+        defaultExpFolder        = 'test';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
-        cameraExposureLivePL = 1;    % in ms
+        cameraExposureLivePL = 10;    % in ms
         cameraExposureLiveBF = 10;    % in ms      
         
         %% DEFINITION OF FUNCTIONS FOR EXECUTEFUNCTION() OR DOTIMELAPSE()
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [2]; 
+        executeOnly = [1]; 
 
         % then execute
         % i)   setChannel_i, if does not exist, do nothing
@@ -34,16 +34,16 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % exposure1    = 100; %ms
 
         setChannel1 = {{'BF', 100}};
-        function1    = {'takeA3DStack',{'zStack1','BrightFieldTTL'},''};
+        function1    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'},''};
         timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        exposure1 = 1;
+        exposure1 = 10;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
         setChannel2  = {{'laser-640',1}};
-        function2    = {'takeA3DStack',{'zStack1','Laser640TTL'},''};
+        function2    = {'takeA3DStack',{'zStackZeroStep1','Laser640TTL'},''};
         timePoints2  = 0:60*20:60*60*8;
-        exposure2    = 1;
+        exposure2    = 10;
         
         setChannel3  = {{'laser-561',1}};
         function3    = {'takeA3DStack',{'zStack1','Laser561TTL'},''};
@@ -125,7 +125,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         zStackZeroStep_dz  = 0;
         zStackZeroStep_z0  = 0;
         
-        zStackZeroStep1_N   = 5; %for 2D timeLapses
+        zStackZeroStep1_N   = 1; %for 2D timeLapses
         zStackZeroStep1_dz  = 0;
         zStackZeroStep1_z0  = 0;
 
@@ -137,59 +137,59 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % by default, the z stage is set up to the closed-loop mode to ensure stability, additional acceleration is not used
         % if parameter for chosen dz step is absent then stage will be moved with a standard rate 
         
-        ff1_dz          = 300;
-        ff1_deltaUp     = 1500;
-        ff1_delayUp     = 1;
-        ff1_deltaDown   = -500;
-        ff1_delayDown   = 1;
-        
-        ff2_dz          = -300;
-        ff2_deltaUp     = -2850;
-        ff2_delayUp     = 1;
-        ff2_deltaDown   = 100;
-        ff2_delayDown   = 1;
-        
-        ff3_dz          = -3000;
-        ff3_deltaUp     = -5000;
-        ff3_delayUp     = 20;
-        ff3_deltaDown   = 1000;
-        ff3_delayDown   = 1;
-        
-        ff4_dz          = -1200;
-        ff4_deltaUp     = -5000;
-        ff4_delayUp     = 20;
-        ff4_deltaDown   = 1000;
-        ff4_delayDown   = 1;
-        
-        ff5_dz          = 2700;
-        ff5_deltaUp     = 2930;
-        ff5_delayUp     = 1;
-        ff5_deltaDown   = -1000;
-        ff5_delayDown   = 1;
-        
-        ff6_dz          = 400;
-        ff6_deltaUp     = 2230;
-        ff6_delayUp     = 1;
-        ff6_deltaDown   = -1000;
-        ff6_delayDown   = 1;
-        
-        ff7_dz          = -400;
-        ff7_deltaUp     = -2850;
-        ff7_delayUp     = 1;
-        ff7_deltaDown   = 100;
-        ff7_delayDown   = 1;
-        
-        ff8_dz          = -800;
-        ff8_deltaUp     = -3230;
-        ff8_delayUp     = 1;
-        ff8_deltaDown   = 100;
-        ff8_delayDown   = 1;
-        
-        ff9_dz          = 800;
-        ff9_deltaUp     = 2230;
-        ff9_delayUp     = 1;
-        ff9_deltaDown   = -1000;
-        ff9_delayDown   = 1;
+        % ff1_dz          = 300;
+        % ff1_deltaUp     = 1500;
+        % ff1_delayUp     = 1;
+        % ff1_deltaDown   = -500;
+        % ff1_delayDown   = 1;
+        % 
+        % ff2_dz          = -300;
+        % ff2_deltaUp     = -2850;
+        % ff2_delayUp     = 1;
+        % ff2_deltaDown   = 100;
+        % ff2_delayDown   = 1;
+        % 
+        % ff3_dz          = -3000;
+        % ff3_deltaUp     = -5000;
+        % ff3_delayUp     = 20;
+        % ff3_deltaDown   = 1000;
+        % ff3_delayDown   = 1;
+        % 
+        % ff4_dz          = -1200;
+        % ff4_deltaUp     = -5000;
+        % ff4_delayUp     = 20;
+        % ff4_deltaDown   = 1000;
+        % ff4_delayDown   = 1;
+        % 
+        % ff5_dz          = 2700;
+        % ff5_deltaUp     = 2930;
+        % ff5_delayUp     = 1;
+        % ff5_deltaDown   = -1000;
+        % ff5_delayDown   = 1;
+        % 
+        % ff6_dz          = 400;
+        % ff6_deltaUp     = 2230;
+        % ff6_delayUp     = 1;
+        % ff6_deltaDown   = -1000;
+        % ff6_delayDown   = 1;
+        % 
+        % ff7_dz          = -400;
+        % ff7_deltaUp     = -2850;
+        % ff7_delayUp     = 1;
+        % ff7_deltaDown   = 100;
+        % ff7_delayDown   = 1;
+        % 
+        % ff8_dz          = -800;
+        % ff8_deltaUp     = -3230;
+        % ff8_delayUp     = 1;
+        % ff8_deltaDown   = 100;
+        % ff8_delayDown   = 1;
+        % 
+        % ff9_dz          = 800;
+        % ff9_deltaUp     = 2230;
+        % ff9_delayUp     = 1;
+        % ff9_deltaDown   = -1000;
+        % ff9_delayDown   = 1;
         
         %% -- OPTIONAL PARAMETERS ----------------------------------------------
 
@@ -222,17 +222,17 @@ classdef scopeParams < matlab.mixin.SetGet & handle
     
     properties (Constant)
         %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'test';
+        defaultUser             = 'muxika';
         %-DRIVE TO SAVE IN
-        drive                   = 'D:';
+        drive                   = 'H:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
-        micromanagerPath        = 'C:\Users\yclenman\MATLAB Drive\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
+        micromanagerPath        = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
-        configPath              = 'C:\Users\yclenman\MATLAB Drive\ScopeScript-2.0\binaries\microscope_config.cfg';
+        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg';
         bufferSize              = 10000;
         % com port for custom TTL control
-        fcPiezoCircuitCOMPort   = 'COM9';    
+        fcPiezoCircuitCOMPort   = 'COM3';    
         fcPiezoCircuitBaudRate  = 115200;
         %-TIF SAVING PARAMS------------------------------------------------
         saveParams              = {'tif', 'Compression', 'none'};
