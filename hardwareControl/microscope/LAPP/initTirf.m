@@ -14,3 +14,4 @@ ti2.tirf1YSpeed.Value = 1;
 setTirf('EPI');
 
 disp('TIRF set to EPI')
+fprintf('\n\n');

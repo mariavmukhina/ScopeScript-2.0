@@ -1,7 +1,7 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'closed_shutter_EM_off';
+        defaultSampleName       = 'test';
         defaultExpFolder        = 'test';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
@@ -36,7 +36,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         setChannel1 = {{'BF', 100}};
         function1    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'},''};
         timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        exposure1 = 10;
+        exposure1 = 1;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
@@ -224,12 +224,12 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %-USER FOLDER TO SAVE IN------------------------------------------
         defaultUser             = 'muxika';
         %-DRIVE TO SAVE IN
-        drive                   = 'H:';
+        drive                   = 'D:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
         micromanagerPath        = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
-        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg';
+        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config_loanerCamera.cfg';
         bufferSize              = 10000;
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM3';    

@@ -4,12 +4,10 @@ function [] = BF()
 global mmc;
 if mmc.getCameraDevice() == 'Andor'
     mmc.setProperty('Andor','FrameTransfer','On');
-    mmc.setProperty('Andor','CCDTemperatureSetPoint','-75');
+    mmc.setProperty('Andor','EMSwitch','Off')
     mmc.setProperty('Andor','ReadoutMode','30.000 MHz');
-
     mmc.setProperty('Andor','VerticalClockVoltage','+4');
     mmc.setProperty('Andor','VerticalSpeed (microseconds)','4.33');
-    mmc.setProperty('Andor','EMSwitch','Off')
     disp('BF configuration selected: readout 30 MHz, vert shift 4.33, EM 0');
 end
 end
