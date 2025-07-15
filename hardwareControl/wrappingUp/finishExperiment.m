@@ -19,7 +19,7 @@ BF();
 
 global mmc;
 % (7) clean up µManager: clear all notifications on internal events 
-registerCallback([]);
+mmc.registerCallback([]);
 % (8) unload all devices from the core, clears all configuration data
 mmc.reset();
 
