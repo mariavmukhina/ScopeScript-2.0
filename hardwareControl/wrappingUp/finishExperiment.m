@@ -12,10 +12,16 @@ resetZStackToZero();
 turnOffAllEpiChannels();
 turnOffBFLED();
 
-% (5) turns off EM gain on Andor camera
+% (5) stops camera aquisition in case of the emergency script shutoff 
+% (6) turns off EM gain on Andor camera
+stopStreaming();
 BF();
 
-
+global mmc;
+% (7) clean up µManager: clear all notifications on internal events 
+registerCallback([]);
+% (8) unload all devices from the core, clears all configuration data
+mmc.reset();
 
 end
 
