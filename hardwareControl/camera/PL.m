@@ -4,7 +4,6 @@ function [] = PL()
 
 global mmc;
 if mmc.getCameraDevice() == 'Andor'
-    mmc.setProperty('Andor','FrameTransfer','On');
     mmc.setProperty('Andor','EMSwitch','On');
     mmc.setProperty('Andor','Gain','100');
     mmc.setProperty('Andor','ReadoutMode','30.000 MHz');

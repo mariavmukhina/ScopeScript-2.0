@@ -3,7 +3,6 @@ function [] = BF()
 %brightfield image acquisition
 global mmc;
 if mmc.getCameraDevice() == 'Andor'
-    mmc.setProperty('Andor','FrameTransfer','On');
     mmc.setProperty('Andor','EMSwitch','Off')
     mmc.setProperty('Andor','ReadoutMode','30.000 MHz');
     mmc.setProperty('Andor','VerticalClockVoltage','+4');
