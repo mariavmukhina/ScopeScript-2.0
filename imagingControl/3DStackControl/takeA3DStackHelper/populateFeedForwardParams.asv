@@ -12,6 +12,7 @@ jump0  = mergedZSteps(1) - mergedZSteps(end);
 jumpSizes = [jump0 diff(mergedZSteps)];
 % populate feedForwardSteps given ff params
 [idxBinary,idxOfdzs] = ismember(jumpSizes,cell2mat(dzs));
+disp(mat2str(cell2mat(dzs)))
 feedForwardSteps = zeros(4,numel(idxBinary));
 % populate deltaUp
 feedForwardSteps(1,idxBinary) = arrayfun(@(x) get(fcScope,['ff' num2str(x) '_deltaUp']),idxOfdzs(idxBinary));
@@ -24,10 +25,9 @@ feedForwardSteps(4,idxBinary) = arrayfun(@(x) get(fcScope,['ff' num2str(x) '_del
 % handle missing jumpSizes
 missingFeedForwards = jumpSizes(~idxBinary);
 % missingFeedForwards = missingFeedForwards(missingFeedForwards > 0);
-if ~isempty(cell2mat(dzs)) && any(missingFeedForwards) 
-   warning(['missing feed forward jump parameters: ' mat2str(missingFeedForwards)]);
+if any(missingFeedForwards)
+   warning(['missing jump parameters: ' mat2str(missingFeedForwards)]);
 end
 flattenedInstructions.feedForwardSteps = feedForwardSteps;
-
 end
 
