@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test';
-        defaultExpFolder        = 'test';
+        defaultSampleName       = 'timelapse_test';
+        defaultExpFolder        = 'timelapse_test';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [3]; 
+        executeOnly = [7]; 
 
         % then execute
 
@@ -79,7 +79,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
         setChannel7  = {{'laser-640',1},{'BF',1}};
         function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
-        timePoints7  = 0:10:60;
+        timePoints7  = 0:60:60*60*5;
         exposure7    = 1;
         
         setChannel8  = {{'laser-561',1},{'BF',100}};
