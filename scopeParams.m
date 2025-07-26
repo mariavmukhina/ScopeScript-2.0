@@ -240,7 +240,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         micromanagerPath        = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
         configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config_loanerCamera.cfg';
-        bufferSize              = 102400;
+        bufferSize              = 90000;
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM3';    
         fcPiezoCircuitBaudRate  = 115200;
