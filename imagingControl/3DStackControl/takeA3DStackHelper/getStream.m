@@ -9,13 +9,14 @@ stack   = zeros(width,height,n,'uint16');
 mmc.prepareSequenceAcquisition(mmc.getCameraDevice);
 mmc.startSequenceAcquisition(n, 0, false);
 j = 0;
-tFrame = tic;
+tFirstFrame = tic;
+tCurrFrame = 0;
 
-while(mmc.isSequenceRunning(mmc.getCameraDevice()) || j ~= n && (toc - tFrame < 5))
+while(mmc.isSequenceRunning(mmc.getCameraDevice()) || j ~= n && (tCurrFrame < 5))
     if (mmc.getRemainingImageCount() > 0)
             j = j+1;
 			stack(:,:,j) = reshape(typecast(mmc.popNextImage(),'uint16'),width,height);
-            tFrame = tic;
+            tCurrFrame = toc(tFirstFrame);
     end
 end
 mmc.stopSequenceAcquisition();
