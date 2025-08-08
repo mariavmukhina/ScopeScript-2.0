@@ -1,7 +1,7 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = '8.7-Timelapse-2-3%-488';
+        defaultSampleName       = '8.7-Timelapse';
         defaultExpFolder        = 'Mitosis-Spy620-ERGFP';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [7,9]; 
+        executeOnly = [7,4]; 
 
         % then execute
 
@@ -79,7 +79,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
         setChannel7  = {{'laser-640',1},{'BF',1}};
         function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
-        timePoints7  = 0:60*4:60*60*8;
+        timePoints7  = 0:60:60*60*2;
         exposure7    = 10;
         
         setChannel8  = {{'laser-561',1},{'BF',100}};
@@ -87,9 +87,9 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         timePoints8  = 0:10:60;
         exposure8    = 10;
         
-        setChannel9  = {{'laser-488',3},{'BF',1}};
+        setChannel9  = {{'laser-488',2},{'BF',1}};
         function9    = {'takeA3DStack',{'zStack1','Laser488TTL','zStack2','BrightFieldTTL'},''};
-        timePoints9  = 0:60*4:60*60*8;
+        timePoints9  = 0:10:60;
         exposure9    = 10;
         
         
