@@ -9,32 +9,21 @@ stack   = zeros(width,height,n,'uint16');
 timeout = 30; % set timeout in sec after which the acquisition will beforced to stop
 
 mmc.prepareSequenceAcquisition(mmc.getCameraDevice);
-mmc.startSequenceAcquisition(n, 0, true); % increasing interval between images (second parameter) does n't help with "Aquire Thread: We can get here if we are not fast enough" error
+mmc.startSequenceAcquisition(n, 4, true);
 j = 0;
 tFirstFrame = tic;
 
-%code for Force Run Till Abort = On
-while (mmc.getRemainingImageCount() > 0 || (j<n))
+while (mmc.getRemainingImageCount() > 0 || mmc.isSequenceRunning(mmc.getCameraDevice()))
     if toc(tFirstFrame) > timeout
         warning('Acquisition timeout. Forcing stop.');
         break;
     end
+    %pause(0.001);
     if (mmc.getRemainingImageCount()>0)  % confirm that the next frame has appeared in the buffer
         j = j+1;
 	    stack(:,:,j) = reshape(typecast(mmc.popNextImage(),'uint16'),width,height);
     end
 end
-%code for Force Run Till Abort = Off
-% while (mmc.getRemainingImageCount() > 0 || mmc.isSequenceRunning(mmc.getCameraDevice()))
-%     if toc(tFirstFrame) > timeout
-%         warning('Acquisition timeout. Forcing stop.');
-%         break;
-%     end
-%     if (mmc.getRemainingImageCount()>0)  % confirm that the next frame has appeared in the buffer
-%         j = j+1;
-% 	    stack(:,:,j) = reshape(typecast(mmc.popNextImage(),'uint16'),width,height);
-%     end
-% end
 
 mmc.stopSequenceAcquisition();
 

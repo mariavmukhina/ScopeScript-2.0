@@ -7,7 +7,7 @@ disp('Lasers disabled');
 mmc.setProperty('iChrome-MLE','All: 1. Enable','0');
 
 % Turn Retra UV LED off
-disp('UV LEDs disabled')
-mmc.setProperty('Retra UV LED', 'State', '0'); 
+%disp('UV LEDs disabled')
+%mmc.setProperty('Retra UV LED', 'State', '0'); 
 
 end

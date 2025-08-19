@@ -27,7 +27,7 @@ initLaser();
 fprintf('\n\n');
 
 %initialize UV LED
-initUVLED();
+%initUVLED();
 fprintf('\n\n');
 
 %print all available illumination channels
