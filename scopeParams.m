@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'timelapse_test';
-        defaultExpFolder        = 'timelapse_test';
+        defaultSampleName       = 'copper_free_test';
+        defaultExpFolder        = 'copper_free_test';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
@@ -232,14 +232,14 @@ classdef scopeParams < matlab.mixin.SetGet & handle
     
     properties (Constant)
         %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'muxika';
+        defaultUser             = 'khanley';
         %-DRIVE TO SAVE IN
         drive                   = 'H:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
-        micromanagerPath        = 'C:\Users\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
+        micromanagerPath        = 'C:\Users\khanley1\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
-        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg';
+        configPath              = 'C:\Users\khanley1\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg';
         bufferSize              = 4096; %in MB
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM3';    
