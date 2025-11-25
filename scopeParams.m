@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'copper_free_test';
-        defaultExpFolder        = 'copper_free_test';
+        defaultSampleName       = 'SiRdye_FOV1_timelapse-overnight';
+        defaultExpFolder        = '20251124_IEDDA_chemistry';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
@@ -77,9 +77,9 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         exposure6    = 10;
         
 
-        setChannel7  = {{'laser-640',1},{'BF',1}};
+        setChannel7  = {{'laser-640',0.5},{'BF',2}};
         function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
-        timePoints7  = 0:60:60*60*5;
+        timePoints7  = 0:60*30:60*60*8;
         exposure7    = 10;
         
         setChannel8  = {{'laser-561',1},{'BF',100}};
