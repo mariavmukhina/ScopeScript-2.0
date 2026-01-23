@@ -1,12 +1,12 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'SiRdye_15';
-        defaultExpFolder        = '20251124_IEDDA_chemistry';
+        defaultSampleName       = 'SiRdye_IEDDAtreatment-new';
+        defaultExpFolder        = '20260123_IEDDA_chemistry';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
-        cameraExposureLivePL = 10;    % in ms
-        cameraExposureLiveBF = 10;    % in ms      
+        cameraExposureLivePL = 20;    % in ms
+        cameraExposureLiveBF = 50;    % in ms      
         
         %% DEFINITION OF FUNCTIONS FOR EXECUTEFUNCTION() OR DOTIMELAPSE()
         % define experiments here; executeFunctions() uses setChannel,function and exposure; doTimeLapse() also uses timePoints
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
 
-        executeOnly = [7]; 
+        executeOnly = [2,4,1]; 
 
         % then execute
 
@@ -43,16 +43,16 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %%%%%
 
 
-        setChannel1 = {{'BF', 100}};
-        function1    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'},''};
-        timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        exposure1 = 1;
+        setChannel1 = {{'BF', 2}};
+        function1    = {'takeA3DStack',{'zStack1','BrightFieldTTL'},''};
+        timePoints1  = 0:60*15:60*60*16; % start immediately, call function[1] every 10 sec for 60 sec total
+        exposure1 = 10;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
         setChannel2  = {{'laser-640',1}};
-        function2    = {'takeA3DStack',{'zStackZeroStep1','Laser640TTL'},''};
-        timePoints2  = 0:60*20:60*60*8;
+        function2    = {'takeA3DStack',{'zStack1','Laser640TTL'},''};
+        timePoints2  = 0:60*15:60*60*16;
         exposure2    = 10;
         
         setChannel3  = {{'laser-561',1}};
@@ -62,7 +62,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         
         setChannel4  = {{'laser-488',1}};
         function4    = {'takeA3DStack',{'zStack2','Laser488TTL'},''};
-        timePoints4  = 0:15:60*60*4;
+        timePoints4  = 0:60*15:60*60*16;
         exposure4    = 10;
         
                
@@ -77,10 +77,10 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         exposure6    = 10;
         
 
-        setChannel7  = {{'laser-640',1},{'BF',1}};
-        function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
-        timePoints7  = 0:60:60*60*5;
-        exposure7    = 10;
+        setChannel7  = {{'laser-640',1},{'laser-488',1}};
+        function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','Laser488TTL'},''};
+        timePoints7  = 0:60*15:60*60*16;
+        exposure7    = 20;
         
         setChannel8  = {{'laser-561',1},{'BF',100}};
         function8    = {'takeA3DStack',{'zStack1','Laser561TTL','zStack2','BrightFieldTTL'},''};
@@ -234,7 +234,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %-USER FOLDER TO SAVE IN------------------------------------------
         defaultUser             = 'khanley';
         %-DRIVE TO SAVE IN
-        drive                   = 'H:';
+        drive                   = 'D:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
         micromanagerPath        = 'C:\Users\khanley1\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
