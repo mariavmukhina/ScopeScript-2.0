@@ -44,7 +44,9 @@ function doShow()
         while(isempty(temp))
             temp = grabRecentFrame();
         end
-        fig = imtool(temp,[min(temp(:)), max(temp(:))]);
+        %fig = imtool(temp,[min(temp(:)), max(temp(:))]);
+        fig = figure;
+        imshow(temp, [min(temp(:)) max(temp(:))]);
            set(fig,'units','normalized','outerposition',[0.05 0.15 0.43 0.81]);
 
         
@@ -54,8 +56,8 @@ function doShow()
         set(fig,'KeyPressFcn',@keyDownListener);
         % get all axes in figure
         set(fig,'doublebuffer','on');
-        iptsetpref('ImshowBorder','tight');
-        iptsetpref('ImtoolInitialMagnification','adaptive');
+       % iptsetpref('ImshowBorder','tight');
+       % iptsetpref('ImtoolInitialMagnification','adaptive');
         allAxesInFigure = findall(fig,'type','axes');
         set(allAxesInFigure, 'xlimmode','manual',...
             'ylimmode','manual',...
