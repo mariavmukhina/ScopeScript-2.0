@@ -4,6 +4,7 @@ global ti2;
 if ~isempty(stagePos)
     ti2.XPosition.Value = stagePos.X;
     ti2.YPosition.Value = stagePos.Y;
+    ti2.ZPosition.Value = stagePos.Z;
 end
 
 end

@@ -14,6 +14,7 @@ if isempty(varargin)
         fcScope = scopeParams();
         executeFunctionsInFcScopeList({fcScope});
     else
+        
         disp('taking fcScope Z stacks at XY locations from stageCoordinates list');
         executeFunctionsInFcScopeList(stageCoordinates);
     end
