@@ -52,8 +52,14 @@ for i = 1:numFcScope
             % go to stage pos if available
             if numel(fcScopeList) > 1
                 if ~isempty(parsedAndValues.stagePos)
-                    %masterFileMaker.setStagePos(i);
-                    gotoStagePos(parsedAndValues.stagePos)
+                    masterFileMaker.setStagePos(i);
+                    if ~isATimerOn()
+                     
+                        fprintf('\n\n');
+                        fprintf('>>>>> moving to next stagepos:%i\n',i);
+                        gotoStagePos(parsedAndValues.stagePos);
+                       
+                    end
                 else
                     masterFileMaker.setStagePos([]);
                 end       
