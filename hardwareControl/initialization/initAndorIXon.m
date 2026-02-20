@@ -17,7 +17,7 @@ mmc.setProperty('Andor','CCDTemperatureSetPoint','-75');
 % end
 disp('Sensor temperature is set to -75C');
 % disp('==========================================================================================================')
-mmc.setProperty('Andor','Force Run Till Abort','On');
+%mmc.setProperty('Andor','Force Run Till Abort','On');
 mmc.setProperty('Andor','EMSwitch','Off');
 mmc.setProperty('Andor','FanMode','Full');
 mmc.setProperty('Andor','FrameTransfer','Off');

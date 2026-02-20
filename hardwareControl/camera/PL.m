@@ -8,7 +8,7 @@ if mmc.getCameraDevice() == 'Andor'
     mmc.setProperty('Andor','Gain','100');
     mmc.setProperty('Andor','ReadoutMode','30.000 MHz');
     mmc.setProperty('Andor','VerticalClockVoltage','+4');
-    mmc.setProperty('Andor','VerticalSpeed (microseconds)','4.33');
+    mmc.setProperty('Andor','VerticalSpeed','4.33');
     disp('PL configuration selected: readout 30 MHz, vert shift 4.33, EM 100');
 end
 end
