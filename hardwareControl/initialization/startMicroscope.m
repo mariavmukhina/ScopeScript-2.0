@@ -31,7 +31,9 @@ mmc.initializeCircularBuffer();
 
 fprintf('\n\n');
 
+DebugLogger.writeDebugMessage("Initializing Microscope")
 initMicroscope();
+DebugLogger.writeDebugMessage("Initialized Microscope")
 
 disp('INITIALIZATION IS SUCCESSFULLY COMPLETED')
 disp('============================================================')

@@ -39,6 +39,8 @@ for i = 1:numFcScope
                 if ~isempty(parsedAndValues.stagePos)
                     fprintf('\n\n');
                     fprintf('>>>>> moving to next stagepos:%i\n',i);
+                    DebugLogger.writeDebugMessage(sprintf('Moving to stageposition in initForNextInFcScopeList: %i',i));
+
                     gotoStagePos(parsedAndValues.stagePos);
                 end
             end

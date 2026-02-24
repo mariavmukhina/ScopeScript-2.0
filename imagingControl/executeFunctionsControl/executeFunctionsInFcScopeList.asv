@@ -57,7 +57,7 @@ for i = 1:numFcScope
                      
                         fprintf('\n\n');
                         fprintf('>>>>> moving to next stagepos:%i\n',i);
-                        DebugLogger.writeDebugMessage(sprintf('Moving to stageposition in executeFunctionsInFcScopeList: %i',i));
+                        debugLogger.writeDebugMessage(sprintf('Moving to stageposition: %i',i));
 
                         gotoStagePos(parsedAndValues.stagePos);
                        
@@ -71,8 +71,6 @@ for i = 1:numFcScope
             % wait for stage position to finish
             waitForSystem();
             % setup channel
-            DebugLogger.writeDebugMessage(sprintf('Setting Up Channel in FcScopeList. Position %i',i));
-
             updateChannelGivenCommand(parsedAndValues.values{j}{2});
             % wait for PFS
             currentPFSState = getPFSState();
@@ -82,14 +80,14 @@ for i = 1:numFcScope
             % set exposure 
             setExposure(parsedAndValues.values{j}{4});            
             % execute function
-            DebugLogger.writeDebugMessage(sprintf('Executing function in FcScopeList. Position %i',i));
+            debugLogger.writeDebugMessage(sprintf('Waiting for PFS. Position %i',i);
             executeFunctionGivenCommand(parsedAndValues.values{j}{1},fcScopeList{i})
             % wait for PFS
-            DebugLogger.writeDebugMessage(sprintf('Waiting for PFS. Position %i',i));
+            debugLogger.writeDebugMessage(sprintf('Waiting for PFS. Position %i',i);
             if currentPFSState
                 waitForPFS(parsedAndValues.pfsOffset);
             end   
-            DebugLogger.writeDebugMessage(sprintf('End of executeFunctionInFcScopeList.m loop. Position %i',i));
+            debugLogger.writeDebugMessage(sprintf('End of executeFunctionInFcScopeList.m loop. Position %i',i));
 
         else
            

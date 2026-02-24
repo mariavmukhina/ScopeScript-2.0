@@ -6,8 +6,10 @@ global mmc;
 fcScope = scopeParams;
 import mmcorej.*;
 mmc = CMMCore;
-mmc.enableStderrLog(false);
-mmc.enableDebugLog(false);
+mmc.enableStderrLog(true);
+mmc.enableDebugLog(true);
+logFilePath = 'C:\Users\khanley1\Documents\MicroManagerLog.txt';
+mmc.setPrimaryLogFile(logFilePath, true);
 
 disp('loading other hardware configuration ...');
 mmc.loadSystemConfiguration(fcScope.configPath);

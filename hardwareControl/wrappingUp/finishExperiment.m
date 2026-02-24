@@ -23,5 +23,8 @@ mmc.registerCallback([]);
 % (8) unload all devices from the core, clears all configuration data
 mmc.reset();
 
+DebugLogger.writeDebugMessage("Ending Experiment");
+DebugLogger.close();
+
 end
 
