@@ -1,0 +1,203 @@
+2026-02-23T12:13:50.589045 tid26412 [IFO,LogManager] Enabled primary log file C:\Program Files\Micro-Manager-2.0\CoreLogs\CoreLog20260223T121350_pid26148.txt
+2026-02-23T12:13:50.589108 tid26412 [IFO,App] User: mukhina
+2026-02-23T12:13:50.592154 tid26412 [IFO,App] Host: PHYSWDREN033092
+2026-02-23T12:13:50.592162 tid26412 [IFO,App] MM Studio version: 2.0.3 20260220
+2026-02-23T12:13:50.592184 tid26412 [IFO,App] MMCore version 11.13.0
+2026-02-23T12:13:50.592192 tid26412 [IFO,App] Device API version 74, Module API version 10
+2026-02-23T12:13:50.592198 tid26412 [IFO,App] Operating System: Windows 11 (amd64) 10.0
+2026-02-23T12:13:50.592203 tid26412 [IFO,App] JVM: OpenJDK 64-Bit Server VM, version 11.0.27, 64-bit
+2026-02-23T12:13:50.620578 tid23648 [IFO,App] Unable to instantiate class for class='org.scijava.ui.swing.viewer.table.SwingTableDisplayViewer', priority=0.0, enabled=true, pluginType=DisplayViewer
+                                    [       ] org.scijava.InstantiableException: Class not found: org.scijava.ui.swing.viewer.table.SwingTableDisplayViewer in Thread[Plugin loading thread,6,main]
+                                    [       ]   at org.scijava.plugin.PluginInfo.loadClass(PluginInfo.java:290)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.PluginFinder.findPluginsWithLoader(PluginFinder.java:111)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.DefaultPluginManager.loadPlugins(DefaultPluginManager.java:126)
+                                    [       ]   at java.base/java.lang.Thread.run(Unknown Source)
+                                    [       ] Caused by: java.lang.IllegalArgumentException: Cannot load class: org.scijava.ui.swing.viewer.table.SwingTableDisplayViewer
+                                    [       ]   at org.scijava.util.Types.iae(Types.java:975)
+                                    [       ]   at org.scijava.util.Types.load(Types.java:234)
+                                    [       ]   at org.scijava.plugin.PluginInfo.loadClass(PluginInfo.java:284)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.PluginFinder.findPluginsWithLoader(PluginFinder.java:111)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.DefaultPluginManager.loadPlugins(DefaultPluginManager.java:126)
+                                    [       ]   at java.base/java.lang.Thread.run(Unknown Source)
+                                    [       ] Caused by: java.lang.NoClassDefFoundError: org/scijava/ui/viewer/table/AbstractTableDisplayViewer
+                                    [       ]   at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+                                    [       ]   at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader$1.run(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader$1.run(Unknown Source)
+                                    [       ]   at java.base/java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.base/java.net.URLClassLoader.findClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at org.scijava.util.Types.load(Types.java:226)
+                                    [       ]   at org.scijava.plugin.PluginInfo.loadClass(PluginInfo.java:284)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.PluginFinder.findPluginsWithLoader(PluginFinder.java:111)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.DefaultPluginManager.loadPlugins(DefaultPluginManager.java:126)
+                                    [       ]   at java.base/java.lang.Thread.run(Unknown Source)
+                                    [       ] Caused by: java.lang.ClassNotFoundException: org.scijava.ui.viewer.table.AbstractTableDisplayViewer
+                                    [       ]   at java.base/java.net.URLClassLoader.findClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+                                    [       ]   at java.base/java.lang.ClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.security.SecureClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader.defineClass(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader$1.run(Unknown Source)
+                                    [       ]   at java.base/java.net.URLClassLoader$1.run(Unknown Source)
+                                    [       ]   at java.base/java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.base/java.net.URLClassLoader.findClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+                                    [       ]   at org.scijava.util.Types.load(Types.java:226)
+                                    [       ]   at org.scijava.plugin.PluginInfo.loadClass(PluginInfo.java:284)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.PluginFinder.findPluginsWithLoader(PluginFinder.java:111)
+                                    [       ]   at org.micromanager.internal.pluginmanagement.DefaultPluginManager.loadPlugins(DefaultPluginManager.java:126)
+                                    [       ]   at java.base/java.lang.Thread.run(Unknown Source)
+2026-02-23T12:13:50.698558 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.intensity.IntensityInspectorPanelPlugin@4c28dc20
+2026-02-23T12:13:50.698656 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.metadata.SummaryMetadataInspectorPanelPlugin@3be18298
+2026-02-23T12:13:50.698697 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.metadata.PlaneMetadataInspectorPanelPlugin@6a1fba61
+2026-02-23T12:13:50.698735 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.comments.CommentsInspectorPanelPlugin@55f4e8ef
+2026-02-23T12:13:50.699484 tid23648 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.PatternOverlayPlugin@65d68ac9
+2026-02-23T12:13:50.699537 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.navigation.NavigationInspectorPanelPlugin@2967b07c
+2026-02-23T12:13:50.699560 tid23648 [IFO,App] Found plugin org.micromanager.display.inspector.internal.panels.overlays.OverlaysInspectorPanelPlugin@52d1a1f4
+2026-02-23T12:13:50.699591 tid23648 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.ScaleBarPlugin@5f694bcb
+2026-02-23T12:13:50.699624 tid23648 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.TextOverlayPlugin@4f01329
+2026-02-23T12:13:50.699692 tid23648 [IFO,App] Found plugin org.micromanager.display.overlay.internal.overlays.TimestampPlugin@157b5ca6
+2026-02-23T12:13:50.699822 tid23648 [IFO,App] Found plugin org.micromanager.acquisition.internal.DefaultMDAPlugin@448fef92
+2026-02-23T12:13:50.699908 tid23648 [IFO,App] Found plugin org.micromanager.acquisition.internal.acqengjcompat.multimda.MultiMDA@408f4e97
+2026-02-23T12:13:50.700160 tid23648 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.CopyToImageJItem@2d5cb070
+2026-02-23T12:13:50.700214 tid23648 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.ExportImagesItem@6d549c73
+2026-02-23T12:13:50.700246 tid23648 [IFO,App] Found plugin org.micromanager.display.internal.gearmenu.LineProfileItem@129245c0
+2026-02-23T12:13:50.701284 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.AutofocusButtons@6badc1e8
+2026-02-23T12:13:50.701462 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.CloseAllButton@4edee3e8
+2026-02-23T12:13:50.701662 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ExposureTime@28b9b08f
+2026-02-23T12:13:50.702086 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.LiveButton@5a639f06
+2026-02-23T12:13:50.702604 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.MDAButtons@68c9e846
+2026-02-23T12:13:50.702815 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.PresetButton@5706ea3f
+2026-02-23T12:13:50.702859 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.RefreshButton@4f8d7e41
+2026-02-23T12:13:50.703164 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.SavedMDAButton@28cbec11
+2026-02-23T12:13:50.703870 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ScriptButton@e073db3
+2026-02-23T12:13:50.703979 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.ShutterControl@250d2999
+2026-02-23T12:13:50.704312 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.SnapButton@1cb7a30
+2026-02-23T12:13:50.704353 tid23648 [IFO,App] Found plugin org.micromanager.quickaccess.internal.controls.TextLabel@5cb024c2
+2026-02-23T12:13:50.704583 tid23648 [IFO,App] Plugin loading took 385ms
+2026-02-23T12:13:50.704615 tid26412 [IFO,App] Finished waiting for plugins to load
+2026-02-23T12:14:05.333343 tid26412 [IFO,App] Error: Failed to get optimalZ step from core
+2026-02-23T12:14:05.448884 tid26412 [IFO,Core] Default camera unset
+2026-02-23T12:14:05.448897 tid26412 [IFO,Core] Default xy stage unset
+2026-02-23T12:14:05.448902 tid26412 [IFO,Core] Default stage unset
+2026-02-23T12:14:05.448909 tid26412 [IFO,Core] Default autofocus unset
+2026-02-23T12:14:05.448913 tid26412 [IFO,Core] Default image processor unset
+2026-02-23T12:14:05.448916 tid26412 [IFO,Core] Default galvo unset
+2026-02-23T12:14:05.448919 tid26412 [IFO,Core] Default SLM unset
+2026-02-23T12:14:05.448930 tid26412 [IFO,Core] Did unload all devices
+2026-02-23T12:14:05.448961 tid26412 [IFO,Core] Loading system configuration from:"C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg"
+2026-02-23T12:14:05.449268 tid26412 [IFO,Core] Default camera unset
+2026-02-23T12:14:05.449270 tid26412 [IFO,Core] Default xy stage unset
+2026-02-23T12:14:05.449272 tid26412 [IFO,Core] Default stage unset
+2026-02-23T12:14:05.449275 tid26412 [IFO,Core] Default autofocus unset
+2026-02-23T12:14:05.449276 tid26412 [IFO,Core] Default image processor unset
+2026-02-23T12:14:05.449278 tid26412 [IFO,Core] Default galvo unset
+2026-02-23T12:14:05.449280 tid26412 [IFO,Core] Default SLM unset
+2026-02-23T12:14:05.449284 tid26412 [IFO,Core] Did unload all devices
+2026-02-23T12:14:05.451153 tid26412 [IFO,Core] Did load device COM3 from SerialManager; label = COM3
+2026-02-23T12:14:05.451171 tid26412 [IFO,Core] Did load device COM4 from SerialManager; label = COM4
+2026-02-23T12:14:05.462478 tid26412 [IFO,Core] Did load device Andor from Andor; label = Andor
+2026-02-23T12:14:05.463760 tid26412 [IFO,Core] Did load device FreeSerialPort from FreeSerialPort; label = Arduino
+2026-02-23T12:14:05.465358 tid26412 [IFO,Core] Did load device iChrome-MLE from Toptica_iChrome_MLE; label = iChrome-MLE
+2026-02-23T12:14:05.469129 tid26412 [IFO,Core] Did load device LightEngine from Lumencor; label = Retra UV LED
+2026-02-23T12:14:05.469152 tid26412 [ERR,Core:dev:Andor] Cannot set property "Camera" to "| iXon Ultra | DU888_BVF | 14362 |" [ Error in device "Andor": Invalid property name encountered: Camera (2) ]
+2026-02-23T12:14:05.469220 tid26412 [IFO,Core] Unloading all devices after failure to load system configuration
+2026-02-23T12:14:05.469221 tid26412 [IFO,Core] Default camera unset
+2026-02-23T12:14:05.469224 tid26412 [IFO,Core] Default xy stage unset
+2026-02-23T12:14:05.469225 tid26412 [IFO,Core] Default stage unset
+2026-02-23T12:14:05.469227 tid26412 [IFO,Core] Default autofocus unset
+2026-02-23T12:14:05.469228 tid26412 [IFO,Core] Default image processor unset
+2026-02-23T12:14:05.469229 tid26412 [IFO,Core] Default galvo unset
+2026-02-23T12:14:05.469230 tid26412 [IFO,Core] Default SLM unset
+2026-02-23T12:14:05.469238 tid26412 [IFO,dev:iChrome-MLE] Shutdown
+2026-02-23T12:14:05.469254 tid26412 [ERR,Core] Attempt to log message from unregistered device: Shutdown
+2026-02-23T12:14:05.469295 tid26412 [IFO,Core] Did unload all devices
+2026-02-23T12:14:05.469315 tid26412 [IFO,Core] Now rethrowing original error from system configuration loading
+2026-02-23T12:14:05.470771 tid26412 [IFO,App] Failed to load hardware configuration
+                                    [       ] java.lang.Exception: Line 15: Property,Andor,Camera,| iXon Ultra | DU888_BVF | 14362 |
+                                    [       ] Cannot set property "Camera" to "| iXon Ultra | DU888_BVF | 14362 |" [ Error in device "Andor": Invalid property name encountered: Camera (2) ]
+                                    [       ] 
+                                    [       ]  in Thread[AWT-EventQueue-0,6,main]
+                                    [       ]   at mmcorej.MMCoreJJNI.CMMCore_loadSystemConfiguration(Native Method)
+                                    [       ]   at mmcorej.CMMCore.loadSystemConfiguration(CMMCore.java:315)
+                                    [       ]   at org.micromanager.profile.internal.gui.HardwareConfigurationManager.loadConfigImpl(HardwareConfigurationManager.java:164)
+                                    [       ]   at org.micromanager.profile.internal.gui.HardwareConfigurationManager.loadHardwareConfiguration(HardwareConfigurationManager.java:128)
+                                    [       ]   at org.micromanager.internal.MMStudio.loadSystemConfiguration(MMStudio.java:916)
+                                    [       ]   at org.micromanager.internal.MMStudio.<init>(MMStudio.java:404)
+                                    [       ]   at MMStudioPlugin$1.run(MMStudioPlugin.java:84)
+                                    [       ]   at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+                                    [       ]   at java.base/java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+2026-02-23T12:14:09.099648 tid26412 [IFO,App] EDTHangLogger: Started monitoring of EDT hangs
+                                    [       ] [heartbeat timeout = 4500 ms, hang check interval = 1000 ms]
+2026-02-23T12:14:09.320496 tid26412 [IFO,App] Rebuilding config group table
+2026-02-23T12:14:09.320539 tid26412 [IFO,App] Finished rebuilding config group table
+2026-02-23T12:14:09.337707 tid26412 [IFO,App] Startup script (C:\Program Files\Micro-Manager-2.0\MMStartup.bsh) not present
+2026-02-23T12:14:09.337719 tid26412 [IFO,App] Updating GUI; config pad = true; from cache = true
+2026-02-23T12:14:09.339048 tid26412 [IFO,App] Rebuilding config group table
+2026-02-23T12:14:09.339052 tid26412 [IFO,App] Finished rebuilding config group table
+2026-02-23T12:14:09.339971 tid26412 [IFO,App] Finished updating GUI
+2026-02-23T12:14:17.474151 tid26412 [IFO,App] Failed to get Z Position from Core.
+                                    [       ] java.lang.Exception: No device with label "" in Thread[AWT-EventQueue-0,6,main]
+                                    [       ]   at mmcorej.MMCoreJJNI.CMMCore_getPosition__SWIG_1(Native Method)
+                                    [       ]   at mmcorej.CMMCore.getPosition(CMMCore.java:1171)
+                                    [       ]   at org.micromanager.internal.dialogs.AcqControlDlg.applySettingsFromGUI(AcqControlDlg.java:2104)
+                                    [       ]   at org.micromanager.internal.dialogs.AcqControlDlg.saveAcqSettingsToProfile(AcqControlDlg.java:1707)
+                                    [       ]   at org.micromanager.internal.dialogs.AcqControlDlg.close(AcqControlDlg.java:1371)
+                                    [       ]   at org.micromanager.internal.MMUIManager.cleanupOnClose(MMUIManager.java:213)
+                                    [       ]   at org.micromanager.internal.MMStudio.cleanupOnClose(MMStudio.java:747)
+                                    [       ]   at org.micromanager.internal.MMStudio.closeSequence(MMStudio.java:809)
+                                    [       ]   at org.micromanager.internal.MainFrame$1.windowClosing(MainFrame.java:187)
+                                    [       ]   at java.desktop/java.awt.AWTEventMulticaster.windowClosing(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Window.processWindowEvent(Unknown Source)
+                                    [       ]   at java.desktop/javax.swing.JFrame.processWindowEvent(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Window.processEvent(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+                                    [       ]   at java.base/java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+                                    [       ]   at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+                                    [       ]   at java.base/java.security.AccessController.doPrivileged(Native Method)
+                                    [       ]   at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+                                    [       ]   at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+2026-02-23T12:14:17.477773 tid26412 [IFO,App] EDTHangLogger: Stopping monitoring of EDT hangs
+2026-02-23T12:14:17.477795 tid26412 [IFO,Core] Default camera unset
+2026-02-23T12:14:17.477799 tid26412 [IFO,Core] Default xy stage unset
+2026-02-23T12:14:17.477800 tid26412 [IFO,Core] Default stage unset
+2026-02-23T12:14:17.477802 tid26412 [IFO,Core] Default autofocus unset
+2026-02-23T12:14:17.477803 tid26412 [IFO,Core] Default image processor unset
+2026-02-23T12:14:17.477805 tid26412 [IFO,Core] Default galvo unset
+2026-02-23T12:14:17.477805 tid26412 [IFO,Core] Default SLM unset
+2026-02-23T12:14:17.477809 tid26412 [IFO,Core] Did unload all devices
+2026-02-23T12:14:17.477813 tid26412 [IFO,Core] System reset
+2026-02-23T12:14:17.478558 tid26412 [IFO,Core] Core session ended
