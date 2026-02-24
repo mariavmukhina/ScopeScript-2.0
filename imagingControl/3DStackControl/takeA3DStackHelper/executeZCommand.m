@@ -58,20 +58,20 @@ for i= 1:numel(zCommandOutput)
 end 
 
 %% save output
-% global masterFileMaker;
-% for i = 1:numel(zCommandOutput)
-%    % save each parsed output
-%    TTLtrigger = regexp(zCommandOutput{i}.zMeta,'TTLtrigger: \w+','match');
-%    TTLtrigger = TTLtrigger{1};
-%    TTLtrigger = TTLtrigger(13:end);
-%    LEDlevels = regexp(zCommandOutput{i}.zMeta,'LED levels: \w+','match');
-%    if ~isempty(LEDlevels)
-%        LEDlevels = LEDlevels{1};
-%        LEDlevels = LEDlevels(13:end);
-%    end
-%    currfilename = masterFileMaker.generateFileName(fcScope,'TTLchannel',TTLtrigger,'LEDlevels',LEDlevels);
-%    exportSingleTifStack(currfilename,zCommandOutput{i}.data,zCommandOutput{i}.zMeta);
-% end
+global masterFileMaker;
+for i = 1:numel(zCommandOutput)
+   % save each parsed output
+   TTLtrigger = regexp(zCommandOutput{i}.zMeta,'TTLtrigger: \w+','match');
+   TTLtrigger = TTLtrigger{1};
+   TTLtrigger = TTLtrigger(13:end);
+   LEDlevels = regexp(zCommandOutput{i}.zMeta,'LED levels: \w+','match');
+   if ~isempty(LEDlevels)
+       LEDlevels = LEDlevels{1};
+       LEDlevels = LEDlevels(13:end);
+   end
+   currfilename = masterFileMaker.generateFileName(fcScope,'TTLchannel',TTLtrigger,'LEDlevels',LEDlevels);
+   exportSingleTifStack(currfilename,zCommandOutput{i}.data,zCommandOutput{i}.zMeta);
+end
 
 %% if pfs state was on, turn it back on and wait for it to settle
 if currentPFSState
