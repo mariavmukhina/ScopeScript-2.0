@@ -7,8 +7,9 @@ if ~isempty(varargin)
    energy =  varargin{2};
    setupChannel(channel,energy);
 else
-    channel = [];
-    energy = [];
+    channel = 'led-BF';
+    energy = 1;
+    setupChannel(channel,energy);
 end
 
 fcScope = scopeParams;

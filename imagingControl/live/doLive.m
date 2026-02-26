@@ -9,8 +9,6 @@ function [] = doLive(oldROI,varargin)
 % keyboard '1-9' -> moves to position in stageCoordinates list
 
 
-global showROI;
-
 fastStage();
 stopStreaming();
 
@@ -45,17 +43,15 @@ function doShow()
             temp = grabRecentFrame();
         end
         fig = imtool(temp,[min(temp(:)), max(temp(:))]);
-           set(fig,'units','normalized','outerposition',[0.05 0.15 0.43 0.81]);
-
-        
-        rectangle = int16(showROI);
+        %fig = imageshow(temp, DisplayRange=[min(temp(:)) max(temp(:))]);
+        set(fig,'units','normalized','outerposition',[0.05 0.15 0.43 0.81]);
         
         drawnow;
         set(fig,'KeyPressFcn',@keyDownListener);
-        % get all axes in figure
         set(fig,'doublebuffer','on');
         iptsetpref('ImshowBorder','tight');
         iptsetpref('ImtoolInitialMagnification','adaptive');
+        % get all axes in figure
         allAxesInFigure = findall(fig,'type','axes');
         set(allAxesInFigure, 'xlimmode','manual',...
             'ylimmode','manual',...
@@ -70,10 +66,7 @@ function doShow()
             while(temp == 0)
                 views = grabRecentFrame();
                 if ~isempty(views)
-                    temp = 1;
-                    % shapeInserter = vision.ShapeInserter('BorderColor','Custom','LineWidth',3,'CustomBorderColor', max(views(:)));
-                    % views = step(shapeInserter, views, rectangle);             
-
+                    temp = 1;           
                 end
             end
         

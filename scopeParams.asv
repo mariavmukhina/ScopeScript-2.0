@@ -1,20 +1,20 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'timelapse_test';
-        defaultExpFolder        = 'timelapse_test';
+        defaultSampleName       = 'well3_sensor-EP_07';
+        defaultExpFolder        = 'OS-190_2026023_HeLa_electroporation_v7_NLS-PEGs';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
-        cameraExposureLiveBF = 10;    % in ms      
+        cameraExposureLiveBF = 50;    % in ms      
         
         %% DEFINITION OF FUNCTIONS FOR EXECUTEFUNCTION() OR DOTIMELAPSE()
         % define experiments here; executeFunctions() uses setChannel,function and exposure; doTimeLapse() also uses timePoints
         
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
-
-        executeOnly = [7]; 
+     
+        executeOnly = [1,2,3]; 
 
         % then execute
 
@@ -43,22 +43,22 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %%%%%
 
 
-        setChannel1 = {{'BF', 100}};
-        function1    = {'takeA3DStack',{'zStackZeroStep1','BrightFieldTTL'},''};
+        setChannel1 = {{'BF', 10}};
+        function1    = {'takeA3DStack',{'zStack2','BrightFieldTTL'},''};
         timePoints1  = 0:10:60; % start immediately, call function[1] every 10 sec for 60 sec total
-        exposure1 = 1;
+        exposure1 = 200;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
         setChannel2  = {{'laser-640',1}};
-        function2    = {'takeA3DStack',{'zStackZeroStep1','Laser640TTL'},''};
+        function2    = {'takeA3DStack',{'zStack2','Laser640TTL'},''};
         timePoints2  = 0:60*20:60*60*8;
-        exposure2    = 10;
+        exposure2    = 20;
         
         setChannel3  = {{'laser-561',1}};
-        function3    = {'takeA3DStack',{'zStack1','Laser561TTL'},''};
+        function3    = {'takeA3DStack',{'zStack2','Laser561TTL'},''};
         timePoints3  = 0:60*2:60*60*60;
-        exposure3    = 10;
+        exposure3    = 20;
         
         setChannel4  = {{'laser-488',1}};
         function4    = {'takeA3DStack',{'zStack2','Laser488TTL'},''};
@@ -71,15 +71,15 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         timePoints5  = 0:15:60*60*3;
         exposure5    = 10;
         
-        setChannel6  = {{'laser-561-640',{1,1}}};
-        function6    = {'takeA3DStack',{'zStack4','Laser561&640'},''};
+        setChannel6  = {{'laser-561-640',{0,1}},{'laser-561-640',{1,0}}};
+        function6    = {'takeA3DStack',{'zStack1','Laser561&640','zStack2','Laser561&640'},''};
         timePoints6  = 0:10:60;
         exposure6    = 10;
         
 
         setChannel7  = {{'laser-640',1},{'BF',1}};
         function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
-        timePoints7  = 0:60:60*60*5;
+        timePoints7  = 0:60:60*60;
         exposure7    = 10;
         
         setChannel8  = {{'laser-561',1},{'BF',100}};
@@ -239,8 +239,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %path to uManager app files
         micromanagerPath        = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\Micro-Manager-2.0\';
         %path to uManager hardware configuration
-        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config_loanerCamera_noUV.cfg';
-        bufferSize              = 4096;
+        configPath              = 'C:\Users\mukhina\Documents\GitHub\ScopeScript-2.0\binaries\microscope_config.cfg';
+        bufferSize              = 4096; %in MB
         % com port for custom TTL control
         fcPiezoCircuitCOMPort   = 'COM3';    
         fcPiezoCircuitBaudRate  = 115200;
