@@ -1,7 +1,7 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test';
+        defaultSampleName       = 'test_stageAppend';
         defaultExpFolder        = 'test-timeLapse';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
      
-        executeOnly = [1,2,3]; 
+        executeOnly = [2,3]; 
 
         % then execute
 
@@ -36,7 +36,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % The full list of TTL triggers for Toptica laser, Retra UV LED (PL), and Peka LED (BF): 'UVTTL','Laser488TTL', 'Laser561TTL', 'Laser640TTL','Laser561&640','BrightFieldTTL'.
 
         % (iii) If doTimeLapse() is called, 2 zstacks are taken at time points defined in timePoints[7]
-        % timePoints1  = 0:10:60; % start immediately, call function[7] every 10 sec for 60 sec total
+        % timePoints1  = 0:10:60; % start immediately, call function[7]
+        % every 10 sec for 60 sec total; 
 
         % Both zstacks are taken with exposure[7]
 
@@ -45,19 +46,19 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
         setChannel1 = {{'BF', 10}};
         function1    = {'takeA3DStack',{'zStack2','BrightFieldTTL'},''};
-        timePoints1  = 0:60:60*60*3; % start immediately, call function[1] every 10 sec for 60 sec total
+        timePoints1  = 0:60*5:60*10; % 
         exposure1 = 200;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
         setChannel2  = {{'laser-640',1}};
         function2    = {'takeA3DStack',{'zStack2','Laser640TTL'},''};
-        timePoints2  = 0:60:60*60*3;
+        timePoints2  = 0:60*5:60*10;
         exposure2    = 20;
         
         setChannel3  = {{'laser-561',1}};
         function3    = {'takeA3DStack',{'zStack2','Laser561TTL'},''};
-        timePoints3  = 0:60:60*60*3;
+        timePoints3  = 0:60*5:60*10;
         exposure3    = 20;
         
         setChannel4  = {{'laser-488',1}};
