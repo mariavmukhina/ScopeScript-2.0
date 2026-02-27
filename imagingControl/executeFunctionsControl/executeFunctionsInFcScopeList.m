@@ -26,61 +26,55 @@ if isempty(currentElapsedTimeInSeconds)
 end
 numFcScope = numel(fcScopeList);
 for i = 1:numFcScope
-    parsedAndValues = parseParamsForFunctions(fcScopeList{i});
-    executeOnly = fcScopeList{i}.executeOnly;
-    for j = executeOnly
-        % If EMCCD Andor is used, switch EM camera settings 
-        if contains(parsedAndValues.values{j}{2}{1}{1},'BF')
+    for j = 1:length(fcScopeList{i}.recipelist)
+        if contains(fcScopeList{i}.recipelist{j}.setChannel,'BF')
             BF();
         else
             PL();
         end
-        %time points in timelapse, not z-stack
-        currTimePoints = parsedAndValues.values{j}{3};
-        % need to check if timepoint is a subset of current running time
+        currTimePoints = fcScopeList{i}.combinedTimePoints;
         if ~ischar(currTimePoints)
-           timer = timerfind('Name','timeLapse');
-           lastTimePoint = max(currTimePoints); 
-           if isempty(lastTimePoint)
-               checkLastTimePoint = false;
-           else
-               checkLastTimePoint = lastTimePoint == currentElapsedTimeInSeconds;
-           end
-           
+            timer = timerfind('Name','timeLapse');
+            lastTimePoint = max(currTimePoints); 
+            if isempty(lastTimePoint)
+                checkLastTimePoint = false;
+            else
+                checkLastTimePoint = lastTimePoint == currentElapsedTimeInSeconds;
+            end
         end
         if (~ischar(currTimePoints) && (sum(ismember(currTimePoints,currentElapsedTimeInSeconds))>0))  || ~isATimerOn()
             % go to stage pos if available
             if numel(fcScopeList) > 1
-                if ~isempty(parsedAndValues.stagePos)
+                if ~isempty(fcScopeList{i}.stagePos)
                     masterFileMaker.setStagePos(i);
                 else
                     masterFileMaker.setStagePos([]);
                 end       
             else
-                 masterFileMaker.setStagePos([]);
+                masterFileMaker.setStagePos([]);
             end
             % wait for stage position to finish
             waitForSystem();
             % setup channel
-            updateChannelGivenCommand(parsedAndValues.values{j}{2});
+            updateChannelGivenCommand(fcScopeList{i}.recipelist{j}.setChannel);
             % wait for PFS
             currentPFSState = getPFSState();
             if currentPFSState
-                waitForPFS(parsedAndValues.pfsOffset);
+                waitForPFS(fcScopeList{i}.pfsOffset);
             end
             % set exposure 
-            setExposure(parsedAndValues.values{j}{4});            
+            setExposure(fcScopeList{i}.recipelist{j}.exposure);            
             % execute function
-            executeFunctionGivenCommand(parsedAndValues.values{j}{1},fcScopeList{i})
+            executeFunctionGivenCommand(fcScopeList{i}.recipelist{j}.functions,fcScopeList{i})
             % wait for PFS
             if currentPFSState
-                waitForPFS(parsedAndValues.pfsOffset);
+                waitForPFS(fcScopeList{i}.pfsOffset);
             end   
-        else
-           
-        end
+        else  
+        end       
     end
 end
+
 initForNextInFcScopeList(fcScopeList);
 end
 
