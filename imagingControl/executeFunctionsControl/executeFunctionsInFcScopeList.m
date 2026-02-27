@@ -29,12 +29,6 @@ for i = 1:numFcScope
     parsedAndValues = parseParamsForFunctions(fcScopeList{i});
     executeOnly = fcScopeList{i}.executeOnly;
     for j = executeOnly
-        % If EMCCD Andor is used, switch EM camera settings 
-        if contains(parsedAndValues.values{j}{2}{1}{1},'BF')
-            BF();
-        else
-            PL();
-        end
         %time points in timelapse, not z-stack
         currTimePoints = parsedAndValues.values{j}{3};
         % need to check if timepoint is a subset of current running time
@@ -53,6 +47,7 @@ for i = 1:numFcScope
             if numel(fcScopeList) > 1
                 if ~isempty(parsedAndValues.stagePos)
                     masterFileMaker.setStagePos(i);
+                    gotoStagePos(parsedAndValues.stagePos);
                 else
                     masterFileMaker.setStagePos([]);
                 end       
