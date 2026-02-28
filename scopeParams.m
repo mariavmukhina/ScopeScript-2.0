@@ -266,5 +266,14 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         function expPath = returnPath(obj)
                 expPath = [obj.drive filesep obj.defaultUser filesep obj.currentDate filesep];
         end
+
+        function obj = updateFcScope(obj, otherObj) % updates fcScope without changing stagePos
+        props = properties(obj);
+        for k = 1:numel(props)
+            if ~strcmp(props{k}, 'stagePos')
+                obj.(props{k}) = otherObj.(props{k});
+            end
+        end
+    end
     end
 end
