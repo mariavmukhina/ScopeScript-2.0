@@ -72,7 +72,7 @@ if currentPFSState
 end
 
 %% set BF configuration (EM =0) 
-BF();
+%BF();
 
 end
 

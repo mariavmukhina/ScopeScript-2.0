@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test';
-        defaultExpFolder        = 'test-timeLapse';
+        defaultSampleName       = 'test_3CH_15minGap_6Positions';
+        defaultExpFolder        = 'test-timeLapse-stageAppend';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
      
-        executeOnly = [1,2,3]; 
+        executeOnly = [1,6]; 
 
         % then execute
 
@@ -24,7 +24,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %            iii) timePoints7  = 0:10:60;
         %                 exposure7    = 1;
 
-        % i)   setChannel_i, if does not exist, do nothing
+        % i)   setChannel_i, if does not exist, do nothing - CAN BE USED TO SPEED UP single channel timelapse
         % ii)  function_i
         % iii) at timePoints_i (seconds), if does not exist, do always
         
@@ -36,7 +36,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % The full list of TTL triggers for Toptica laser, Retra UV LED (PL), and Peka LED (BF): 'UVTTL','Laser488TTL', 'Laser561TTL', 'Laser640TTL','Laser561&640','BrightFieldTTL'.
 
         % (iii) If doTimeLapse() is called, 2 zstacks are taken at time points defined in timePoints[7]
-        % timePoints1  = 0:10:60; % start immediately, call function[7] every 10 sec for 60 sec total
+        % timePoints1  = 0:10:60; % start immediately, call function[7]
+        % every 10 sec for 60 sec total; 
 
         % Both zstacks are taken with exposure[7]
 
@@ -44,6 +45,66 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         recipelist = []; 
         combinedTimePoints = [];
 
+<<<<<<< HEAD
+=======
+
+        setChannel1 = {{'BF', 10}};
+        function1    = {'takeA3DStack',{'zStack2','BrightFieldTTL'},''};
+        timePoints1  = 0:60*15:60*60*3; % 
+        exposure1 = 200;
+
+        
+        % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
+        setChannel2  = {{'laser-640',1}};
+        function2    = {'takeA3DStack',{'zStack2','Laser640TTL'},''};
+        timePoints2  = 0:60*5:60*10;
+        exposure2    = 20;
+        
+        setChannel3  = {{'laser-561',1}};
+        function3    = {'takeA3DStack',{'zStack2','Laser561TTL'},''};
+        timePoints3  = 0:60*5:60*10;
+        exposure3    = 20;
+        
+        setChannel4  = {{'laser-488',1}};
+        function4    = {'takeA3DStack',{'zStack2','Laser488TTL'},''};
+        timePoints4  = 0:15:60*60*4;
+        exposure4    = 10;
+        
+               
+        setChannel5  = {{'led-340',1}};
+        function5    = {'takeA3DStack',{'zStackZeroStep','UVTTL'},''};
+        timePoints5  = 0:15:60*60*3;
+        exposure5    = 10;
+        
+        setChannel6  = {{'laser-561-640',{1,1}},{'laser-561-640',{1,1}}};
+        function6    = {'takeA3DStack',{'zStack1','Laser561TTL','zStack2','Laser640TTL'},''};
+        timePoints6  = 0:60*15:60*60*3;
+        exposure6    = 10;
+        
+
+        setChannel7  = {{'laser-640',1},{'BF',1}};
+        function7    = {'takeA3DStack',{'zStack1','Laser640TTL','zStack2','BrightFieldTTL'},''};
+        timePoints7  = 0:60:60*60;
+        exposure7    = 10;
+        
+        setChannel8  = {{'laser-561',1},{'BF',100}};
+        function8    = {'takeA3DStack',{'zStack1','Laser561TTL','zStack2','BrightFieldTTL'},''};
+        timePoints8  = 0:10:60;
+        exposure8    = 10;
+        
+        setChannel9  = {{'laser-488',1},{'BF',100}};
+        function9    = {'takeA3DStack',{'zStack1','Laser488TTL','zStack2','BrightFieldTTL'},''};
+        timePoints9  = 0:10:60;
+        exposure9    = 10;
+        
+        
+        %fcScope[11] takes 2D stack with 2 PL channels triggered
+        %simultaneously for Optosplit
+        setChannel11  = {{'6-TRF561-640',{6,2}}};
+        function11    = {'takeA3DStack',{'zStackZeroStep1','AllFourTTL'},''};
+        timePoints11  = 0:5:60*60;
+        exposure11    = 50;
+>>>>>>> upstream/main
         
         %-zStack recipes---------------------------------------------------
         % z step is defined in DAC units, not nanometers
@@ -136,13 +197,13 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %% -STATE VARIABLES--------------------------------------------------
         currentDate;            % this defines the exp folder
         pfsOffset;              % this defines the PFS offset if available
-        stagePos;               % this defines the stage position to use
+        stagePos;               % this defines the stage position(s) to use in executeFunctions and doTimeLapse
         currentDateTime;        % this is the curent date and time as datetime obj
     end
     
     properties (Constant)
         %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'muxika';
+        defaultUser             = 'testUser';
         %-DRIVE TO SAVE IN
         drive                   = 'H:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
@@ -160,10 +221,16 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
     methods
         function obj = scopeParams(varargin)
-            % fcScope = scopeParams('saveStage') then this will save the stage position
+            % fcScope = scopeParams('saveStage') then this will save the current stage position
             % fcScope = scopeParams() doesn't save stage position
             if nargin == 1
-                obj.stagePos    = getStagePos();
+                global stageCoordinates;
+                obj.stagePos = stageCoordinates.stagePos;
+                if isempty(stageCoordinates.stagePos)
+                    obj.stagePos = getStagePos();        % first entry
+                else
+                    obj.stagePos = [obj.stagePos getStagePos()];  % append as new column
+                end
             else
                 obj.stagePos    = [];
             end
@@ -191,6 +258,18 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         
         function expPath = returnPath(obj)
                 expPath = [obj.drive filesep obj.defaultUser filesep obj.currentDate filesep];
+        end
+
+        function obj = updateFcScope(obj, otherObj) % updates fcScope without changing stagePos
+            props = properties(obj);
+            constant_props = {'defaultUser' 'drive' 'micromanagerPath' 'configPath' 'bufferSize' 'fcPiezoCircuitCOMPort' 'fcPiezoCircuitBaudRate' 'saveParams'};      
+
+            for k = 1:numel(props)
+                if  ismember(props{k},constant_props) || strcmp(props{k},'stagePos')
+                    continue
+                end
+                obj.(props{k}) = otherObj.(props{k});
+            end
         end
     end
 end
