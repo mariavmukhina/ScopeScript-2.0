@@ -1,27 +1,13 @@
 function [] = stageAppend(varargin)
-%STAGEAPPEND allows to save multiple XY locations of the microscope stage alonside corresponding PFS offsets to the stageCoordinates list
-%the stageCoordinates list is then used to execute fcScopes (Z stacks) at the selected locations as a timeLapse
-%default time interval between fcScopes at different locations is 5 sec
-%it can also be provided as an argument of stageAppend()
-
-if ~isempty(varargin)
-    timeOffset = varargin{1};
-else
-    timeOffset = 5;%sec
-end
+%STAGEAPPEND allows to save multiple XYZ locations of the microscope stage
+%to global variable stageCoordinates of class scopeParams
+%the stageCoordinates list is then used to execute functions (Z stacks) at the selected locations
+%if doTimeLapse is called and stageCoordinates.stagePos are not empty,
+%functions will be executed in each location for each timepoint
 
 global stageCoordinates;
 fcScopeCurrent = scopeParams('saveStage');
-
-
-numel(stageCoordinates)
-for i = 1:numel(fcScopeCurrent.recipeList)
-    fcScopeCurrent.recipeList{i}.timePoints = fcScopeCurrent.recipeList{i}.timePoints + numel(stageCoordinates)*timeOffset;
-end
-
-
-stageCoordinates{end+1} = fcScopeCurrent;
-
+stageCoordinates = fcScopeCurrent;
 
 end
 

@@ -1,8 +1,8 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test';
-        defaultExpFolder        = 'test-timeLapse';
+        defaultSampleName       = 'test_3CH_15minGap_6Positions';
+        defaultExpFolder        = 'test-timeLapse-stageAppend';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
         cameraExposureLivePL = 10;    % in ms
@@ -14,7 +14,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % when executeFunctions() or doTimeLapse() are called, the script will look for function[i] = {functionName,argumentList} selected in executeOnly;
         % if selected more than one function, the functions will be run in the order defined in executeOnly
      
-        executeOnly = [1,2,3]; 
+        executeOnly = [1,6]; 
 
         % then execute
 
@@ -24,7 +24,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %            iii) timePoints7  = 0:10:60;
         %                 exposure7    = 1;
 
-        % i)   setChannel_i, if does not exist, do nothing
+        % i)   setChannel_i, if does not exist, do nothing - CAN BE USED TO SPEED UP single channel timelapse
         % ii)  function_i
         % iii) at timePoints_i (seconds), if does not exist, do always
         
@@ -36,7 +36,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         % The full list of TTL triggers for Toptica laser, Retra UV LED (PL), and Peka LED (BF): 'UVTTL','Laser488TTL', 'Laser561TTL', 'Laser640TTL','Laser561&640','BrightFieldTTL'.
 
         % (iii) If doTimeLapse() is called, 2 zstacks are taken at time points defined in timePoints[7]
-        % timePoints1  = 0:10:60; % start immediately, call function[7] every 10 sec for 60 sec total
+        % timePoints1  = 0:10:60; % start immediately, call function[7]
+        % every 10 sec for 60 sec total; 
 
         % Both zstacks are taken with exposure[7]
 
@@ -136,13 +137,13 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %% -STATE VARIABLES--------------------------------------------------
         currentDate;            % this defines the exp folder
         pfsOffset;              % this defines the PFS offset if available
-        stagePos;               % this defines the stage position to use
+        stagePos;               % this defines the stage position(s) to use in executeFunctions and doTimeLapse
         currentDateTime;        % this is the curent date and time as datetime obj
     end
     
     properties (Constant)
         %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'muxika';
+        defaultUser             = 'testUser';
         %-DRIVE TO SAVE IN
         drive                   = 'H:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
@@ -160,10 +161,16 @@ classdef scopeParams < matlab.mixin.SetGet & handle
 
     methods
         function obj = scopeParams(varargin)
-            % fcScope = scopeParams('saveStage') then this will save the stage position
+            % fcScope = scopeParams('saveStage') then this will save the current stage position
             % fcScope = scopeParams() doesn't save stage position
             if nargin == 1
-                obj.stagePos    = getStagePos();
+                global stageCoordinates;
+                obj.stagePos = stageCoordinates.stagePos;
+                if isempty(stageCoordinates.stagePos)
+                    obj.stagePos = getStagePos();        % first entry
+                else
+                    obj.stagePos = [obj.stagePos getStagePos()];  % append as new column
+                end
             else
                 obj.stagePos    = [];
             end
@@ -191,6 +198,18 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         
         function expPath = returnPath(obj)
                 expPath = [obj.drive filesep obj.defaultUser filesep obj.currentDate filesep];
+        end
+
+        function obj = updateFcScope(obj, otherObj) % updates fcScope without changing stagePos
+            props = properties(obj);
+            constant_props = {'defaultUser' 'drive' 'micromanagerPath' 'configPath' 'bufferSize' 'fcPiezoCircuitCOMPort' 'fcPiezoCircuitBaudRate' 'saveParams'};      
+
+            for k = 1:numel(props)
+                if  ismember(props{k},constant_props) || strcmp(props{k},'stagePos')
+                    continue
+                end
+                obj.(props{k}) = otherObj.(props{k});
+            end
         end
     end
 end

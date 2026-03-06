@@ -1,0 +1,86 @@
+function [] = executeFunctionsInFcScope(fcScope)
+%EXECUTEFUNCTIONSINPARAMS will look inside the fcScope, which
+%contains various stage positions, pfsOffset, channel recipies (includes channel settings, functions (e.g. 3D stack),timepoints, exposure)
+% ... parses all of them and executes the functions chosen in executeOnly
+% in scopeParams if the timepoints match the current timestamp.
+%
+%
+%function is labeled as functioni
+% for each functioni
+% 1) if setChanneli exists, setupChannel(setChanneli);
+% 2) execute functioni = {functionname, argumentList}
+%    functionname(argumentList);
+% 3) if timepointsi exists and timer is running, only execute functions when timepointsi match the current elapsed time (seconds)
+
+setupStage();
+global masterFileMaker;
+currentElapsedTimeInSeconds = returnSecsFromRunningTimer();
+display(['current timepoint (secs):' num2str(currentElapsedTimeInSeconds)]);
+if isempty(currentElapsedTimeInSeconds)
+    currentElapsedTimeInSeconds = 0;
+end
+
+parsedAndValues = parseParamsForFunctions(fcScope);
+executeOnly = fcScope.executeOnly;
+currentPFSState = getPFSState(); % check is PFS on
+
+if ~isempty(parsedAndValues.stagePos) 
+    numStagePos = numel(parsedAndValues.stagePos);
+    for k = 1:numStagePos                                % rotate through stage pos if available
+        masterFileMaker.setStagePos(k);                  % update file handler to know that there is a stage pos
+        gotoStagePos(parsedAndValues.stagePos(k));
+        fprintf('moving to stagepos:%i\n',k);
+        waitForSystem();                                 % wait for stage position to finish
+        for j = executeOnly                              % rotate through channel recipies selected by executeOnly in scopeParams
+            %time points in timelapse, not z-stack
+            currTimePoints = parsedAndValues.values{j}{3};
+            % need to check if timepoint is a subset of current running time
+            if (~ischar(currTimePoints) && (sum(ismember(currTimePoints,currentElapsedTimeInSeconds))>0))  || ~isATimerOn()
+                % setup channel
+                updateChannelGivenCommand(parsedAndValues.values{j}{2});
+                % wait for PFS
+                if currentPFSState
+                    waitForPFS(parsedAndValues.pfsOffset);
+                end
+                % set exposure 
+                setExposure(parsedAndValues.values{j}{4}); 
+                % execute function
+                executeFunctionGivenCommand(parsedAndValues.values{j}{1},fcScope)
+                % wait for PFS
+                if currentPFSState
+                    waitForPFS(parsedAndValues.pfsOffset);
+                end   
+            else
+               
+            end
+        end
+    end
+
+else                                                 %if there is no saved stage positions, execute the channels once
+    masterFileMaker.setStagePos([]);
+    for j = executeOnly                              % rotate through channel recipies selected by executeOnly in scopeParams
+        %time points in timelapse, not z-stack
+        currTimePoints = parsedAndValues.values{j}{3};
+        % need to check if timepoint is a subset of current running time
+        if (~ischar(currTimePoints) && (sum(ismember(currTimePoints,currentElapsedTimeInSeconds))>0))  || ~isATimerOn()
+            % setup channel
+            updateChannelGivenCommand(parsedAndValues.values{j}{2});
+            % wait for PFS
+            if currentPFSState
+                waitForPFS(parsedAndValues.pfsOffset);
+            end
+            % set exposure 
+            setExposure(parsedAndValues.values{j}{4});            
+            % execute function
+            executeFunctionGivenCommand(parsedAndValues.values{j}{1},fcScope)
+            % wait for PFS
+            if currentPFSState
+                waitForPFS(parsedAndValues.pfsOffset);
+            end   
+        else
+           
+        end
+    end
+end       
+end
+

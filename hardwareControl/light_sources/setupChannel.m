@@ -31,6 +31,7 @@ if contains(channel,'BF')
         ti2.DiaLampSwitch.Value = 1;
         ti2.DiaLampPos.Value = energy;
     end
+    BF();
     return;
 else
     %% if the channel is fluorescent, execute filter cube change, switch mirror on the main branch of Ti2-LAPP attachment, and update Toptica laser or Retra LED parameters
@@ -111,6 +112,8 @@ else
         end
             
     end
+
+    PL();
     
 end
 
