@@ -1,0 +1,23 @@
+function [] = doTimeLapse(varargin)
+%DOTIMELAPSE
+% doTimeLapse() will instantiate an scopeParams and execute timelapse
+% doTimeLapse(fcScope) will execute timelapse defined in fcScope
+
+global stageCoordinates;
+fcScope = scopeParams();
+if isempty(varargin)
+    % check if stage positons are specified in stageCoordinates
+    if isempty(stageCoordinates.stagePos)        
+        doTimeLapseInFcScope(fcScope);
+    else
+        disp(['taking fcScope Z stacks at ' num2str(numel(stageCoordinates.stagePos)) ' XYZ locations']);
+        global stageCoordinates
+stageCoordinates.updateFrom(newObj);
+        doTimeLapseInFcScope(stageCoordinates);
+    end
+else
+    doTimeLapseInFcScope(varargin{1});
+end
+
+end
+

@@ -13,6 +13,7 @@ global ti2;
 global mmc;
 %multiple xy stage positions
 global stageCoordinates;
+stageCoordinates = scopeParams;
 
 %user-defined ROI to be shown as a white rectange in all live images
 %it is also added as a white rectange to all images produced by executeFucntions / doTimeLapse is ROI for those functions is bigger than defined by showROI

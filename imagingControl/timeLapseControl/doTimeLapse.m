@@ -2,25 +2,20 @@ function [] = doTimeLapse(varargin)
 %DOTIMELAPSE
 % doTimeLapse() will instantiate an scopeParams and execute timelapse
 % doTimeLapse(fcScope) will execute timelapse defined in fcScope
-% doTimeLapse(fcScopeList) will execute timelapse over that of the list
 
 global stageCoordinates;
+fcScope = scopeParams();
 if isempty(varargin)
-    % check if stageCoordinates is specified
-    if isempty(stageCoordinates)
-        fcScope = scopeParams();
-        doTimeLapseInFcScopeList({fcScope});
+    % check if stage positons are specified in stageCoordinates
+    if isempty(stageCoordinates.stagePos)        
+        doTimeLapseInFcScope(fcScope);
     else
-        disp('taking fcScope Z stacks at stageCoordinates XY locations');
-        doTimeLapseInFcScopeList(stageCoordinates);
+        disp(['taking fcScope Z stacks at ' num2str(numel(stageCoordinates.stagePos)) ' XYZ locations']);
+        stageCoordinates.updateFcScope(fcScope);
+        doTimeLapseInFcScope(stageCoordinates);
     end
 else
-    fcScopeList = varargin{1};
-    if iscell(fcScopeList)
-        doTimeLapseInFcScopeList(fcScopeList);
-    else
-        doTimeLapseInFcScopeList({fcScopeList});
-    end
+    doTimeLapseInFcScope(varargin{1});
 end
 
 end

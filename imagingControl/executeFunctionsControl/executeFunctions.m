@@ -2,36 +2,25 @@ function [] = executeFunctions(varargin)
 %EXECUTEFUNCTIONS
 % executeFunctions() will instantiate an scopeParams then execute only
 % the functions within it
-% executeFunctions(fcScope) will execute the functions inside fcScope
-% object
-% executeFunctions({fcScope1,fcScope2}) will execute the functions inside
-% the list of fcScopes
+% executeFunctions([1 .. N]) will execute the function(s) inside fcScope object (as defined in scopeParams) with numbers specified by array [1 .. N]
+
 global stageCoordinates;
+fcScope = scopeParams();
 
 if isempty(varargin)
-    % check if stageCoordinates is specified
-    if isempty(stageCoordinates)
-        fcScope = scopeParams();
-        executeFunctionsInFcScopeList({fcScope});
+    % check if stage positions in stageCoordinates are specified
+    if isempty(stageCoordinates.stagePos)
+        executeFunctionsInFcScope(fcScope);
     else
         
         disp('taking fcScope Z stacks at XY locations from stageCoordinates list');
-        executeFunctionsInFcScopeList(stageCoordinates);
+        stageCoordinates.updateFcScope(fcScope);
+        executeFunctionsInFcScope(stageCoordinates);
     end
-else
-    if isnumeric(varargin{1})
-        fcScope = scopeParams();
-        fcScope.executeOnly = varargin{1};
-        executeFunctionsInFcScopeList({fcScope});
-    else
-        fcScopeList = varargin{1};
-        if iscell(fcScopeList)
-            executeFunctionsInFcScopeList(fcScopeList);
-        else
-            executeFunctionsInFcScopeList({fcScopeList});
-        end
-    end
-    
+else % if array with function numers is provided
+    fcScope = scopeParams();
+    fcScope.executeOnly = varargin{1};
+    executeFunctionsInFcScope(fcScope); 
 end
 
 
