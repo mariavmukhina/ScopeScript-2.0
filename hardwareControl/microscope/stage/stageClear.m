@@ -3,7 +3,7 @@ function [] = stageClear()
 
 global stageCoordinates;
 
-stageCoordinates = {};
+stageCoordinates = scopeParams;
 
 
 end
