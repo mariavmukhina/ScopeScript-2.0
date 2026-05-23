@@ -64,9 +64,12 @@ for i = 1:numel(zCommandOutput)
    end
    currfilename = masterFileMaker.generateFileName(fcScope,'TTLchannel',TTLtrigger,'LEDlevels',LEDlevels);
    exportSingleTifStack(currfilename,zCommandOutput{i}.data,zCommandOutput{i}.zMeta);
-   %% run super-localization post-pocessing
-    [folderPath, ~, ~] = fileparts(currfilename);
-    LLR_onTheFly(folderPath,TTLtrigger);
+   %% run super-localization post-pocessing if there is no running timelapse
+   t = timerfind('Name', 'timeLapse');
+    if isempty(t) || ~strcmp(t.Running, 'on')
+        [folderPath, ~, ~] = fileparts(currfilename);
+        LLR_onTheFly(folderPath,TTLtrigger);
+    end
 end
 
 %% if pfs state was on, turn it back on and wait for it to settle
