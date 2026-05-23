@@ -6,7 +6,7 @@ function [] = LLR_onTheFly(dataFolder,TTLtrigger)
     currentFolder            = pwd;
     camVarFile               = fullfile(currentFolder,'\postProcessing\dummy_calibration.mat');
     channels                 = {TTLtrigger};
-    specimenUnitsInMicrons   = [0.13,0.13,200*0.003];%[0.217,0.217,0];  % pixel/voxel size in µm; DAC->µm conversion coeff for z: 1 DAC unit = 220 µm[max stage range]/65536 ~= 0.003 µm
+    specimenUnitsInMicrons   = [0.13,0.13,75*0.003];%[0.217,0.217,0];  % pixel/voxel size in µm; DAC->µm conversion coeff for z: 1 DAC unit = 220 µm[max stage range]/65536 ~= 0.003 µm
     nD                       = 3; % number of dimensions in dataset
     multi                    = 0; % 1 - multi-color dataset; 0 - single color
     imageSize                = [1024 1024]; % px
