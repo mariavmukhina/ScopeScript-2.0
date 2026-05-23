@@ -8,10 +8,10 @@ global ti2;
 ti2.tirf1XSpeed.Value = 1;
 ti2.tirf1YSpeed.Value = 1;
 
-%set tirf position to zero
-% ti2.tirf1XPOSITION.Value = 0;
-% ti2.tirf1YPOSITION.Value = 0;
-setTirf('EPI');
+%setTirf('EPI');
+%disp('Laser is set to EPI');
 
-disp('TIRF set to EPI')
+setTirf('HILO');
+disp('Laser is set to HILO');
+
 fprintf('\n\n');
