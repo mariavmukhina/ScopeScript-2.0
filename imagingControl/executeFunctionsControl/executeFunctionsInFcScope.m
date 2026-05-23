@@ -24,7 +24,7 @@ parsedAndValues = parseParamsForFunctions(fcScope);
 executeOnly = fcScope.executeOnly;
 currentPFSState = getPFSState(); % check is PFS on
 
-if ~isempty(parsedAndValues.stagePos) 
+if ~contains(iscaller(),'executeFunctions') && ~isempty(parsedAndValues.stagePos) 
     numStagePos = numel(parsedAndValues.stagePos);
     for k = 1:numStagePos                                % rotate through stage pos if available
         masterFileMaker.setStagePos(k);                  % update file handler to know that there is a stage pos
@@ -51,7 +51,7 @@ if ~isempty(parsedAndValues.stagePos)
                     waitForPFS(parsedAndValues.pfsOffset);
                 end   
             else
-               
+
             end
         end
     end
