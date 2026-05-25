@@ -185,52 +185,56 @@ sortByTime(redList, redTimes, redCount);
 
 
 // ------------------------------------------------------------
-// 7. Open BrightField xyz stacks and concatenate into xyzt
+// 7. Open BrightField xyz stacks (if exist) and concatenate into xyzt
 // ------------------------------------------------------------
+if (bfCount > 0) {
 
-titlesBF = newArray();
+	titlesBF = newArray();
 
-// Open all BrightField stacks
-for (i = 0; i < bfCount; i++) {
+	// Open all BrightField stacks
+	for (i = 0; i < bfCount; i++) {
 
-    open(baseDir + bfList[i]);
+	    open(baseDir + bfList[i]);
 
-    titlesBF[i] = getTitle();
+	    titlesBF[i] = getTitle();
 
-    print("Opened BF: " + titlesBF[i]);
+	    print("Opened BF: " + titlesBF[i]);
+	}
+
+
+
+	// Concatenate all stacks
+	concatArg = "";
+
+	for (i = 0; i < bfCount; i++) {
+
+	    concatArg = concatArg + " image" + (i+1) + "=[" + titlesBF[i] + "]";
+	}
+
+	run("Concatenate...", concatArg + " title=BrightField_stack");
+
+
+
+	// Get number of z-slices from first stack
+	selectWindow("BrightField_stack");
+
+	zSlices = nSlices / bfCount;
+
+
+
+	// Convert concatenated stack into hyperstack
+	Stack.setDimensions(1, zSlices, bfCount);
+
+	run("Stack to Hyperstack...", 
+	    "order=xyztc channels=1 slices=" + zSlices +
+	    " frames=" + bfCount + " display=Grayscale");
+
+	selectWindow("BrightField_stack");
+	run("32-bit");
+} else {
+
+    print("No BrightField files found. Continuing without BF.");
 }
-
-
-
-// Concatenate all stacks
-concatArg = "";
-
-for (i = 0; i < bfCount; i++) {
-
-    concatArg = concatArg + " image" + (i+1) + "=[" + titlesBF[i] + "]";
-}
-
-run("Concatenate...", concatArg + " title=BrightField_stack");
-
-
-
-// Get number of z-slices from first stack
-selectWindow("BrightField_stack");
-
-zSlices = nSlices / bfCount;
-
-
-
-// Convert concatenated stack into hyperstack
-Stack.setDimensions(1, zSlices, bfCount);
-
-run("Stack to Hyperstack...", 
-    "order=xyztc channels=1 slices=" + zSlices +
-    " frames=" + bfCount + " display=Grayscale");
-
-selectWindow("BrightField_stack");
-run("32-bit");
-
 
 // ------------------------------------------------------------
 // 8. Open Lsr561 xyz stacks and concatenate into xyzt
@@ -244,8 +248,6 @@ for (i = 0; i < greenCount; i++) {
     open(subDir + greenList[i]);
 
     titles561[i] = getTitle();
-
-    print("Opened Lsr561: " + titles561[i]);
 }
 
 
@@ -292,8 +294,6 @@ for (i = 0; i < redCount; i++) {
     run("Reverse");
 
     titles640[i] = getTitle();
-
-    print("Opened + reversed Lsr640: " + titles640[i]);
 }
 
 
@@ -328,11 +328,25 @@ run("Stack to Hyperstack...",
 
 // ------------------------------------------------------------
 // 10. Merge channels into composite hyperstack
+// BrightField channel is optional
 // ------------------------------------------------------------
-run("Merge Channels...",
-    "c1=[Lsr640_stack] " +
-    "c2=[Lsr561_stack] " +
-    "gray=[BrightField_stack] " +
-    "create");
+
+if (bfCount > 0) {
+
+    // Merge with BrightField
+    run("Merge Channels...",
+        "c1=[Lsr640_stack] " +
+        "c2=[Lsr561_stack] " +
+        "gray=[BrightField_stack] " +
+        "create");
+
+} else {
+
+    // Merge without BrightField
+    run("Merge Channels...",
+        "c1=[Lsr640_stack] " +
+        "c2=[Lsr561_stack] " +
+        "create");
+}
 
 setBatchMode(false);
