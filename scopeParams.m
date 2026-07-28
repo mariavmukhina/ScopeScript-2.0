@@ -233,7 +233,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
     
     properties (Constant)
         %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'testUser';
+        defaultUser             = 'wmissig';
         %-DRIVE TO SAVE IN
         drive                   = 'H:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
