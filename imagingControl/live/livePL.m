@@ -9,6 +9,7 @@ if ~isempty(varargin)
 else
     channel = [];
     energy = [];
+    PL();
 end
 
 fcScope = scopeParams;
@@ -19,7 +20,6 @@ openTurretShutter();
 oldROI = getROI();
 %clearROI();
 
-PL();
 
 stopStreaming();
 disp('--livePL()-----------------------');
