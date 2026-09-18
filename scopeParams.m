@@ -1,7 +1,11 @@
 classdef scopeParams < matlab.mixin.SetGet & handle
+    properties (Constant)
+        %%-ENTER YOUR USER FOLDER TO SAVE IN------------------------------------------
+        defaultUser             = 'muxika';
+    end
     properties
         %% PATH TO EXPERIMENT FOLDER
-        defaultSampleName       = 'test_3CH_15minGap_6Positions';
+        defaultSampleName       = 'test_3CH_5minGap_6Positions';
         defaultExpFolder        = 'test-timeLapse-stageAppend';
 
         %% EXPOSURE PARAMETERS FOR REAL TIME IMAGING WITH LIVEBF AND LIVEPL
@@ -44,10 +48,10 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         %%%%%
 
 
-        setChannel1 = {{'BF', 10}};
+        setChannel1  = {{'BF', 10}};
         function1    = {'takeA3DStack',{'zStack2','BrightFieldTTL'},''};
-        timePoints1  = 0:60*15:60*60*3; % 
-        exposure1 = 200;
+        timePoints1  = 0:60*5:60*60*3; % 
+        exposure1    = 50;
 
         
         % fcScope[2] takes only 1 zstack in the PL channel "laser-640"
@@ -74,7 +78,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         
         setChannel6  = {{'laser-561-640',{1,1}},{'laser-561-640',{1,1}}};
         function6    = {'takeA3DStack',{'zStack1','Laser561TTL','zStack2','Laser640TTL'},''};
-        timePoints6  = 0:60*15:60*60*3;
+        timePoints6  = 0:60*5:60*60*3;
         exposure6    = 10;
         
 
@@ -232,10 +236,8 @@ classdef scopeParams < matlab.mixin.SetGet & handle
     end
     
     properties (Constant)
-        %-USER FOLDER TO SAVE IN------------------------------------------
-        defaultUser             = 'testUser';
         %-DRIVE TO SAVE IN
-        drive                   = 'H:';
+        drive                   = 'D:';
         %-MICROMANAGER AND MICROSCOPE CONTROL PROPS------------------------
         %path to uManager app files
         micromanagerPath        = 'C:\Program Files\Micro-Manager-2.0\';
@@ -243,7 +245,7 @@ classdef scopeParams < matlab.mixin.SetGet & handle
         configPath              = 'C:\Program Files\Micro-Manager-2.0\microscope_config.cfg';
         bufferSize              = 4096; %in MB
         % com port for custom TTL control
-        fcPiezoCircuitCOMPort   = 'COM3';    
+        fcPiezoCircuitCOMPort   = 'COM4';    
         fcPiezoCircuitBaudRate  = 115200;
         %-TIF SAVING PARAMS------------------------------------------------
         saveParams              = {'tif', 'Compression', 'none'};

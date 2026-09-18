@@ -20,7 +20,6 @@ closeTurretShutter();
 oldROI = getROI();
 clearROI();
 
-BF();
 
 stopStreaming();
 disp('--liveBF()-----------------------');
